@@ -8,3 +8,4 @@ C:\Users\samue\Documents\VSprojects\HeartDiseaseInvestigation\HeartDiseaseInvest
 C:\Users\samue\Documents\VSprojects\HeartDiseaseInvestigation\HeartDiseaseInvestigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.csproj.CoreCompileInputs.cache
 C:\Users\samue\Documents\VSprojects\HeartDiseaseInvestigation\HeartDiseaseInvestigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.exe
 C:\Users\samue\Documents\VSprojects\HeartDiseaseInvestigation\HeartDiseaseInvestigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.pdb
+C:\Users\samue\Documents\VSprojects\HeartDiseaseInvestigation\HeartDiseaseInvestigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.UI.Graphs.resources

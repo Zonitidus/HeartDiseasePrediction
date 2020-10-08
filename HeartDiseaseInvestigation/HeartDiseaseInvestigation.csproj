@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,11 +47,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UI\Form1.cs">
+    <Compile Include="UI\MainGraphicInteface.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="UI\MainGraphicInteface.Designer.cs">
+      <DependentUpon>MainGraphicInteface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Graphs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Graphs.Designer.cs">
+      <DependentUpon>Graphs.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -63,8 +70,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UI\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="UI\MainGraphicInteface.resx">
+      <DependentUpon>MainGraphicInteface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Graphs.resx">
+      <DependentUpon>Graphs.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Data\heart.csv" />
     <None Include="Properties\Settings.settings">

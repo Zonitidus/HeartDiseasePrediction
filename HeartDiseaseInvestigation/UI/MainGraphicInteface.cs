@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HeartDiseaseInvestigation.UI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,12 +15,14 @@ namespace HeartDiseaseInvestigation
     
     public partial class Form1 : Form
     {
-        DataTable dt = new DataTable();
+        public DataTable dt = new DataTable();
         public Form1()
         {
             InitializeComponent();
             loadDt();
         }
+
+        
 
         //this method load the csv and load this data into a dataTable
         private void loadDt()
@@ -49,14 +52,15 @@ namespace HeartDiseaseInvestigation
             heartDataTable.DataSource = dt;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void filter_Click(object sender, EventArgs e)
         {
             dt.DefaultView.RowFilter = comboBoxHeartData.Text + " >= " + "'" + textBox1.Text + "'" + " AND " + comboBoxHeartData.Text + " <= " + "'" + textBox2.Text + "'";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Graphs gp = new Graphs();
+            gp.Show();
         }
     }
 }
