@@ -1,4 +1,5 @@
-﻿using HeartDiseaseInvestigation.UI;
+﻿using HeartDiseaseInvestigation.Model;
+using HeartDiseaseInvestigation.UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,49 +13,29 @@ using System.Windows.Forms;
 
 namespace HeartDiseaseInvestigation
 {
-    
+
     public partial class Form1 : Form
     {
         public DataTable dt = new DataTable();
+        DataManager dm = new DataManager();
+
         public Form1()
         {
             InitializeComponent();
             loadDt();
         }
 
-        
 
         //this method load the csv and load this data into a dataTable
         private void loadDt()
         {
-            dt.Clear();
-            string dir = "../../Data/heart.csv";
-            if (File.Exists(dir))
-            {
-
-                // Read a text file line by line.  
-                string[] lines = File.ReadAllLines(dir);
-                string[] columns = lines[0].Split(',');
-
-                for (int i = 0; i < columns.Length; i++)
-                {
-                    dt.Columns.Add(columns[i]);
-                    comboBoxHeartData.Items.Add(columns[i]);
-                }
-
-                for (int i = 1; i < lines.Length; i++)
-                {
-                    //split the line by ","
-                    string[] aux = lines[i].Split(',');
-                    dt.Rows.Add(aux);
-                }
-            }
+            dt = dm.loadCSV(comboBoxHeartData);
             heartDataTable.DataSource = dt;
         }
 
         private void filter_Click(object sender, EventArgs e)
         {
-            dt.DefaultView.RowFilter = comboBoxHeartData.Text + " >= " + "'" + textBox1.Text + "'" + " AND " + comboBoxHeartData.Text + " <= " + "'" + textBox2.Text + "'";
+            dm.filter(dt, comboBoxHeartData, textBox1, textBox2);
         }
 
         private void button1_Click(object sender, EventArgs e)
