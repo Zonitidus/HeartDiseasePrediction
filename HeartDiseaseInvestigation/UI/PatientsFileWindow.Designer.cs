@@ -1,6 +1,6 @@
 ﻿namespace HeartDiseaseInvestigation
 {
-    partial class Form1
+    partial class PatientsFileWindow
     {
         /// <summary>
         /// Required designer variable.
@@ -35,7 +35,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxHeartData = new System.Windows.Forms.ComboBox();
             this.filter = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.showGraphsBttn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.heartDataTable)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,22 +99,22 @@
             this.filter.UseVisualStyleBackColor = true;
             this.filter.Click += new System.EventHandler(this.filter_Click);
             // 
-            // button1
+            // showGraphsBttn
             // 
-            this.button1.Location = new System.Drawing.Point(12, 101);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 34);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Show Graphs";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.showGraphsBttn.Location = new System.Drawing.Point(12, 101);
+            this.showGraphsBttn.Name = "showGraphsBttn";
+            this.showGraphsBttn.Size = new System.Drawing.Size(130, 34);
+            this.showGraphsBttn.TabIndex = 7;
+            this.showGraphsBttn.Text = "Show Graphs";
+            this.showGraphsBttn.UseVisualStyleBackColor = true;
+            this.showGraphsBttn.Click += new System.EventHandler(this.showGraphsBttn_Click);
             // 
-            // Form1
+            // PatientsFileWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1132, 694);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.showGraphsBttn);
             this.Controls.Add(this.filter);
             this.Controls.Add(this.comboBoxHeartData);
             this.Controls.Add(this.label2);
@@ -122,8 +122,8 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.heartDataTable);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "PatientsFileWindow";
+            this.Text = "Heart Disease Classifier";
             ((System.ComponentModel.ISupportInitialize)(this.heartDataTable)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -139,7 +139,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBoxHeartData;
         private System.Windows.Forms.Button filter;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button showGraphsBttn;
     }
 }
 

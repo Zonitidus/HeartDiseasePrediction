@@ -14,31 +14,31 @@ using System.Windows.Forms;
 namespace HeartDiseaseInvestigation
 {
 
-    public partial class Form1 : Form
+    public partial class PatientsFileWindow : Form
     {
         public DataTable dt = new DataTable();
         DataManager dm = new DataManager();
 
-        public Form1()
+        public PatientsFileWindow()
         {
             InitializeComponent();
-            loadDt();
+            LoadDt();
         }
 
 
         //this method load the csv and load this data into a dataTable
-        private void loadDt()
+        private void LoadDt()
         {
-            dt = dm.loadCSV(comboBoxHeartData);
+            dt = dm.LoadCSV(comboBoxHeartData);
             heartDataTable.DataSource = dt;
         }
 
         private void filter_Click(object sender, EventArgs e)
         {
-            dm.filter(dt, comboBoxHeartData, textBox1, textBox2);
+            dm.Filter(dt, comboBoxHeartData, textBox1, textBox2);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void showGraphsBttn_Click(object sender, EventArgs e)
         {
             Graphs gp = new Graphs();
             gp.Show();

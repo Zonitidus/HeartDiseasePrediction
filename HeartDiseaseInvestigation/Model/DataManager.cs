@@ -19,13 +19,13 @@ namespace HeartDiseaseInvestigation.Model
         }
 
         //This method filters the data
-        public void filter(DataTable dt, ComboBox cb, TextBox tb1, TextBox tb2)
+        public void Filter(DataTable dt, ComboBox cb, TextBox tb1, TextBox tb2)
         {
             dt.DefaultView.RowFilter = cb.Text + " >= " + "'" + tb1.Text + "'" + " AND " + cb.Text + " <= " + "'" + tb2.Text + "'";
         }
 
         //This method loads the CSV file into de data table
-        public DataTable loadCSV(ComboBox cb)
+        public DataTable LoadCSV(ComboBox cb)
         {
             DataTable dt = new DataTable();
             dt.Clear();

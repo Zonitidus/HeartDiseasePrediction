@@ -48,11 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\DataManager.cs" />
-    <Compile Include="UI\MainGraphicInteface.cs">
+    <Compile Include="Model\Patient.cs" />
+    <Compile Include="UI\PatientsFileWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\MainGraphicInteface.Designer.cs">
-      <DependentUpon>MainGraphicInteface.cs</DependentUpon>
+    <Compile Include="UI\PatientsFileWindow.Designer.cs">
+      <DependentUpon>PatientsFileWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Graphs.cs">
       <SubType>Form</SubType>
@@ -71,8 +72,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UI\MainGraphicInteface.resx">
-      <DependentUpon>MainGraphicInteface.cs</DependentUpon>
+    <EmbeddedResource Include="UI\PatientsFileWindow.resx">
+      <DependentUpon>PatientsFileWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Graphs.resx">
       <DependentUpon>Graphs.cs</DependentUpon>
