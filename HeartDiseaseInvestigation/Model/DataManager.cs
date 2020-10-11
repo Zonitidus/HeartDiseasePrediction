@@ -11,11 +11,14 @@ namespace HeartDiseaseInvestigation.Model
 {
     class DataManager
     {
+        private List<Patient> patientsDataset;
+        private Dictionary<String, Patient> classifiedPatients;
 
         //Class constructor
         public DataManager()
         {
-
+            this.patientsDataset = new List<Patient>();
+            this.classifiedPatients = new Dictionary<string, Patient>();
         }
 
         //This method filters the data
@@ -49,10 +52,32 @@ namespace HeartDiseaseInvestigation.Model
                 {
                     //split the line by ","
                     string[] aux = lines[i].Split(',');
+                    LoadPatient(aux);
                     dt.Rows.Add(aux);
                 }
             }
+
             return dt;
         }
+
+        private void LoadPatient(String[] attributes)
+        {
+            int[] cAtt = new int[attributes.Length];
+
+            for (int i = 0; i < attributes.Length; i++)
+            {
+                if (i != 9)
+                {
+                    cAtt[i] = Convert.ToInt32(attributes[i]);
+                }
+            }
+
+
+            Patient p = new Patient(cAtt[0], cAtt[1], cAtt[2], cAtt[3], cAtt[4], cAtt[5], cAtt[6], cAtt[7], 
+                cAtt[8], Convert.ToDouble(attributes[9]), cAtt[10], cAtt[11], cAtt[12], cAtt[13]);
+
+            patientsDataset.Add(p);
+        }
+
     }
 }
