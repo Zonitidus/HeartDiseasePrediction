@@ -47,6 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DecisionTreeClassifier\DecisionTree.cs" />
+    <Compile Include="DecisionTreeClassifier\Node.cs" />
+    <Compile Include="DecisionTreeClassifier\Question.cs" />
     <Compile Include="Model\DataManager.cs" />
     <Compile Include="Model\Patient.cs" />
     <Compile Include="UI\PatientsFileWindow.cs">
