@@ -11,13 +11,13 @@ namespace HeartDiseaseInvestigation.Model
 {
     class DataManager
     {
-        private List<Patient> patientsDataset;
+        private Dictionary<String, Patient> dataSetPatients;
         private Dictionary<String, Patient> classifiedPatients;
 
         //Class constructor
         public DataManager()
         {
-            this.patientsDataset = new List<Patient>();
+            this.dataSetPatients = new Dictionary<String, Patient>();
             this.classifiedPatients = new Dictionary<string, Patient>();
         }
 
@@ -52,7 +52,7 @@ namespace HeartDiseaseInvestigation.Model
                 {
                     //split the line by ","
                     string[] aux = lines[i].Split(',');
-                    AddPatient(aux);
+                    AddPatient(aux, i);
                     dt.Rows.Add(aux);
                 }
             }
@@ -60,7 +60,7 @@ namespace HeartDiseaseInvestigation.Model
             return dt;
         }
 
-        private void AddPatient(String[] attributes)
+        private void AddPatient(String[] attributes, int id)
         {
             int[] cAtt = new int[attributes.Length];
 
@@ -73,10 +73,10 @@ namespace HeartDiseaseInvestigation.Model
             }
 
 
-            Patient p = new Patient(cAtt[0], cAtt[1], cAtt[2], cAtt[3], cAtt[4], cAtt[5], cAtt[6], cAtt[7], 
+            Patient p = new Patient(id+"",cAtt[0], cAtt[1], cAtt[2], cAtt[3], cAtt[4], cAtt[5], cAtt[6], cAtt[7], 
                 cAtt[8], Convert.ToDouble(attributes[9]), cAtt[10], cAtt[11], cAtt[12], cAtt[13]);
 
-            patientsDataset.Add(p);
+            dataSetPatients.Add(id+"",p);
         }
 
         public void AddPatient(string id, int age, int sex, int cp, int trestbps, int chol, int fbs, int restecg, int thalach, int exang, double oldpeak, int slope, int ca, int thal, int target)
