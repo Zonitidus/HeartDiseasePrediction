@@ -52,7 +52,7 @@ namespace HeartDiseaseInvestigation.Model
                 {
                     //split the line by ","
                     string[] aux = lines[i].Split(',');
-                    LoadPatient(aux);
+                    AddPatient(aux);
                     dt.Rows.Add(aux);
                 }
             }
@@ -60,7 +60,7 @@ namespace HeartDiseaseInvestigation.Model
             return dt;
         }
 
-        private void LoadPatient(String[] attributes)
+        private void AddPatient(String[] attributes)
         {
             int[] cAtt = new int[attributes.Length];
 
@@ -77,6 +77,13 @@ namespace HeartDiseaseInvestigation.Model
                 cAtt[8], Convert.ToDouble(attributes[9]), cAtt[10], cAtt[11], cAtt[12], cAtt[13]);
 
             patientsDataset.Add(p);
+        }
+
+        public void AddPatient(string id, int age, int sex, int cp, int trestbps, int chol, int fbs, int restecg, int thalach, int exang, double oldpeak, int slope, int ca, int thal, int target)
+        {
+            Patient p = new Patient(id, age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal, target);
+
+            this.classifiedPatients.Add(id, p);
         }
 
     }
