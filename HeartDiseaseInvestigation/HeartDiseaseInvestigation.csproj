@@ -58,6 +58,12 @@
     <Compile Include="UI\DataFilterControl.Designer.cs">
       <DependentUpon>DataFilterControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\GraphsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\GraphsControl.Designer.cs">
+      <DependentUpon>GraphsControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\PatientsFileWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,9 @@
     </Compile>
     <EmbeddedResource Include="UI\DataFilterControl.resx">
       <DependentUpon>DataFilterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\GraphsControl.resx">
+      <DependentUpon>GraphsControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\PatientsFileWindow.resx">
       <DependentUpon>PatientsFileWindow.cs</DependentUpon>
