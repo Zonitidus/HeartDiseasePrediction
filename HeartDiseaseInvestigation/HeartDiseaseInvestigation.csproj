@@ -49,6 +49,12 @@
   <ItemGroup>
     <Compile Include="Model\DataManager.cs" />
     <Compile Include="Model\Patient.cs" />
+    <Compile Include="UI\DataFilterControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\DataFilterControl.Designer.cs">
+      <DependentUpon>DataFilterControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\PatientsFileWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\DataFilterControl.resx">
+      <DependentUpon>DataFilterControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\PatientsFileWindow.resx">
       <DependentUpon>PatientsFileWindow.cs</DependentUpon>
     </EmbeddedResource>

@@ -14,6 +14,8 @@ namespace HeartDiseaseInvestigation.Model
         private Dictionary<String, Patient> dataSetPatients;
         private Dictionary<String, Patient> classifiedPatients;
 
+        List<string> listFilters = new List<string>();
+
         //Class constructor
         public DataManager()
         {
@@ -22,9 +24,41 @@ namespace HeartDiseaseInvestigation.Model
         }
 
         //This method filters the data
-        public void Filter(DataTable dt, ComboBox cb, TextBox tb1, TextBox tb2)
+        public void Filter(DataTable dt)
         {
-            dt.DefaultView.RowFilter = cb.Text + " >= " + "'" + tb1.Text + "'" + " AND " + cb.Text + " <= " + "'" + tb2.Text + "'";
+            //dt.DefaultView.RowFilter = 
+            string aux = "";
+            for(int i = 0; i < listFilters.Count()-1; i++)
+            {
+                aux = aux + listFilters[i] + " AND ";
+            }
+            aux = aux + listFilters[listFilters.Count-1];
+            dt.DefaultView.RowFilter = aux;
+        }
+
+        public void addFilter(Label l, TextBox tb1, TextBox tb2, ComboBox cb)
+        {
+            
+            if (tb2.Text.Equals(""))
+            {
+                listFilters.Add(cb.Text + " = " + "'" + tb1.Text + "'");
+                l.Text = l.Text + "\n" + cb.Text + ": " + tb1.Text;
+            }
+            else
+            {
+                listFilters.Add(cb.Text + " >= " + "'" + tb1.Text + "'" + " AND " + cb.Text + " <= " + "'" + tb2.Text + "'");
+                l.Text = l.Text + "\n" + cb.Text + ": " + tb1.Text + "-" + tb2.Text;
+            }
+            
+            tb1.Text = "";
+            tb2.Text = "";
+        }
+
+        public void resetFilters(Label l, DataTable dt)
+        {
+            l.Text = "Filters:";
+            listFilters.Clear();
+            dt.DefaultView.RowFilter = "sex <> '-1'";
         }
 
         //This method loads the CSV file into de data table
