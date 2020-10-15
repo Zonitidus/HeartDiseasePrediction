@@ -45,6 +45,7 @@ namespace HeartDiseaseInvestigation.Model
 
         public string[] getAttributes()
         {
+            throw new NotImplementedException();
         }
     }
 }
