@@ -12,20 +12,22 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
     {
         private Node root { get; set; }
         private DataTable dataset { get; set; }
-        private Dictionary<String, T> dataDic { get; set; }
+        private Dictionary<String, T> datasetDictionary { get; set; }
+        private Dictionary<String, Int32> labelDistribution { get; set; }
 
-        public DecisionTree()
+        public DecisionTree(Dictionary<String, T> dataset)
         {
-
+            this.datasetDictionary = dataset;
+            CountLabelDistribution();
         }
 
-        private Dictionary<String, Int32> CountLabelDistribution()
+        private void CountLabelDistribution()
         {
             Dictionary<String, Int32> distribution = new Dictionary<String, Int32>();
 
-            foreach (String row in dataDic.Keys)
+            foreach (String row in datasetDictionary.Keys)
             {
-                String[] attributes = dataDic[row].getAttributes();
+                String[] attributes = datasetDictionary[row].getAttributes();
 
                 String label = attributes[attributes.Length - 1];
 
@@ -40,7 +42,7 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
 
             }
 
-            return distribution;
+            this.labelDistribution = distribution;
         }
     }
 }
