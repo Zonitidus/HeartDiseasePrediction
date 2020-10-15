@@ -11,8 +11,8 @@ namespace HeartDiseaseInvestigation.Model
 {
     class DataManager
     {
-        private Dictionary<String, Patient> dataSetPatients;
-        private Dictionary<String, Patient> classifiedPatients;
+        private Dictionary<String, Patient> dataSetPatients { get; set; }
+        private Dictionary<String, Patient> classifiedPatients { get; set; }
 
         List<string> listFilters = new List<string>();
 
