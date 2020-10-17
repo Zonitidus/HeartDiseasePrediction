@@ -29,6 +29,7 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
             {
                 String[] attributes = datasetDictionary[row].getAttributes();
 
+                //We supose that the last attribute it's our label.
                 String label = attributes[attributes.Length - 1];
 
                 if (distribution.Keys.Contains(label))
@@ -44,5 +45,6 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
 
             this.labelDistribution = distribution;
         }
+
     }
 }
