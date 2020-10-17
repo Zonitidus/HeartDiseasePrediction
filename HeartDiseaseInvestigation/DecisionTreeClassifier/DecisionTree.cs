@@ -46,5 +46,40 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
             this.labelDistribution = distribution;
         }
 
+        public List<T>[] Partition(Query<T> query)
+        {
+            List<T>[] partition = {new List<T>(), new List<T>()};
+
+            foreach (String key in datasetDictionary.Keys)
+            {
+                T row = this.datasetDictionary[key];
+
+                if (query.Compare(row))
+                {
+                    partition[0].Add(row);
+                }
+                else
+                {
+                    partition[1].Add(row);
+                }
+            }
+
+
+            return partition;
+        }
+
+        public double Gini()
+        {
+            double impurity = 1;
+
+            foreach(String label in this.labelDistribution.Keys)
+            {
+                double prob = this.labelDistribution[label] / Convert.ToDouble(this.datasetDictionary.Keys.Count);
+                impurity -= Math.Pow(prob, 2) ;
+            }
+
+            return impurity;
+        }
+
     }
 }
