@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="DecisionTreeClassifier\DecisionTree.cs" />
     <Compile Include="DecisionTreeClassifier\Node.cs" />
+    <Compile Include="DecisionTreeClassifier\OptimalSolution.cs" />
     <Compile Include="DecisionTreeClassifier\Query.cs" />
     <Compile Include="Model\DataManager.cs" />
     <Compile Include="Model\DatasetRow.cs" />

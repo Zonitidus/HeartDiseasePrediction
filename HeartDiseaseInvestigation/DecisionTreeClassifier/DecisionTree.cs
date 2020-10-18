@@ -152,7 +152,16 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
             return new Node<T>(solution.GetQuery(), trueBranch, falseBranch);
         }
 
-     
 
+        public Dictionary<String, Int32> Classify(T row, Node<T> node) {
+
+            if (node.GetPredictions() != null)
+                return node.GetPredictions();
+
+            if (node.GetQuery().Compare(row))
+                return Classify(row, node.GetTrueNode());
+            else
+                return Classify(row, node.GetFalseNode());
+        }
     }
 }
