@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -45,14 +46,12 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
             return distribution;
         }
 
-        public List<T>[] Partition(Query<T> query)
+        public List<T>[] Partition(List<T> rows, Query<T> query)
         {
             List<T>[] partition = {new List<T>(), new List<T>()};
 
-            foreach (String key in datasetDictionary.Keys)
+            foreach (T row in rows)
             {
-                T row = this.datasetDictionary[key];
-
                 if (query.Compare(row))
                 {
                     partition[0].Add(row);
@@ -62,7 +61,6 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
                     partition[1].Add(row);
                 }
             }
-
 
             return partition;
         }
@@ -90,11 +88,58 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
             return impurity - proportion * this.Gini(left) - (1 - proportion) * this.Gini(right);
         }
 
-        public FindBestPartition(List<T> rows)
+        public OptimalSolution<T> FindBestPartition(List<T> rows)
         {
+            OptimalSolution<T> solution = new OptimalSolution<T>();
+
             double bestGain = 0;
             Query<T> bestQuery = null;
+            double currentImpurity = this.Gini(rows);
 
+            int attributesN = rows.ElementAt(0).getAttributes().Length;
+
+            for(int i = 0; i < attributesN; i++)
+            {
+                List<String> attributesValue = new List<string>();
+
+                foreach (T row in rows)
+                {
+                    String value = row.getAttributes()[i];
+
+                    foreach(String val in attributesValue)
+                    {
+                        Query<T> query = new Query<T>(0, val);
+
+                        List<T>[] partition = this.Partition(rows, query);
+
+                        if (partition[0].Count > 0 && partition[1].Count > 0)
+                        {
+
+                            double gain = InformationGain(partition[0], partition[1], currentImpurity);
+
+                            if(gain >= bestGain)
+                            {
+                                bestGain = gain;
+                                bestQuery = query;
+
+                                solution.SetGain(gain);
+                                solution.SetQuery(query);
+                            }
+
+                        }
+                    }
+
+
+                }
+            }
+
+            return solution;
         }
+
+
+
+
+
+
     }
 }
