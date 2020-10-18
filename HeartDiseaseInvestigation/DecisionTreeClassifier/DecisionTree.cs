@@ -13,21 +13,19 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
         private Node root { get; set; }
         private DataTable dataset { get; set; }
         private Dictionary<String, T> datasetDictionary { get; set; }
-        private Dictionary<String, Int32> labelDistribution { get; set; }
 
         public DecisionTree(Dictionary<String, T> dataset)
         {
             this.datasetDictionary = dataset;
-            CountLabelDistribution();
         }
 
-        private void CountLabelDistribution()
+        private Dictionary<String, Int32> CountLabelDistribution(List<T> rows)
         {
             Dictionary<String, Int32> distribution = new Dictionary<String, Int32>();
 
-            foreach (String row in datasetDictionary.Keys)
+            foreach (T row in rows)
             {
-                String[] attributes = datasetDictionary[row].getAttributes();
+                String[] attributes = row.getAttributes();
 
                 //We supose that the last attribute it's our label.
                 String label = attributes[attributes.Length - 1];
@@ -43,7 +41,7 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
 
             }
 
-            this.labelDistribution = distribution;
+            return distribution;
         }
 
         public List<T>[] Partition(Query<T> query)
@@ -68,17 +66,27 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
             return partition;
         }
 
-        public double Gini()
+        public double Gini(List<T> rows)
         {
             double impurity = 1;
 
-            foreach(String label in this.labelDistribution.Keys)
+            Dictionary<String, Int32> distribution = this.CountLabelDistribution(rows);
+
+            foreach (String label in distribution.Keys)
             {
-                double prob = this.labelDistribution[label] / Convert.ToDouble(this.datasetDictionary.Keys.Count);
+                double prob = distribution[label] / rows.Count;
                 impurity -= Math.Pow(prob, 2) ;
             }
 
             return impurity;
+        }
+
+        public double InformationGain(List<T> left, List<T> right, double impurity)
+        {
+
+            double proportion = Convert.ToDouble(left.Count) / (Convert.ToDouble(left.Count)+ Convert.ToDouble(right.Count));
+
+            return impurity - proportion * this.Gini(left) - (1 - proportion) * this.Gini(right);
         }
 
     }
