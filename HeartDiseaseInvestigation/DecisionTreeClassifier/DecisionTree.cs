@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace HeartDiseaseInvestigation.DecisionTreeClassifier
 {
@@ -84,10 +85,16 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
         public double InformationGain(List<T> left, List<T> right, double impurity)
         {
 
-            double proportion = Convert.ToDouble(left.Count) / (Convert.ToDouble(left.Count)+ Convert.ToDouble(right.Count));
+            double proportion = Convert.ToDouble(left.Count) / (Convert.ToDouble(left.Count) + Convert.ToDouble(right.Count));
 
             return impurity - proportion * this.Gini(left) - (1 - proportion) * this.Gini(right);
         }
 
+        public FindBestPartition(List<T> rows)
+        {
+            double bestGain = 0;
+            Query<T> bestQuery = null;
+
+        }
     }
 }
