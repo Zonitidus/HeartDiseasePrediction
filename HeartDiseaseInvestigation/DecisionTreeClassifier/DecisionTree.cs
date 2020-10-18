@@ -12,7 +12,7 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
 {
     class DecisionTree<T> where T: DatasetRow
     {
-        private Node root { get; set; }
+        private Node<T> root { get; set; }
         private DataTable dataset { get; set; }
         private Dictionary<String, T> datasetDictionary { get; set; }
 
@@ -91,7 +91,6 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
         public OptimalSolution<T> FindBestPartition(List<T> rows)
         {
             OptimalSolution<T> solution = new OptimalSolution<T>();
-
             double bestGain = 0;
             Query<T> bestQuery = null;
             double currentImpurity = this.Gini(rows);
@@ -136,9 +135,24 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
             return solution;
         }
 
+        public Node<T> BuildTree(List<T> rows)
+        {
+            OptimalSolution<T> solution = this.FindBestPartition(rows);
 
+            if(solution.GetGain() == 0)
+            {
+                return new Node<T>(this.CountLabelDistribution(rows));
+            }
 
+            List<T>[] partition = this.Partition(rows, solution.GetQuery());
 
+            Node<T> trueBranch = BuildTree(partition[0]);
+            Node<T> falseBranch = BuildTree(partition[1]);
+
+            return new Node<T>(solution.GetQuery(), trueBranch, falseBranch);
+        }
+
+     
 
     }
 }

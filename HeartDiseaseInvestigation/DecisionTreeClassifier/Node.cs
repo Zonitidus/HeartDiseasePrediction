@@ -11,29 +11,40 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
     class Node<T> where T: DatasetRow
     {
         private Query<T> query;
-        private List<T>[] partition;
-        public Node(Query<T> query, List<T>[] partition)
+        private Node<T> trueNode;
+        private Node<T> falseNode;
+
+        private Dictionary<String, Int32> labelCount;
+
+        public Node(Query<T> query, Node<T> trueNode, Node<T> falseNode)
         {
             this.query = query;
-            this.partition = partition;
+            this.trueNode = trueNode;
+            this.falseNode = falseNode;
+        }
+
+        public Node(Dictionary<String, Int32> labelCount)
+        {
+            this.labelCount = labelCount;
         }
 
         public Query<T> GetQuery()
         {
             return this.query;
         }
-        public void SetQuery(Query<T> query)
+
+        public Node<T> GetTrueNode()
         {
-            this.query = query;
+            return this.trueNode;
+        }
+        public Node<T> GetFalseNode()
+        {
+            return this.falseNode;
         }
 
-        public List<T>[] GetPartition()
+        public Dictionary<String, Int32> GetPredictions()
         {
-            return this.partition;
-        }
-        public void SetPartition(List<T>[] partition)
-        {
-            this.partition = partition;
+            return this.GetPredictions();
         }
     }
 }
