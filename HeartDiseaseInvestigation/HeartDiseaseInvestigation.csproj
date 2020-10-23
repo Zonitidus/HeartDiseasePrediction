@@ -51,6 +51,7 @@
     <Compile Include="DecisionTreeClassifier\Node.cs" />
     <Compile Include="DecisionTreeClassifier\Question.cs" />
     <Compile Include="Model\DataManager.cs" />
+    <Compile Include="Model\DatasetRow.cs" />
     <Compile Include="Model\Patient.cs" />
     <Compile Include="UI\DataFilterControl.cs">
       <SubType>UserControl</SubType>

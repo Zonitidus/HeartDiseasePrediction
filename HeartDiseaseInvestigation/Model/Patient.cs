@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HeartDiseaseInvestigation.Model
 {
-    class Patient
+    class Patient : DatasetRow
     {
         private String id { get; set; }
         private int age { get; set; }
@@ -41,6 +41,13 @@ namespace HeartDiseaseInvestigation.Model
             this.ca = ca;
             this.thal = thal;
             this.target = target;
+        }
+
+        public string[] getAttributes()
+        {
+            String[] attributes = {id, ""+age, "" + sex, "" + cp, "" + trestbps, "" + chol, "" + fbs, "" + restecg, "" + thalach, "" + exang, "" + oldpeak, "" + slope, "" + ca, "" + thal, "" + target };
+
+            return attributes;
         }
     }
 }

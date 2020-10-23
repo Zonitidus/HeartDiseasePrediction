@@ -11,8 +11,8 @@ namespace HeartDiseaseInvestigation.Model
 {
     class DataManager
     {
-        private Dictionary<String, Patient> dataSetPatients;
-        private Dictionary<String, Patient> classifiedPatients;
+        private Dictionary<String, Patient> dataSetPatients { get; set; }
+        private Dictionary<String, Patient> classifiedPatients { get; set; }
 
         List<string> listFilters = new List<string>();
 
@@ -118,6 +118,135 @@ namespace HeartDiseaseInvestigation.Model
             Patient p = new Patient(id, age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal, target);
 
             this.classifiedPatients.Add(id, p);
+        }
+
+        public Dictionary<string, int> CreateDataToCharts(DataTable dt, String nameCol)
+        {
+            Dictionary<string, int> dictNumberTypeAccidents = new Dictionary<string, int>();
+            DataRow[] foundRows = dt.Select();
+
+
+            foreach (DataRow row in dt.Rows)
+            {
+                if (!row.Equals("") && !dictNumberTypeAccidents.ContainsKey(row[nameCol].ToString()))
+                {
+                    dictNumberTypeAccidents.Add(row[nameCol].ToString(), 1);
+                }
+                else if (dictNumberTypeAccidents.ContainsKey(row[nameCol].ToString()))
+                {
+                    dictNumberTypeAccidents[row[nameCol].ToString()] = dictNumberTypeAccidents[row[nameCol].ToString()] + 1;
+                }
+                else
+                {
+                    Console.WriteLine("Bad type accident format");
+                }
+            }
+
+            return dictNumberTypeAccidents;
+        }
+
+
+        public Dictionary<string, int> CreateDataToBarAgeChart(DataTable dt, String nameCol)
+        {
+            Dictionary<string, int> dict = new Dictionary<string, int>();
+            DataRow[] foundRows = dt.Select();
+
+
+            foreach (DataRow row in dt.Rows)
+            {
+                int number = Int32.Parse(row[nameCol].ToString());
+
+                String nameMethodInterval = nameCol.Equals("age") ? setIntervalAge(number) : setIntervalChol(number);
+
+                if (!row.Equals(""))
+                {
+                    if (!dict.ContainsKey(nameMethodInterval))
+                    {
+                        dict.Add(nameMethodInterval, 1);
+                    }
+                    else if (dict.ContainsKey(nameMethodInterval))
+                    {
+                        dict[nameMethodInterval] = dict[nameMethodInterval] + 1;
+                    }
+                }
+            }
+
+            Console.WriteLine(dict.Count());
+            return dict;
+        }
+
+        private String setIntervalAge(int number)
+        {
+
+            if (number >= 28 && number <= 35)
+            {
+                return "28-35";
+            }
+            else if (number >= 36 && number <= 43)
+            {
+                return "36-43";
+            }
+            else if (number >= 44 && number <= 51)
+            {
+                return "44-51";
+            }
+            else if (number >= 52 && number <= 59)
+            {
+                return "52-59";
+            }
+            else if (number >= 60 && number <= 67)
+            {
+                return "60-67";
+            }
+            else if (number >= 68 && number <= 75)
+            {
+                return "68-75";
+            }
+            else if (number >= 76 && number <= 83)
+            {
+                return "76-83";
+            }
+            else
+            {
+                return "";
+            }
+        }
+
+        private String setIntervalChol(float number)
+        {
+
+            if (number >= 126.00 && number <= 169.80)
+            {
+                return "126.00-169.80";
+            }
+            else if (number >= 169.81 && number <= 213.60)
+            {
+                return "169.81-213.60";
+            }
+            else if (number >= 213.61 && number <= 257.40)
+            {
+                return "213.61-257.40";
+            }
+            else if (number >= 257.41 && number <= 301.20)
+            {
+                return "257.41-301.20";
+            }
+            else if (number >= 301.20 && number <= 345.00)
+            {
+                return "301.20-345.00";
+            }
+            else if (number >= 345.01 && number <= 388.80)
+            {
+                return "345.01-388.80";
+            }
+            else if (number >= 388.81 && number <= 432.60)
+            {
+                return "388.81-432.60";
+            }
+            else
+            {
+                return "> 432.60";
+            }
         }
 
     }
