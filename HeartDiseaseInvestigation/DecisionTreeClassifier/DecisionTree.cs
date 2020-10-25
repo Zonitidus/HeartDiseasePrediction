@@ -14,10 +14,10 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
     {
         private Node<T> root { get; set; }
         private DataTable dataset { get; set; }
-        private Dictionary<String, T> datasetDictionary { get; set; }
+        private Dictionary<String, T> datasetDictionary { get; set;}
 
         public DecisionTree(Dictionary<String, T> dataset)
-        {
+        {    
             this.datasetDictionary = dataset;
         }
 
@@ -152,7 +152,7 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
         }
 
 
-        public Dictionary<String, Int32> Classify(T row, Node<T> node) {
+        public Dictionary<String, Int32> Classify(T row, Node<T> node) { //Al parecer le entrata un afila y despues hay que pasarle el arbol para que sepa como clasificar 
 
             if (node.GetPredictions() != null)
                 return node.GetPredictions();
@@ -162,6 +162,19 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
             else
                 return Classify(row, node.GetFalseNode());
         }
+
+
+        public Dictionary<String, Int32> ClassifyTest(T row, Node<T> node)
+        { //Al parecer le entrata un afila y despues hay que pasarle el arbol para que sepa como clasificar 
+            if (node.GetPredictions() != null)
+                return node.GetPredictions();
+
+            if (node.GetQuery().Compare(row))
+                return Classify(row, node.GetTrueNode());
+            else
+                return Classify(row, node.GetFalseNode());
+        }
+        
     }
 }
 //Cual es la diferencia entre la information gain y la impureza?
