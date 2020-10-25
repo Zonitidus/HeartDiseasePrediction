@@ -250,7 +250,7 @@ namespace HeartDiseaseInvestigation.Model
                 return "> 432.60";
             }
         }
-        
+        /*
         public static List<T> ConvertRowsToList<T>(DataTable dt)
         {
             List<T> data = new List<T>();
@@ -278,12 +278,23 @@ namespace HeartDiseaseInvestigation.Model
             }
             return obj;
         }
-        
-        public void tasGordo<T>(DataTable dt) {
-            List<Patient> tmpList1 = new List<Patient>(dataSetPatients.Keys.Count);
-            //List<Patient> tmpList = ConvertRowsToList<Patient>(dt);
+        */
+        private Patient CreatePatient(string id, int age, int sex, int cp, int trestbps, int chol, int fbs, int restecg, int thalach, int exang, double oldpeak, int slope, int ca, int thal, int target) {
+            Patient p = new Patient(id, age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal, target);
+            return p;
+        }
+        public String tasGordo<T>(string id, int age, int sex, int cp, int trestbps, int chol, int fbs, int restecg, int thalach, int exang, double oldpeak, int slope, int ca, int thal, int target) {
+            string value = "";
+            List<Patient> tmpList = new List<Patient>(dataSetPatients.Keys.Count);
             DecisionTree<Patient> treeds = new DecisionTree<Patient>(dataSetPatients);
-
+            
+            Node<Patient> treeToUse = treeds.BuildTree(tmpList);
+            Patient newPatient = CreatePatient(id, age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal, target);
+            Dictionary<String, Int32>  resul = treeds.Classify(newPatient, treeToUse);
+            foreach (KeyValuePair<String, Int32> key in resul) {
+                value += key.Key + " " + key.Value;
+            }
+            return value;
         }
 
     }
