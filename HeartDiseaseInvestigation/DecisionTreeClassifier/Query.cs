@@ -24,16 +24,15 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
         {
             bool response;
             String temp = example.getAttributes()[this.attribute];
+            //4 modulo 1 //4.3 modulo 1
 
-            try
-            {
+            if (Convert.ToDouble(this.value)%1 != 0) {
                 response = Convert.ToDouble(this.value) >= Convert.ToDouble(temp);
             }
-            catch (Exception e)
+            else
             {
                 response = this.value.Equals(temp);
             }
-
             return response;
         }
 

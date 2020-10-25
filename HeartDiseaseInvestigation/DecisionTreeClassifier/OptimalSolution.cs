@@ -19,7 +19,7 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
 
         }
 
-        public OptimalSolution(double gain, Query<T> query)
+        public OptimalSolution(double gain, Query<T> query) //Para que dos constructores?
         {
             this.gain = gain;
             this.query = query;

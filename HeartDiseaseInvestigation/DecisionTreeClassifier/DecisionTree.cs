@@ -34,7 +34,7 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
 
                 if (distribution.Keys.Contains(label))
                 {
-                    distribution[label] +=1;
+                    distribution[label] +=1; //Que hace aqui?
                 }
                 else
                 {
@@ -52,7 +52,7 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
 
             foreach (T row in rows)
             {
-                if (query.Compare(row))
+                if (query.Compare(row))//explicar que significa este if
                 {
                     partition[0].Add(row);
                 }
@@ -88,7 +88,7 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
             return impurity - proportion * this.Gini(left) - (1 - proportion) * this.Gini(right);
         }
 
-        public OptimalSolution<T> FindBestPartition(List<T> rows)
+        public OptimalSolution<T> FindBestPartition(List<T> rows) //Esto que hace? Es la mejor pregunta?Esto en si que es lo que retorna?El pedacito de arbol y abajo lo va construyendo?
         {
             OptimalSolution<T> solution = new OptimalSolution<T>();
             double bestGain = 0;
@@ -107,11 +107,11 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
 
                     foreach(String val in attributesValue)
                     {
-                        Query<T> query = new Query<T>(0, val);
+                        Query<T> query = new Query<T>(i, val); //para que sirve el val? Y porque 0? //TODOS LOS QUERY DEBERIAN SER I
 
-                        List<T>[] partition = this.Partition(rows, query);
+                        List<T>[] partition = this.Partition(rows, query);//
 
-                        if (partition[0].Count > 0 && partition[1].Count > 0)
+                        if (partition[0].Count > 0 && partition[1].Count > 0) //
                         {
 
                             double gain = InformationGain(partition[0], partition[1], currentImpurity);
@@ -143,7 +143,6 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
             {
                 return new Node<T>(this.CountLabelDistribution(rows));
             }
-
             List<T>[] partition = this.Partition(rows, solution.GetQuery());
 
             Node<T> trueBranch = BuildTree(partition[0]);
@@ -165,3 +164,5 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
         }
     }
 }
+//Cual es la diferencia entre la information gain y la impureza?
+//Si le quiero insertar datos para que los clasifique meto una data table o crea otro arbol o que?
