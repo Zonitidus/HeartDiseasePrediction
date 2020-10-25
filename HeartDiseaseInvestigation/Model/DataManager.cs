@@ -11,7 +11,7 @@ using HeartDiseaseInvestigation.DecisionTreeClassifier;
 
 namespace HeartDiseaseInvestigation.Model
 {
-    class DataManager
+    public class DataManager
     {
         private Dictionary<String, Patient> dataSetPatients { get; set; }
         private Dictionary<String, Patient> classifiedPatients { get; set; }
@@ -283,7 +283,7 @@ namespace HeartDiseaseInvestigation.Model
             Patient p = new Patient(id, age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal, target);
             return p;
         }
-        public String tasGordo<T>(string id, int age, int sex, int cp, int trestbps, int chol, int fbs, int restecg, int thalach, int exang, double oldpeak, int slope, int ca, int thal, int target) {
+        public String tasGordo(string id, int age, int sex, int cp, int trestbps, int chol, int fbs, int restecg, int thalach, int exang, double oldpeak, int slope, int ca, int thal, int target) {
             string value = "";
             List<Patient> tmpList = new List<Patient>(dataSetPatients.Keys.Count);
             DecisionTree<Patient> treeds = new DecisionTree<Patient>(dataSetPatients);
