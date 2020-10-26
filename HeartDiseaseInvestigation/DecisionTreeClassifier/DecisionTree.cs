@@ -96,8 +96,10 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
             double currentImpurity = this.Gini(rows);
 
             int attributesN = rows.ElementAt(0).getAttributes().Length;
-
-            for(int i = 0; i < attributesN; i++)
+            //mi propuesta
+            //int attributesNOssim = rows.Count;
+            //int attributesN = 16;
+            for (int i = 0; i < attributesN; i++)
             {
                 List<String> attributesValue = new List<string>();
 

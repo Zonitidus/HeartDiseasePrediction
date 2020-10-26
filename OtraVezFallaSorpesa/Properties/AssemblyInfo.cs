@@ -2,18 +2,18 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("DecisionTreeTest")]
+[assembly: AssemblyTitle("OtraVezFallaSorpesa")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("DecisionTreeTest")]
+[assembly: AssemblyProduct("OtraVezFallaSorpesa")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
 [assembly: ComVisible(false)]
 
-[assembly: Guid("2e635f10-16aa-4b53-b894-9ccfc8ebcdfb")]
+[assembly: Guid("d2de2c6c-ff59-46cd-a06e-50f4c044aa52")]
 
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]

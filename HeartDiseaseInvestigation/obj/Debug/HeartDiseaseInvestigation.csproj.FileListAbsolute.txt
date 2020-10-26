@@ -1,28 +1,3 @@
-C:\Users\samue\Documents\VSprojects\HeartDiseaseInvestigation\HeartDiseaseInvestigation\bin\Debug\HeartDiseaseInvestigation.exe.config
-C:\Users\samue\Documents\VSprojects\HeartDiseaseInvestigation\HeartDiseaseInvestigation\bin\Debug\HeartDiseaseInvestigation.exe
-C:\Users\samue\Documents\VSprojects\HeartDiseaseInvestigation\HeartDiseaseInvestigation\bin\Debug\HeartDiseaseInvestigation.pdb
-C:\Users\samue\Documents\VSprojects\HeartDiseaseInvestigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.csprojAssemblyReference.cache
-C:\Users\samue\Documents\VSprojects\HeartDiseaseInvestigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.Properties.Resources.resources
-C:\Users\samue\Documents\VSprojects\HeartDiseaseInvestigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.UI.DataFilterControl.resources
-C:\Users\samue\Documents\VSprojects\HeartDiseaseInvestigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.PatientsFileWindow.resources
-C:\Users\samue\Documents\VSprojects\HeartDiseaseInvestigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.UI.Graphs.resources
-C:\Users\samue\Documents\VSprojects\HeartDiseaseInvestigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.csproj.GenerateResource.cache
-C:\Users\samue\Documents\VSprojects\HeartDiseaseInvestigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.csproj.CoreCompileInputs.cache
-C:\Users\samue\Documents\VSprojects\HeartDiseaseInvestigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.exe
-C:\Users\samue\Documents\VSprojects\HeartDiseaseInvestigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.pdb
-<<<<<<< HEAD
-C:\Users\zonif\OneDrive\Escritorio\Work\QuintoSemestre\Integrador\Proyecto\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.csprojAssemblyReference.cache
-C:\Users\zonif\OneDrive\Escritorio\Work\QuintoSemestre\Integrador\Proyecto\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.Properties.Resources.resources
-C:\Users\zonif\OneDrive\Escritorio\Work\QuintoSemestre\Integrador\Proyecto\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.UI.DataFilterControl.resources
-C:\Users\zonif\OneDrive\Escritorio\Work\QuintoSemestre\Integrador\Proyecto\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.PatientsFileWindow.resources
-C:\Users\zonif\OneDrive\Escritorio\Work\QuintoSemestre\Integrador\Proyecto\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.UI.Graphs.resources
-C:\Users\zonif\OneDrive\Escritorio\Work\QuintoSemestre\Integrador\Proyecto\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.csproj.GenerateResource.cache
-C:\Users\zonif\OneDrive\Escritorio\Work\QuintoSemestre\Integrador\Proyecto\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.csproj.CoreCompileInputs.cache
-C:\Users\zonif\OneDrive\Escritorio\Work\QuintoSemestre\Integrador\Proyecto\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.exe
-C:\Users\zonif\OneDrive\Escritorio\Work\QuintoSemestre\Integrador\Proyecto\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.pdb
-=======
-C:\Users\samue\Documents\VSprojects\HeartDiseaseInvestigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.UI.GraphsControl.resources
->>>>>>> 1cc5addd59428491b208c4e93d9b87c7838a812e
 C:\Users\juano\source\repos\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.csprojAssemblyReference.cache
 C:\Users\juano\source\repos\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.Properties.Resources.resources
 C:\Users\juano\source\repos\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.UI.DataFilterControl.resources
@@ -30,5 +5,8 @@ C:\Users\juano\source\repos\HeartDisease_Investigation\HeartDiseaseInvestigation
 C:\Users\juano\source\repos\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.UI.Graphs.resources
 C:\Users\juano\source\repos\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.csproj.GenerateResource.cache
 C:\Users\juano\source\repos\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.csproj.CoreCompileInputs.cache
+C:\Users\juano\source\repos\HeartDisease_Investigation\HeartDiseaseInvestigation\bin\Debug\HeartDiseaseInvestigation.exe.config
+C:\Users\juano\source\repos\HeartDisease_Investigation\HeartDiseaseInvestigation\bin\Debug\HeartDiseaseInvestigation.exe
+C:\Users\juano\source\repos\HeartDisease_Investigation\HeartDiseaseInvestigation\bin\Debug\HeartDiseaseInvestigation.pdb
 C:\Users\juano\source\repos\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.exe
 C:\Users\juano\source\repos\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.pdb

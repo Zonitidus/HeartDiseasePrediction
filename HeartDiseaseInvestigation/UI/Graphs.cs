@@ -14,7 +14,7 @@ namespace HeartDiseaseInvestigation.UI
     {
         public Graphs()
         {
-            InitializeComponent();
+            //InitializeComponent();
         }
 
     }

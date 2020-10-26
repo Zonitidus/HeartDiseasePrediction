@@ -23,11 +23,13 @@ namespace HeartDiseaseInvestigation.Model
         {
             this.dataSetPatients = new Dictionary<String, Patient>();
             this.classifiedPatients = new Dictionary<string, Patient>();
+            //
         }
 
         //This method filters the data
         public void Filter(DataTable dt)
         {
+            
             //dt.DefaultView.RowFilter = 
             string aux = "";
             for(int i = 0; i < listFilters.Count()-1; i++)
@@ -58,6 +60,7 @@ namespace HeartDiseaseInvestigation.Model
 
         public void resetFilters(Label l, DataTable dt)
         {
+            tasGordo("23", 41, 0, 1, 130, 204, 0, 0, 172, 0, 1.4, 2, 0, 2, 1);
             l.Text = "Filters:";
             listFilters.Clear();
             dt.DefaultView.RowFilter = "sex <> '-1'";
@@ -77,12 +80,14 @@ namespace HeartDiseaseInvestigation.Model
                 string[] columns = lines[0].Split(',');
 
                 //This for adds the columns on the data table and adds all the categories that can be filtered on the combo box
+               
+                
                 for (int i = 0; i < columns.Length; i++)
                 {
                     dt.Columns.Add(columns[i]);
                     cb.Items.Add(columns[i]);
                 }
-
+               
                 //This for adds the rows to the data table
                 for (int i = 1; i < lines.Length; i++)
                 {
@@ -95,6 +100,36 @@ namespace HeartDiseaseInvestigation.Model
 
             return dt;
         }
+        //////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////
+        //TEMPORAL METHOD 
+
+
+
+
+
+
+        //////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         private void AddPatient(String[] attributes, int id)
         {
@@ -286,6 +321,7 @@ namespace HeartDiseaseInvestigation.Model
         public String tasGordo(string id, int age, int sex, int cp, int trestbps, int chol, int fbs, int restecg, int thalach, int exang, double oldpeak, int slope, int ca, int thal, int target) {
             string value = "";
             List<Patient> tmpList = new List<Patient>(dataSetPatients.Keys.Count);
+            //Console.WriteLine("Aqui entro");
             DecisionTree<Patient> treeds = new DecisionTree<Patient>(dataSetPatients);
             
             Node<Patient> treeToUse = treeds.BuildTree(tmpList);

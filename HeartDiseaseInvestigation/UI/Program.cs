@@ -14,6 +14,8 @@ namespace HeartDiseaseInvestigation
         [STAThread]
         static void Main()
         {
+            Console.WriteLine("PUTA MIERDA");
+            Console.ReadLine();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new PatientsFileWindow());

@@ -2,6 +2,7 @@
 {
     partial class Graphs
     {
+        
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -53,5 +54,6 @@
         #endregion
 
         private GraphsControl graphsControl1;
+        
     }
 }
