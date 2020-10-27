@@ -44,7 +44,8 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
 
         public Dictionary<String, Int32> GetPredictions()
         {
-            return this.GetPredictions();
+            //return this.GetPredictions(); //Ojo se esta auto llamando
+            return labelCount;
         }
     }
 }
