@@ -14,6 +14,7 @@ namespace HeartDiseaseInvestigation.Model
         private Dictionary<String, Patient> dataSetPatients { get; set; }
         private Dictionary<String, Patient> classifiedPatients { get; set; }
 
+        //List of the filters to apply
         List<string> listFilters = new List<string>();
 
         //Class constructor
@@ -36,6 +37,7 @@ namespace HeartDiseaseInvestigation.Model
             dt.DefaultView.RowFilter = aux;
         }
 
+        //This method fills the combobox with each of the names of the columns
         public void fillComboBox(ComboBox cb)
         {
             string dir = "../../Data/heart.csv";
@@ -50,6 +52,10 @@ namespace HeartDiseaseInvestigation.Model
             }
         }
 
+        /*
+        This method adds a filter by taking the data from the combobox, textbox1 and textbox2 
+        and using the function that the datatable has (dataRowFilter)
+        */
         public void addFilter(Label l, TextBox tb1, TextBox tb2, ComboBox cb)
         {
             
@@ -68,6 +74,7 @@ namespace HeartDiseaseInvestigation.Model
             tb2.Text = "";
         }
 
+        //This method reset the filters and reset the dataTable to its original state
         public void resetFilters(Label l, DataTable dt)
         {
             l.Text = "Filters:";
@@ -186,7 +193,6 @@ namespace HeartDiseaseInvestigation.Model
                 }
             }
 
-            Console.WriteLine(dict.Count());
             return dict;
         }
 
