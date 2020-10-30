@@ -32,3 +32,7 @@ C:\Users\samue\Documents\VSprojects\HeartDisease_Investigation\HeartDiseaseInves
 C:\Users\samue\Documents\VSprojects\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.csproj.CoreCompileInputs.cache
 C:\Users\samue\Documents\VSprojects\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.exe
 C:\Users\samue\Documents\VSprojects\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.pdb
+C:\Users\samue\Documents\VSprojects\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.UI.GraphsControl.resources
+C:\Users\samue\Documents\VSprojects\HeartDisease_Investigation\HeartDiseaseInvestigation\bin\Debug\HeartDiseaseInvestigation.exe.config
+C:\Users\samue\Documents\VSprojects\HeartDisease_Investigation\HeartDiseaseInvestigation\bin\Debug\HeartDiseaseInvestigation.exe
+C:\Users\samue\Documents\VSprojects\HeartDisease_Investigation\HeartDiseaseInvestigation\bin\Debug\HeartDiseaseInvestigation.pdb

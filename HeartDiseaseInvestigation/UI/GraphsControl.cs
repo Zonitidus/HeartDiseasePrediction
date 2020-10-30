@@ -15,11 +15,10 @@ namespace HeartDiseaseInvestigation.UI
     {
         DataManager dm = new DataManager();
         public DataTable dt = new DataTable();
-        ComboBox comboBoxHeartData = new ComboBox();
         public GraphsControl()
         {
             InitializeComponent();
-            dt = dm.LoadCSV(comboBoxHeartData);
+            dt = dm.LoadCSV();
             DrawPieChart(dm.CreateDataToCharts(dt, "sex"));
             DrawPieChartExang(dm.CreateDataToCharts(dt, "exang"));
             DrawBarsChartFBS(dm.CreateDataToCharts(dt, "fbs"));
