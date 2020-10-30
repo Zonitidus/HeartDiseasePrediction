@@ -56,6 +56,36 @@ namespace HeartDiseaseInvestigation.UI
             Graphs gp = new Graphs();
             gp.Show();
         }
+
+        public void tree()
+        {
+            DataManager dm = new DataManager();
+            dm.LoadCSV();
+
+            Dictionary<String, Patient> trainData = dm.GetDatasetPatients();
+
+            DecisionTree<Patient> destree = new DecisionTree<Patient>(trainData);
+
+            List<Patient> rows = new List<Patient>();
+
+            foreach (String k in trainData.Keys)
+            {
+                rows.Add(trainData[k]);
+            }
+
+            Node<Patient> t = destree.BuildTree(rows);
+
+            dm.LoadCSVTest();
+
+            Dictionary<String, Patient> test = dm.GetDatasetClassified();
+
+            foreach (String k in test.Keys)
+            {
+                Console.WriteLine("Actual -> " + test[k].getAttributes()[test[k].getAttributes().Length - 1] + "\n" +
+                    "Predicted -> " + destree.PrintLeaf(destree.Classify(test[k], t)));
+            }
+        }
+
     }
 
 }

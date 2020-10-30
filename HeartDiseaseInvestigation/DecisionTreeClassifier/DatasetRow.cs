@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
-namespace HeartDiseaseInvestigation.Model
+namespace HeartDiseaseInvestigation.DecisionTreeClassifier
 {
-    public interface DatasetRow
+    interface DatasetRow
     {
         String[] getAttributes();
     }
