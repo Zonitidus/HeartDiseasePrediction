@@ -24,7 +24,8 @@ namespace HeartDiseaseInvestigation.UI
 
         private void LoadDt()
         {
-            dt = dm.LoadCSV(comboBoxHeartData);
+            dt = dm.LoadCSV();
+            dm.fillComboBox(comboBoxHeartData);
             heartDataTable.DataSource = dt;
         }
 

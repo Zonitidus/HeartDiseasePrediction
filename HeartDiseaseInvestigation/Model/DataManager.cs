@@ -28,12 +28,26 @@ namespace HeartDiseaseInvestigation.Model
         {
             //dt.DefaultView.RowFilter = 
             string aux = "";
-            for(int i = 0; i < listFilters.Count()-1; i++)
+            for (int i = 0; i < listFilters.Count() - 1; i++)
             {
                 aux = aux + listFilters[i] + " AND ";
             }
-            aux = aux + listFilters[listFilters.Count-1];
+            aux = aux + listFilters[listFilters.Count - 1];
             dt.DefaultView.RowFilter = aux;
+        }
+
+        public void fillComboBox(ComboBox cb)
+        {
+            string dir = "../../Data/heart.csv";
+            if (File.Exists(dir))
+            {
+                string[] lines = File.ReadAllLines(dir);
+                string[] columns = lines[0].Split(',');
+                for (int i = 0; i < columns.Length; i++)
+                {
+                    cb.Items.Add(columns[i]);
+                }
+            }
         }
 
         public void addFilter(Label l, TextBox tb1, TextBox tb2, ComboBox cb)
@@ -62,7 +76,7 @@ namespace HeartDiseaseInvestigation.Model
         }
 
         //This method loads the CSV file into de data table
-        public DataTable LoadCSV(ComboBox cb)
+        public DataTable LoadCSV()
         {
             DataTable dt = new DataTable();
             dt.Clear();
@@ -75,10 +89,11 @@ namespace HeartDiseaseInvestigation.Model
                 string[] columns = lines[0].Split(',');
 
                 //This for adds the columns on the data table and adds all the categories that can be filtered on the combo box
+
+
                 for (int i = 0; i < columns.Length; i++)
                 {
                     dt.Columns.Add(columns[i]);
-                    cb.Items.Add(columns[i]);
                 }
 
                 //This for adds the rows to the data table
