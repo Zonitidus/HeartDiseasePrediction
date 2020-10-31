@@ -88,7 +88,7 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
 
             //Console.WriteLine("\t\t\tProportion -> "+proportion+ "\n\t\t\tCurrent Impurity -> " + impurity);
             //Console.WriteLine("\t\t\t\t"+ (impurity - proportion * this.Gini(left) - (1 - proportion) * this.Gini(right)));
-            return Math.Abs(impurity - proportion * this.Gini(left) - (1 - proportion) * this.Gini(right));
+            return impurity - proportion * this.Gini(left) - (1 - proportion) * this.Gini(right);
         }
 
         public OptimalSolution<T> FindBestPartition(List<T> rows)
@@ -100,7 +100,7 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
 
             Console.WriteLine("Rows: "+rows.Count+"\nGini: "+currentImpurity);
 
-            int attributesN = rows.ElementAt(0).getAttributes().Length;
+            int attributesN = rows.ElementAt(0).getAttributes().Length-1;
 
             for (int i = 0; i < attributesN; i++)
             {
@@ -143,7 +143,7 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
         {
             OptimalSolution<T> solution = this.FindBestPartition(rows);
 
-            Console.WriteLine("Solution - >"+solution.GetGain());
+            //Console.WriteLine("Solution - >"+solution.GetGain());
 
             if (solution.GetGain() == 0)
             {
@@ -152,7 +152,7 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
 
             List<T>[] partition = this.Partition(rows, solution.GetQuery());
 
-            Console.WriteLine("AAAAAAAHH - > "+partition[0].Count+"\nBEEEEHH - > "+partition[1].Count);
+            //Console.WriteLine("AAAAAAAHH - > "+partition[0].Count+"\nBEEEEHH - > "+partition[1].Count);
 
             Node<T> trueBranch = BuildTree(partition[0]);
             Node<T> falseBranch = BuildTree(partition[1]);
@@ -186,11 +186,16 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
 
             foreach (String key in counts.Keys)
             {
-                double tem = counts[key] / total * 100;
-                Console.WriteLine("EL TEEEEEEEEEEEMPPPPPPPPPP - >"+tem);
-                int temp = Convert.ToInt32(tem);
 
-                probs.Add(key, temp);
+                //Console.WriteLine("Counts -> "+counts[key]+"\ntotal - >"+total);
+
+                if(total != 0)
+                {
+                    double tem = counts[key] / total * 100;
+                    int temp = Convert.ToInt32(tem);
+
+                    probs.Add(key, temp);
+                }
             }
 
 
