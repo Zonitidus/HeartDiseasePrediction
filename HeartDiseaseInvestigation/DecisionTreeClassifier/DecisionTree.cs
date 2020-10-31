@@ -205,7 +205,7 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
 
             foreach (String k in probs.Keys)
             {
-                pre += k + " " + probs[k] + "%" + "\n";
+                pre += k + " " + probs[k] + "%" + "\n\t\t";
             }
 
             return pre;

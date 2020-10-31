@@ -54,6 +54,12 @@
     <Compile Include="DecisionTreeClassifier\Query.cs" />
     <Compile Include="Model\DataManager.cs" />
     <Compile Include="Model\Patient.cs" />
+    <Compile Include="UI\ClassificationResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ClassificationResult.Designer.cs">
+      <DependentUpon>ClassificationResult.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\DataFilterControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -89,6 +95,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\ClassificationResult.resx">
+      <DependentUpon>ClassificationResult.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\DataFilterControl.resx">
       <DependentUpon>DataFilterControl.cs</DependentUpon>
     </EmbeddedResource>

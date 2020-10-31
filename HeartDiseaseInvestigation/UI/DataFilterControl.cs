@@ -16,12 +16,12 @@ namespace HeartDiseaseInvestigation.UI
     {
         public DataTable dt = new DataTable();
         DataManager dm = new DataManager();
+        DataManager dmC = new DataManager();
 
         public DataFilterControl()
         {
             InitializeComponent();
             LoadDt();
-            tree();
         }
 
         private void LoadDt()
@@ -59,12 +59,12 @@ namespace HeartDiseaseInvestigation.UI
             gp.Show();
         }
 
-        public void tree()
+        private void trainBttn_Click(object sender, EventArgs e)
         {
-            DataManager dm = new DataManager();
-            dm.LoadCSV();
 
-            Dictionary<String, Patient> trainData = dm.GetPatients();
+            dmC.LoadCSV();
+
+            Dictionary<String, Patient> trainData = dmC.GetPatients();
 
             DecisionTree<Patient> destree = new DecisionTree<Patient>(trainData);
 
@@ -77,17 +77,25 @@ namespace HeartDiseaseInvestigation.UI
 
             Node<Patient> t = destree.BuildTree(rows);
 
-            dm.LoadCSVTest();
+            dmC.LoadCSVTest();
 
-            Dictionary<String, Patient> test = dm.GetClassifiedPatients();
+            Dictionary<String, Patient> test = dmC.GetClassifiedPatients();
 
+            List<String> classification = new List<string>();
             foreach (String k in test.Keys)
             {
+
+                classification.Add("Actual -> " + test[k].getAttributes()[test[k].getAttributes().Length - 1] + "\n" +
+                    "Predicted -> " + destree.PrintLeaf(destree.Classify(test[k], t)));
+
+
                 Console.WriteLine("Actual -> " + test[k].getAttributes()[test[k].getAttributes().Length - 1] + "\n" +
                     "Predicted -> " + destree.PrintLeaf(destree.Classify(test[k], t)));
             }
-        }
 
+            ClassificationResult c = new ClassificationResult(classification);
+            c.Show();
+        }
     }
 
 }

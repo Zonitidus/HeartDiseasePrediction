@@ -11,3 +11,4 @@ C:\Users\zonif\OneDrive\Escritorio\Work\QuintoSemestre\Integrador\Proyecto\OssaM
 C:\Users\zonif\OneDrive\Escritorio\Work\QuintoSemestre\Integrador\Proyecto\OssaMongolo\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.csproj.CoreCompileInputs.cache
 C:\Users\zonif\OneDrive\Escritorio\Work\QuintoSemestre\Integrador\Proyecto\OssaMongolo\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.exe
 C:\Users\zonif\OneDrive\Escritorio\Work\QuintoSemestre\Integrador\Proyecto\OssaMongolo\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.pdb
+C:\Users\zonif\OneDrive\Escritorio\Work\QuintoSemestre\Integrador\Proyecto\OssaMongolo\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.UI.ClassificationResult.resources
