@@ -48,5 +48,15 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
             }
             return false;
         }
+
+        public int GetAttribute()
+        {
+            return this.attribute;
+        }
+
+        public String GetValue()
+        {
+            return this.value;
+        }
     }
 }

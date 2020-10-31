@@ -198,6 +198,10 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
 
                     probs.Add(key, temp);
                 }
+                else
+                {
+                    probs.Add(key, 100);
+                }
             }
 
 

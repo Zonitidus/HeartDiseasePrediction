@@ -76,6 +76,7 @@ namespace HeartDiseaseInvestigation.UI
             }
 
             Node<Patient> t = destree.BuildTree(rows);
+            //printTree(t, "");
 
             dmC.LoadCSVTest();
 
@@ -95,6 +96,23 @@ namespace HeartDiseaseInvestigation.UI
 
             ClassificationResult c = new ClassificationResult(classification);
             c.Show();
+        }
+
+        private void printTree(Node<Patient> root, String tab)
+        {
+
+
+            if (root != null && root.GetQuery() != null)
+            {
+                Console.WriteLine(tab + root.GetQuery().GetAttribute());
+            }
+
+            
+            tab += "\t";
+            if (root.GetFalseNode() != null)
+                printTree(root.GetFalseNode(), tab);
+            if (root.GetTrueNode() != null)
+                printTree(root.GetTrueNode(), tab);
         }
     }
 

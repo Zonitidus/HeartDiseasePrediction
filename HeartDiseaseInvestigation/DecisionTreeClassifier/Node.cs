@@ -44,6 +44,5 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
         {
             return this.labelCount;
         }
-
     }
 }
