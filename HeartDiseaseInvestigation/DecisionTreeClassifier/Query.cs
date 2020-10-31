@@ -22,16 +22,31 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
             bool response;
             String temp = example.getAttributes()[this.attribute];
 
-            try
+
+            if (this.isNumeric(this.attribute))
             {
                 response = Convert.ToDouble(this.value) >= Convert.ToDouble(temp);
             }
-            catch (Exception e)
+            else
             {
                 response = this.value.Equals(temp);
             }
 
             return response;
+        }
+
+        private bool isNumeric(int at)
+        {
+            int[] numerics = {0, 3, 4, 7, 9};
+
+            foreach (int i in numerics)
+            {
+                if(i == at)
+                {
+                    return true; ;
+                }
+            }
+            return false;
         }
     }
 }

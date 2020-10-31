@@ -46,7 +46,7 @@ namespace HeartDiseaseInvestigation.Model
 
         public string[] getAttributes()
         {
-            String[] attributes = {id, ""+age, "" + sex, "" + cp, "" + trestbps, "" + chol, "" + fbs, "" + restecg, "" + thalach, "" + exang, "" + oldpeak, "" + slope, "" + ca, "" + thal, "" + target };
+            String[] attributes = {""+age, "" + sex, "" + cp, "" + trestbps, "" + chol, "" + fbs, "" + restecg, "" + thalach, "" + exang, "" + oldpeak, "" + slope, "" + ca, "" + thal, "" + target };
 
             return attributes;
         }

@@ -175,6 +175,8 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
         public String PrintLeaf(Dictionary<String, Int32> counts)
         {
 
+            Console.WriteLine("AAAAAHHH COunts -> "+counts.Count);
+
             double total = 0;
 
             foreach (String key in counts.Keys)
