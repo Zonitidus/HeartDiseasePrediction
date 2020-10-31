@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using HeartDiseaseInvestigation.Model;
+using HeartDiseaseInvestigation.DecisionTreeClassifier;
 
 namespace HeartDiseaseInvestigation.UI
 {
@@ -20,6 +21,7 @@ namespace HeartDiseaseInvestigation.UI
         {
             InitializeComponent();
             LoadDt();
+            tree();
         }
 
         private void LoadDt()
@@ -62,7 +64,7 @@ namespace HeartDiseaseInvestigation.UI
             DataManager dm = new DataManager();
             dm.LoadCSV();
 
-            Dictionary<String, Patient> trainData = dm.GetDatasetPatients();
+            Dictionary<String, Patient> trainData = dm.GetPatients();
 
             DecisionTree<Patient> destree = new DecisionTree<Patient>(trainData);
 
@@ -77,7 +79,7 @@ namespace HeartDiseaseInvestigation.UI
 
             dm.LoadCSVTest();
 
-            Dictionary<String, Patient> test = dm.GetDatasetClassified();
+            Dictionary<String, Patient> test = dm.GetClassifiedPatients();
 
             foreach (String k in test.Keys)
             {

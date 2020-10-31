@@ -24,6 +24,15 @@ namespace HeartDiseaseInvestigation.Model
             this.classifiedPatients = new Dictionary<string, Patient>();
         }
 
+        public Dictionary<String, Patient> GetPatients() {
+            return this.dataSetPatients;
+        }
+
+        public Dictionary<String, Patient> GetClassifiedPatients()
+        {
+            return this.classifiedPatients;
+        }
+
         //This method filters the data
         public void Filter(DataTable dt)
         {
@@ -87,7 +96,7 @@ namespace HeartDiseaseInvestigation.Model
         {
             DataTable dt = new DataTable();
             dt.Clear();
-            string dir = "../../Data/heart.csv";
+            string dir = "../../Data/heartS.csv";
             if (File.Exists(dir))
             {
 
@@ -114,6 +123,57 @@ namespace HeartDiseaseInvestigation.Model
             }
 
             return dt;
+        }
+
+        public DataTable LoadCSVTest()
+        {
+            DataTable dt = new DataTable();
+            dt.Clear();
+            string dir = "../../Data/test.csv";
+            if (File.Exists(dir))
+            {
+                Console.WriteLine("Biem");
+                // Read a text file line by line.  
+                string[] lines = File.ReadAllLines(dir);
+                string[] columns = lines[0].Split(',');
+
+                //This for adds the columns on the data table and adds all the categories that can be filtered on the combo box
+                for (int i = 0; i < columns.Length; i++)
+                {
+                    dt.Columns.Add(columns[i]);
+                }
+
+                //This for adds the rows to the data table
+                for (int i = 1; i < lines.Length; i++)
+                {
+                    //split the line by ","
+                    string[] aux = lines[i].Split(',');
+                    addTestData(aux, i);
+                    dt.Rows.Add(aux);
+                }
+            }
+            else
+            {
+                Console.WriteLine("AAAAAh");
+            }
+
+            return dt;
+        }
+
+        private void addTestData(String[] attributes, int id)
+        {
+            int[] cAtt = new int[attributes.Length];
+
+            for (int i = 0; i < attributes.Length; i++)
+            {
+                if (i != 9)
+                {
+                    cAtt[i] = Convert.ToInt32(attributes[i]);
+                }
+            }
+
+            AddPatient(id + "", cAtt[0], cAtt[1], cAtt[2], cAtt[3], cAtt[4], cAtt[5], cAtt[6], cAtt[7],
+                cAtt[8], Convert.ToDouble(attributes[9]), cAtt[10], cAtt[11], cAtt[12], cAtt[13]);
         }
 
         private void AddPatient(String[] attributes, int id)

@@ -102,6 +102,8 @@
       <DependentUpon>Graphs.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Data\heart.csv" />
+    <None Include="Data\heartS.csv" />
+    <None Include="Data\test.csv" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

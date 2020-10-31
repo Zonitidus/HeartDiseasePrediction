@@ -70,9 +70,11 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
 
             Dictionary<String, Int32> distribution = this.CountLabelDistribution(rows);
 
+            //Console.WriteLine("GINIIIIIIIIIIIIIIIII ------> \n\n\n ---> "+distribution.Count);
+
             foreach (String label in distribution.Keys)
             {
-                double prob = distribution[label] / rows.Count;
+                double prob = Convert.ToDouble(distribution[label]) / Convert.ToDouble(rows.Count);
                 impurity -= Math.Pow(prob, 2);
             }
 
@@ -84,7 +86,9 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
 
             double proportion = Convert.ToDouble(left.Count) / (Convert.ToDouble(left.Count) + Convert.ToDouble(right.Count));
 
-            return impurity - proportion * this.Gini(left) - (1 - proportion) * this.Gini(right);
+            //Console.WriteLine("\t\t\tProportion -> "+proportion+ "\n\t\t\tCurrent Impurity -> " + impurity);
+            //Console.WriteLine("\t\t\t\t"+ (impurity - proportion * this.Gini(left) - (1 - proportion) * this.Gini(right)));
+            return Math.Abs(impurity - proportion * this.Gini(left) - (1 - proportion) * this.Gini(right));
         }
 
         public OptimalSolution<T> FindBestPartition(List<T> rows)
@@ -94,6 +98,8 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
             Query<T> bestQuery = null;
             double currentImpurity = this.Gini(rows);
 
+            Console.WriteLine("Rows: "+rows.Count+"\nGini: "+currentImpurity);
+
             int attributesN = rows.ElementAt(0).getAttributes().Length;
 
             for (int i = 0; i < attributesN; i++)
@@ -102,19 +108,17 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
 
                 foreach (T row in rows)
                 {
-                    String value = row.getAttributes()[i];
+                    String val = row.getAttributes()[i];
 
-                    foreach (String val in attributesValue)
-                    {
-                        Query<T> query = new Query<T>(0, val);
+                    /*foreach (String val in attributesValue)
+                    {*/
+                        Query<T> query = new Query<T>(i, val);
 
                         List<T>[] partition = this.Partition(rows, query);
 
                         if (partition[0].Count > 0 && partition[1].Count > 0)
                         {
-
                             double gain = InformationGain(partition[0], partition[1], currentImpurity);
-
                             if (gain >= bestGain)
                             {
                                 bestGain = gain;
@@ -124,13 +128,14 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
                                 solution.SetQuery(query);
                             }
 
-                        }
+                        /*}*/
                     }
 
 
                 }
             }
 
+            //Console.WriteLine("Gain -> "+solution.GetGain()+"\nQuery -> "+solution.GetQuery());
             return solution;
         }
 
@@ -138,12 +143,16 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
         {
             OptimalSolution<T> solution = this.FindBestPartition(rows);
 
+            Console.WriteLine("Solution - >"+solution.GetGain());
+
             if (solution.GetGain() == 0)
             {
                 return new Node<T>(this.CountLabelDistribution(rows));
             }
 
             List<T>[] partition = this.Partition(rows, solution.GetQuery());
+
+            Console.WriteLine("AAAAAAAHH - > "+partition[0].Count+"\nBEEEEHH - > "+partition[1].Count);
 
             Node<T> trueBranch = BuildTree(partition[0]);
             Node<T> falseBranch = BuildTree(partition[1]);
@@ -154,7 +163,6 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
 
         public Dictionary<String, Int32> Classify(T row, Node<T> node)
         {
-
             if (node.GetPredictions() != null)
                 return node.GetPredictions();
 
@@ -179,6 +187,7 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
             foreach (String key in counts.Keys)
             {
                 double tem = counts[key] / total * 100;
+                Console.WriteLine("EL TEEEEEEEEEEEMPPPPPPPPPP - >"+tem);
                 int temp = Convert.ToInt32(tem);
 
                 probs.Add(key, temp);
