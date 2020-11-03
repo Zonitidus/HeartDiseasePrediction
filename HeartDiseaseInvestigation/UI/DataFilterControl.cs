@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using HeartDiseaseInvestigation.Model;
+using HeartDiseaseInvestigation.DecisionTreeClassifier;
 
 namespace HeartDiseaseInvestigation.UI
 {
@@ -15,6 +16,7 @@ namespace HeartDiseaseInvestigation.UI
     {
         public DataTable dt = new DataTable();
         DataManager dm = new DataManager();
+        DataManager dmC = new DataManager();
 
         public DataFilterControl()
         {
@@ -24,7 +26,8 @@ namespace HeartDiseaseInvestigation.UI
 
         private void LoadDt()
         {
-            dt = dm.LoadCSV(comboBoxHeartData);
+            dt = dm.LoadCSV();
+            dm.fillComboBox(comboBoxHeartData);
             heartDataTable.DataSource = dt;
         }
 
@@ -54,6 +57,62 @@ namespace HeartDiseaseInvestigation.UI
         {
             Graphs gp = new Graphs();
             gp.Show();
+        }
+
+        private void trainBttn_Click(object sender, EventArgs e)
+        {
+
+            dmC.LoadCSV();
+
+            Dictionary<String, Patient> trainData = dmC.GetPatients();
+
+            DecisionTree<Patient> destree = new DecisionTree<Patient>(trainData);
+
+            List<Patient> rows = new List<Patient>();
+
+            foreach (String k in trainData.Keys)
+            {
+                rows.Add(trainData[k]);
+            }
+
+            Node<Patient> t = destree.BuildTree(rows);
+            //printTree(t, "");
+
+            dmC.LoadCSVTest();
+
+            Dictionary<String, Patient> test = dmC.GetClassifiedPatients();
+
+            List<String> classification = new List<string>();
+            foreach (String k in test.Keys)
+            {
+
+                classification.Add("Actual -> " + test[k].getAttributes()[test[k].getAttributes().Length - 1] + "\n" +
+                    "Predicted -> " + destree.PrintLeaf(destree.Classify(test[k], t)));
+
+
+                Console.WriteLine("Actual -> " + test[k].getAttributes()[test[k].getAttributes().Length - 1] + "\n" +
+                    "Predicted -> " + destree.PrintLeaf(destree.Classify(test[k], t)));
+            }
+
+            ClassificationResult c = new ClassificationResult(classification);
+            c.Show();
+        }
+
+        private void printTree(Node<Patient> root, String tab)
+        {
+
+
+            if (root != null && root.GetQuery() != null)
+            {
+                Console.WriteLine(tab + root.GetQuery().GetAttribute());
+            }
+
+            
+            tab += "\t";
+            if (root.GetFalseNode() != null)
+                printTree(root.GetFalseNode(), tab);
+            if (root.GetTrueNode() != null)
+                printTree(root.GetTrueNode(), tab);
         }
     }
 

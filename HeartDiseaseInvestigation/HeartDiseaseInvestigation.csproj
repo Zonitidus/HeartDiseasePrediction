@@ -47,17 +47,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DecisionTreeClassifier\DatasetRow.cs" />
     <Compile Include="DecisionTreeClassifier\DecisionTree.cs" />
     <Compile Include="DecisionTreeClassifier\Node.cs" />
-    <Compile Include="DecisionTreeClassifier\Question.cs" />
+    <Compile Include="DecisionTreeClassifier\Optimal Solution.cs" />
+    <Compile Include="DecisionTreeClassifier\Query.cs" />
     <Compile Include="Model\DataManager.cs" />
-    <Compile Include="Model\DatasetRow.cs" />
     <Compile Include="Model\Patient.cs" />
+    <Compile Include="UI\ClassificationResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ClassificationResult.Designer.cs">
+      <DependentUpon>ClassificationResult.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\DataFilterControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UI\DataFilterControl.Designer.cs">
       <DependentUpon>DataFilterControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\GraphsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\GraphsControl.Designer.cs">
+      <DependentUpon>GraphsControl.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\PatientsFileWindow.cs">
       <SubType>Form</SubType>
@@ -82,8 +95,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\ClassificationResult.resx">
+      <DependentUpon>ClassificationResult.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\DataFilterControl.resx">
       <DependentUpon>DataFilterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\GraphsControl.resx">
+      <DependentUpon>GraphsControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\PatientsFileWindow.resx">
       <DependentUpon>PatientsFileWindow.cs</DependentUpon>
@@ -92,6 +111,8 @@
       <DependentUpon>Graphs.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Data\heart.csv" />
+    <None Include="Data\heartS.csv" />
+    <None Include="Data\test.csv" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
