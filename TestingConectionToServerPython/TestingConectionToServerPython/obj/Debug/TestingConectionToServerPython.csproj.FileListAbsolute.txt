@@ -1,0 +1,7 @@
+C:\Users\juano\source\repos\TestingConectionToServerPython\TestingConectionToServerPython\bin\Debug\TestingConectionToServerPython.exe.config
+C:\Users\juano\source\repos\TestingConectionToServerPython\TestingConectionToServerPython\bin\Debug\TestingConectionToServerPython.exe
+C:\Users\juano\source\repos\TestingConectionToServerPython\TestingConectionToServerPython\bin\Debug\TestingConectionToServerPython.pdb
+C:\Users\juano\source\repos\TestingConectionToServerPython\TestingConectionToServerPython\obj\Debug\TestingConectionToServerPython.csprojAssemblyReference.cache
+C:\Users\juano\source\repos\TestingConectionToServerPython\TestingConectionToServerPython\obj\Debug\TestingConectionToServerPython.csproj.CoreCompileInputs.cache
+C:\Users\juano\source\repos\TestingConectionToServerPython\TestingConectionToServerPython\obj\Debug\TestingConectionToServerPython.exe
+C:\Users\juano\source\repos\TestingConectionToServerPython\TestingConectionToServerPython\obj\Debug\TestingConectionToServerPython.pdb
