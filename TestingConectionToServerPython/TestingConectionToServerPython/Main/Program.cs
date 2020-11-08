@@ -17,7 +17,8 @@ namespace TestingConectionToServerPython
             string link2 = "https://pi-final-app.herokuapp.com/desitionTree";
 
             Conecction connect = new Conecction();
-            Console.WriteLine(connect.ConnectionTest2(link2));
+            
+            Console.WriteLine(connect.SendCSVtoServer(link1, "path del csv poner aqui"));
             Console.ReadKey();
 
             /*
