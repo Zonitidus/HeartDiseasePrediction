@@ -13,10 +13,18 @@ namespace TestingConectionToServerPython
         static void Main(string[] args)
         {
             //url = "";
-            string lind = "";
-            Conecction conect = new Conecction();
+            string link1 = "https://pi-final-app.herokuapp.com/";
+            string link2 = "https://pi-final-app.herokuapp.com/desitionTree";
+
+            Conecction connect = new Conecction();
+            Console.WriteLine(connect.ConnectionTest(link1));
+            Console.ReadKey();
+
+            /*
             Console.WriteLine(conect.GetReleases1(lind)) ;
             Console.ReadLine();
+            */
+
         }
     }
 

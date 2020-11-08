@@ -30,14 +30,18 @@ namespace TestingConectionToServerPython.Model
                 WebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(uri);
                 httpWebRequest.ContentType = "application/json";
                 httpWebRequest.Method = "POST";
+                
                 using (StreamWriter streamWriter = new StreamWriter(httpWebRequest.GetRequestStream())) 
                 {
                     //Esto es lo que envia al servidor (?) Si creo que si
+                   
                     dynamic employee = new Object();
                     employee.username = "theUserName";
                     employee.password = "thePassword";
                     streamWriter.Write(employee.ToString());
+                   
                 }
+                
                 HttpWebResponse httpWebResponse = (HttpWebResponse)httpWebRequest.GetResponse();
                 using (StreamReader streamReader = new StreamReader(httpWebResponse.GetResponseStream()))
                 {
@@ -48,7 +52,7 @@ namespace TestingConectionToServerPython.Model
             {
                 //exceptionMessage = $"An error occurred. {ex.Message}";
                 Console.WriteLine(ex.Message);
-                Console.ReadKey();
+                //Console.ReadKey();
             }
             return webResponse;
         }
