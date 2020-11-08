@@ -7,6 +7,7 @@ using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.IO;
+using Newtonsoft.Json.Linq;
 
 namespace TestingConectionToServerPython.Model
 {
@@ -99,11 +100,25 @@ namespace TestingConectionToServerPython.Model
             WebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(uri);
             httpWebRequest.ContentType = "application/json";
             httpWebRequest.Method = "POST";
-            //base64String;
-            return "";
+            base64String = Base64CsvEncoder(csvPath);
+            using (StreamWriter streamWriter = new StreamWriter(httpWebRequest.GetRequestStream())) {
+                dynamic csvJson = new JObject();
+                csvJson.content = base64String;
+                streamWriter.Write(csvJson.ToString());
+                //streamWriter.Write(base64String);
+            }
+            HttpWebResponse httpWebResponse = (HttpWebResponse)httpWebRequest.GetResponse();;
+            using (StreamReader streamReader = new StreamReader(httpWebResponse.GetResponseStream())) {
+                webResponse = streamReader.ReadToEnd();
+            }
+                return webResponse;
         }
+
         private string Base64CsvEncoder(string csvPathName) {
-            return "";
+            string base64Csv = string.Empty;
+            Byte[] bytes = File.ReadAllBytes(csvPathName);
+            base64Csv = Convert.ToBase64String(bytes);
+            return base64Csv;
         }
 
 
