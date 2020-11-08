@@ -64,13 +64,14 @@ namespace TestingConectionToServerPython.Model
             Uri uri = new Uri(uirWebAPI);
             WebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(uri);
             httpWebRequest.ContentType = "application/json";
-            httpWebRequest.Method = "POST";
-
+            httpWebRequest.Method = "GET";//AQUI SERIA POST A LA HORA DE MANDAR INFO
+            HttpWebResponse httpWebResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+            /*Se quitaria esto cuando este el post
             using (StreamWriter streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
             {
-              
+                streamWriter.Write("d");
             }
-            HttpWebResponse httpWebResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+            */
             using (StreamReader streamReader = new StreamReader(httpWebResponse.GetResponseStream()))
             {
                 webResponse = streamReader.ReadToEnd();
@@ -78,6 +79,7 @@ namespace TestingConectionToServerPython.Model
             
             return webResponse;
         }
+
         public string ConnectionTest3(string uirWebAPI)
         {
             var client = new WebClient();
