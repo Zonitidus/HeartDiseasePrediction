@@ -17,7 +17,7 @@ namespace TestingConectionToServerPython
             string link2 = "https://pi-final-app.herokuapp.com/desitionTree";
 
             Conecction connect = new Conecction();
-            Console.WriteLine(connect.ConnectionTest(link1, "falle jeje"));
+            Console.WriteLine(connect.ConnectionTest3(link1));
             Console.ReadKey();
 
             /*

@@ -28,8 +28,9 @@ namespace TestingConectionToServerPython.Model
            // {
                 Uri uri = new Uri(uirWebAPI);
                 WebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(uri);
-                httpWebRequest.ContentType = "application/json";
-                httpWebRequest.Method = "POST";
+            //httpWebRequest.ContentType = "application/json";
+            //httpWebRequest.ContentType = "application/xml";
+            httpWebRequest.Method = "POST";
                 
                 using (StreamWriter streamWriter = new StreamWriter(httpWebRequest.GetRequestStream())) 
                 {
@@ -38,7 +39,7 @@ namespace TestingConectionToServerPython.Model
                     //dynamic employee = new Object();
                     //employee.username = "theUserName";
                     //employee.password = "thePassword";
-                    streamWriter.Write("d");
+                    //streamWriter.Write("d");
                    
                 }
                 
@@ -56,6 +57,35 @@ namespace TestingConectionToServerPython.Model
            // }
             return webResponse;
         }
+
+        public string ConnectionTest2(string uirWebAPI)
+        {
+            string webResponse = string.Empty;
+            Uri uri = new Uri(uirWebAPI);
+            WebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(uri);
+            httpWebRequest.ContentType = "application/json";
+            httpWebRequest.Method = "POST";
+
+            using (StreamWriter streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
+            {
+              
+            }
+            HttpWebResponse httpWebResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+            using (StreamReader streamReader = new StreamReader(httpWebResponse.GetResponseStream()))
+            {
+                webResponse = streamReader.ReadToEnd();
+            }
+            
+            return webResponse;
+        }
+        public string ConnectionTest3(string uirWebAPI)
+        {
+            var client = new WebClient();
+            var response = client.DownloadString(uirWebAPI);
+            return response;
+        }
+
+
 
     }
 }
