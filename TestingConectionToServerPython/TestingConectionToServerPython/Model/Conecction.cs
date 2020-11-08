@@ -91,7 +91,20 @@ namespace TestingConectionToServerPython.Model
          Byte[] bytes = File.ReadAllBytes("path");
          String file = Convert.ToBase64String(bytes);
          */
+        public string SendCSVtoServer(string uirWebAPI, string csvPath/*Este es el path que le va a mandar al metodo encoder para retornarle en base64 y despues poder enciarlo al servidor en nuestro caso seria la ruta al archivo csv*/) {
+            string base64String = string.Empty;
+            string webResponse = string.Empty;
 
+            Uri uri = new Uri(uirWebAPI);
+            WebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(uri);
+            httpWebRequest.ContentType = "application/json";
+            httpWebRequest.Method = "POST";
+            //base64String;
+            return "";
+        }
+        private string Base64CsvEncoder(string csvPathName) {
+            return "";
+        }
 
 
     }
