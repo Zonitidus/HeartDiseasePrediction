@@ -21,11 +21,11 @@ namespace TestingConectionToServerPython.Model
             var response = client.DownloadString(url);
             return response;
         }
-        public string ConnectionTest(string uirWebAPI/*, string exceptionMessage*/) {
-            //string exceptionMessage;
+        public string ConnectionTest(string uirWebAPI, string exceptionMessage) {
+            exceptionMessage=string.Empty;
             string webResponse = string.Empty;
-            try
-            {
+          //  try
+           // {
                 Uri uri = new Uri(uirWebAPI);
                 WebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(uri);
                 httpWebRequest.ContentType = "application/json";
@@ -35,10 +35,10 @@ namespace TestingConectionToServerPython.Model
                 {
                     //Esto es lo que envia al servidor (?) Si creo que si
                    
-                    dynamic employee = new Object();
-                    employee.username = "theUserName";
-                    employee.password = "thePassword";
-                    streamWriter.Write(employee.ToString());
+                    //dynamic employee = new Object();
+                    //employee.username = "theUserName";
+                    //employee.password = "thePassword";
+                    streamWriter.Write("d");
                    
                 }
                 
@@ -47,13 +47,13 @@ namespace TestingConectionToServerPython.Model
                 {
                     webResponse = streamReader.ReadToEnd();
                 }
-            }
-            catch(Exception ex)
-            {
-                //exceptionMessage = $"An error occurred. {ex.Message}";
-                Console.WriteLine(ex.Message);
-                //Console.ReadKey();
-            }
+           // }
+          //  catch(Exception ex)
+           // {
+           //     exceptionMessage = $"An error occurred. {ex.Message}";
+           ///     Console.WriteLine(ex.Message);
+           //     Console.ReadKey();
+           // }
             return webResponse;
         }
 
