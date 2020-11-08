@@ -87,6 +87,11 @@ namespace TestingConectionToServerPython.Model
             return response;
         }
 
+        /*
+         Byte[] bytes = File.ReadAllBytes("path");
+         String file = Convert.ToBase64String(bytes);
+         */
+
 
 
     }
