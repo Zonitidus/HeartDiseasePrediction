@@ -19,5 +19,5 @@ https://docs.google.com/document/d/10gsKGZiQ20isCSnKJnhliO52LLV3Pcp42pGsdlgtKGo/
 **Programing language:** C# <br>
 **Operative System:** Windows 10 <br>
 **Development Environment:**  Visual Studio 
-## Rols
-[Roles]()
+## Roles
+[Roles PDF](https://github.com/Zonitidus/HeartDisease_Investigation/blob/main/HeartDiseaseInvestigation/Docs/Roles_del_equipo.pdf)
