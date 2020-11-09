@@ -107,7 +107,7 @@ namespace TestingConectionToServerPython.Model
                 streamWriter.Write(csvJson.ToString());
                 //streamWriter.Write(base64String);
             }
-            HttpWebResponse httpWebResponse = (HttpWebResponse)httpWebRequest.GetResponse();;
+            HttpWebResponse httpWebResponse = (HttpWebResponse)httpWebRequest.GetResponse();
             using (StreamReader streamReader = new StreamReader(httpWebResponse.GetResponseStream())) {
                 webResponse = streamReader.ReadToEnd();
             }
@@ -120,7 +120,8 @@ namespace TestingConectionToServerPython.Model
             base64Csv = Convert.ToBase64String(bytes);
             return base64Csv;
         }
-
+        //Ya no mandar CSV si no el paciente en formato Json
+        //Imagen por ruta hacer metodo
 
     }
 }
