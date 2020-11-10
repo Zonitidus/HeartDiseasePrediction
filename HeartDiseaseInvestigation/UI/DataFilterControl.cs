@@ -33,7 +33,23 @@ namespace HeartDiseaseInvestigation.UI
 
         private void addfilterButton_Click(object sender, EventArgs e)
         {
-            dm.addFilter(filtersLabel, textBox1, textBox2, comboBoxHeartData);
+            if (comboBoxHeartData.Text == "")
+            {
+                MessageBox.Show("Please select a filter", "Error", MessageBoxButtons.OK);
+            }
+            else
+            {
+                if (textBox1.Text.CompareTo(textBox2.Text) > 0)
+                {
+                    dm.addFilter(filtersLabel, textBox2, textBox1, comboBoxHeartData);
+                }
+                else
+                {
+                    dm.addFilter(filtersLabel, textBox1, textBox2, comboBoxHeartData);
+                }
+
+            }
+
         }
 
         private void filter_Click(object sender, EventArgs e)
