@@ -53,12 +53,6 @@ namespace HeartDiseaseInvestigation.UI
             dm.resetFilters(filtersLabel, dt);
         }
 
-        private void showGraphsButton_Click(object sender, EventArgs e)
-        {
-            Graphs gp = new Graphs();
-            gp.Show();
-        }
-
         private void trainBttn_Click(object sender, EventArgs e)
         {
 

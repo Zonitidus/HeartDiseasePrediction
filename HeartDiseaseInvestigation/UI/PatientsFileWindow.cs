@@ -19,6 +19,7 @@ namespace HeartDiseaseInvestigation
         public PatientsFileWindow()
         {
             InitializeComponent();
-        }        
+        }
+
     }
 }

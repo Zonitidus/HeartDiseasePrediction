@@ -78,12 +78,6 @@
     <Compile Include="UI\PatientsFileWindow.Designer.cs">
       <DependentUpon>PatientsFileWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Graphs.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Graphs.Designer.cs">
-      <DependentUpon>Graphs.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -106,9 +100,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\PatientsFileWindow.resx">
       <DependentUpon>PatientsFileWindow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Graphs.resx">
-      <DependentUpon>Graphs.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Data\heart.csv" />
     <None Include="Data\heartS.csv" />
