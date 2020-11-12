@@ -10,16 +10,12 @@ Marta is a software engineer in Cleveland she was born with hearth issues, thank
 
 ## Database:
 [Kaggle Database](https://www.kaggle.com/ronitf/heart-disease-uci)
-## Documentation: 
-#### Class diagram: 
-https://app.lucidchart.com/invitations/accept/f7cc2e50-f3e9-4f46-98d0-468e896a7e8e
-#### Engineering Method: 
-https://docs.google.com/document/d/10gsKGZiQ20isCSnKJnhliO52LLV3Pcp42pGsdlgtKGo/edit?usp=sharing
+
 ## Technical Conditions: 
 **Programing language:** C# <br>
 **Operative System:** Windows 10 <br>
 **Development Environment:**  Visual Studio 
-## Documentation
+## Documentation:
 [Roles PDF](https://github.com/Zonitidus/HeartDisease_Investigation/blob/main/HeartDiseaseInvestigation/Docs/Roles_del_equipo.pdf)<br>
 [Functional Requirements](https://github.com/Zonitidus/HeartDisease_Investigation/blob/main/HeartDiseaseInvestigation/Docs/Requerimientos%20funcionales.docx)<br>
 [Engineering method](https://github.com/Zonitidus/HeartDisease_Investigation/blob/main/HeartDiseaseInvestigation/Docs/Documentacion%20PI1%20SEGUNDA%20ENTREGA.docx)<br>
