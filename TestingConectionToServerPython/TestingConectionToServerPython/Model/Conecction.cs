@@ -7,6 +7,7 @@ using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.IO;
+using System.Drawing;
 using Newtonsoft.Json.Linq;
 
 namespace TestingConectionToServerPython.Model
@@ -87,12 +88,7 @@ namespace TestingConectionToServerPython.Model
             var response = client.DownloadString(uirWebAPI);
             return response;
         }
-
-        /*
-         Byte[] bytes = File.ReadAllBytes("path");
-         String file = Convert.ToBase64String(bytes);
-         */
-        public string SendCSVtoServer(string uirWebAPI, string csvPath/*Este es el path que le va a mandar al metodo encoder para retornarle en base64 y despues poder enciarlo al servidor en nuestro caso seria la ruta al archivo csv*/) {
+        public string SendPatientToServer(string uirWebAPI, Patient patient/*Este es el path que le va a mandar al metodo encoder para retornarle en base64 y despues poder enciarlo al servidor en nuestro caso seria la ruta al archivo csv*/) {
             string base64String = string.Empty;
             string webResponse = string.Empty;
 
@@ -100,12 +96,9 @@ namespace TestingConectionToServerPython.Model
             WebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(uri);
             httpWebRequest.ContentType = "application/json";
             httpWebRequest.Method = "POST";
-            base64String = Base64CsvEncoder(csvPath);
             using (StreamWriter streamWriter = new StreamWriter(httpWebRequest.GetRequestStream())) {
-                dynamic csvJson = new JObject();
-                csvJson.content = base64String;
-                streamWriter.Write(csvJson.ToString());
-                //streamWriter.Write(base64String);
+                var jarray = JArray.FromObject(patient.getAttributes());
+                streamWriter.Write(jarray);
             }
             HttpWebResponse httpWebResponse = (HttpWebResponse)httpWebRequest.GetResponse();
             using (StreamReader streamReader = new StreamReader(httpWebResponse.GetResponseStream())) {
@@ -113,6 +106,14 @@ namespace TestingConectionToServerPython.Model
             }
                 return webResponse;
         }
+        public Image ImageFromAnURI(string urlImage) {
+            Image image = null;
+            Uri uri = new Uri(urlImage);
+            WebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(uri);
+            return image;
+        }
+        
+
 
         private string Base64CsvEncoder(string csvPathName) {
             string base64Csv = string.Empty;

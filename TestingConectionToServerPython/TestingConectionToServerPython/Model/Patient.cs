@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TestingConectionToServerPython.Model
 {
-    class Patient
+    public class Patient
     {
         private String id { get; set; }
         private int age { get; set; }
