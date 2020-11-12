@@ -19,5 +19,13 @@ https://docs.google.com/document/d/10gsKGZiQ20isCSnKJnhliO52LLV3Pcp42pGsdlgtKGo/
 **Programing language:** C# <br>
 **Operative System:** Windows 10 <br>
 **Development Environment:**  Visual Studio 
-## Roles
+## Documentation
 [Roles PDF](https://github.com/Zonitidus/HeartDisease_Investigation/blob/main/HeartDiseaseInvestigation/Docs/Roles_del_equipo.pdf)
+[Functional Requirements](https://github.com/Zonitidus/HeartDisease_Investigation/blob/main/HeartDiseaseInvestigation/Docs/Requerimientos%20funcionales.docx)
+[Engineering method](https://github.com/Zonitidus/HeartDisease_Investigation/blob/main/HeartDiseaseInvestigation/Docs/Documentacion%20PI1%20SEGUNDA%20ENTREGA.docx)
+#### Diagrams
+[Class Diagram](https://github.com/Zonitidus/HeartDisease_Investigation/blob/main/HeartDiseaseInvestigation/Docs/Diagrama%20de%20Clases.pdf)
+[Object Diagram](https://github.com/Zonitidus/HeartDisease_Investigation/blob/main/HeartDiseaseInvestigation/Docs/Diagrama%20de%20objetos.png)
+[Sequence Diagram](https://github.com/Zonitidus/HeartDisease_Investigation/blob/main/HeartDiseaseInvestigation/Docs/Sequence%20Diagram.pdf)
+
+
