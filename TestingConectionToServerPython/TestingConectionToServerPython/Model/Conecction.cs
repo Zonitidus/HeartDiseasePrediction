@@ -82,14 +82,8 @@ namespace TestingConectionToServerPython.Model
             return webResponse;
         }
 
-        public string ConnectionTest3(string uirWebAPI)
-        {
-            var client = new WebClient();
-            var response = client.DownloadString(uirWebAPI);
-            return response;
-        }
+       
         public string SendPatientToServer(string uirWebAPI, Patient patient/*Este es el path que le va a mandar al metodo encoder para retornarle en base64 y despues poder enciarlo al servidor en nuestro caso seria la ruta al archivo csv*/) {
-            string base64String = string.Empty;
             string webResponse = string.Empty;
 
             Uri uri = new Uri(uirWebAPI);
@@ -106,13 +100,23 @@ namespace TestingConectionToServerPython.Model
             }
                 return webResponse;
         }
-        public Image ImageFromAnURI(string urlImage) {
+        public Image ImageFromAnURI(string urlWebApi) {
+            string urlImage = GetImageURL(urlWebApi);
             Image image = null;
             Uri uri = new Uri(urlImage);
-            WebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(uri);
+            HttpWebRequest webRequest = (HttpWebRequest)WebRequest.Create(uri);
+            WebResponse webResponse = webRequest.GetResponse();
+            Stream stream = webResponse.GetResponseStream();
+            image = Image.FromStream(stream);
+            webResponse.Close();
             return image;
         }
-        
+        private string GetImageURL(string uirWebAPI)
+        {
+            var client = new WebClient();
+            var response = client.DownloadString(uirWebAPI);
+            return response;
+        }
 
 
         private string Base64CsvEncoder(string csvPathName) {
