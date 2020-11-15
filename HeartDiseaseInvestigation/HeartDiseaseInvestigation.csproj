@@ -54,6 +54,8 @@
     <Compile Include="DecisionTreeClassifier\Query.cs" />
     <Compile Include="Model\DataManager.cs" />
     <Compile Include="Model\Patient.cs" />
+    <Compile Include="TreeVisualization\CircleNode.cs" />
+    <Compile Include="TreeVisualization\TreeNode.cs" />
     <Compile Include="UI\ClassificationResult.cs">
       <SubType>Form</SubType>
     </Compile>
