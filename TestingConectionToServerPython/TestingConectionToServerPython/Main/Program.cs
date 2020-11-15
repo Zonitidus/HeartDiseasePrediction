@@ -18,7 +18,7 @@ namespace TestingConectionToServerPython
             string link3 = "https://pi-final-app.herokuapp.com/draw-tree";
 
             Conecction connect = new Conecction();
-            Console.WriteLine(connect.ConnectionTestImage(link3));
+            Console.WriteLine(connect.ImageFromAnURI(link3));
             //Console.WriteLine(connect.GetImageURL(link3));
             Console.ReadKey();
             //Console.WriteLine(connect.SendCSVtoServer(link1, "path del csv poner aqui"));

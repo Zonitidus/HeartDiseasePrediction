@@ -10,6 +10,7 @@ using System.IO;
 using System.Drawing;
 using Newtonsoft.Json.Linq;
 using System.Web.Script.Serialization;
+using Newtonsoft.Json;
 
 namespace TestingConectionToServerPython.Model
 {
@@ -93,6 +94,9 @@ namespace TestingConectionToServerPython.Model
             httpWebRequest.Method = "POST";
             using (StreamWriter streamWriter = new StreamWriter(httpWebRequest.GetRequestStream())) {
                 var jarray = JArray.FromObject(patient.getAttributes());
+
+
+                var jsonPatient = JsonConvert.SerializeObject(patient.getAttributes());
                 streamWriter.Write(jarray);
             }
             HttpWebResponse httpWebResponse = (HttpWebResponse)httpWebRequest.GetResponse();
@@ -101,6 +105,11 @@ namespace TestingConectionToServerPython.Model
             }
                 return webResponse;
         }
+
+
+
+
+
         public Image ImageFromAnURI(string urlWebApi) {
             string urlImage = GetImageURL(urlWebApi);
             Image image = null;
@@ -114,28 +123,11 @@ namespace TestingConectionToServerPython.Model
         }
         private string GetImageURL(string uirWebAPI)
         {
-            var client = new WebClient();
-            var urlObject = JObject.Parse(uirWebAPI); //CORREGIR
-            Console.WriteLine(urlObject["url"]);
-            var response = client.DownloadString(uirWebAPI);
-            return response;
-        }
-
-
-
-
-
-
-
-
-
-        public string ConnectionTestImage(string uirWebAPI)
-        {
             string uriImage = string.Empty;
             Uri uri = new Uri(uirWebAPI);
             WebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(uri);
             httpWebRequest.ContentType = "application/json";
-            httpWebRequest.Method = "GET";//AQUI SERIA POST A LA HORA DE MANDAR INFO
+            httpWebRequest.Method = "GET";
             HttpWebResponse httpWebResponse = (HttpWebResponse)httpWebRequest.GetResponse();
             
             using (StreamReader streamReader = new StreamReader(httpWebResponse.GetResponseStream()))
@@ -144,7 +136,6 @@ namespace TestingConectionToServerPython.Model
                 var completeString = new JavaScriptSerializer().Deserialize<Dictionary<string, string>>(webResponse);
                 uriImage = completeString["url"];
             }
-
             return uriImage;
         }
 
