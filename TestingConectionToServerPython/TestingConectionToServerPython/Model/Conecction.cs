@@ -93,11 +93,15 @@ namespace TestingConectionToServerPython.Model
             httpWebRequest.ContentType = "application/json";
             httpWebRequest.Method = "POST";
             using (StreamWriter streamWriter = new StreamWriter(httpWebRequest.GetRequestStream())) {
-                var jarray = JArray.FromObject(patient.getAttributes());
-
-
+                
+                /*
+                var patientDictionary = new Dictionary<string, string>
+                {
+                };
+                /*
                 var jsonPatient = JsonConvert.SerializeObject(patient.getAttributes());
-                streamWriter.Write(jarray);
+                streamWriter.Write(jsonPatient);
+                */
             }
             HttpWebResponse httpWebResponse = (HttpWebResponse)httpWebRequest.GetResponse();
             using (StreamReader streamReader = new StreamReader(httpWebResponse.GetResponseStream())) {
