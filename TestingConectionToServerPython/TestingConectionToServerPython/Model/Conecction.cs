@@ -19,77 +19,8 @@ namespace TestingConectionToServerPython.Model
         public Conecction() {
             
         }
-        public string GetReleases1(string url) {
-            var client = new WebClient();
-            client.Headers.Add("dd");
-            var response = client.DownloadString(url);
-            return response;
-        }
-        public string ConnectionTest(string uirWebAPI, string exceptionMessage) {
-            exceptionMessage=string.Empty;
+        public string SendPatientToServer(string uirWebAPI, Patient patient) {
             string webResponse = string.Empty;
-          //  try
-           // {
-                Uri uri = new Uri(uirWebAPI);
-                WebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(uri);
-            //httpWebRequest.ContentType = "application/json";
-            //httpWebRequest.ContentType = "application/xml";
-            httpWebRequest.Method = "POST";
-                
-                using (StreamWriter streamWriter = new StreamWriter(httpWebRequest.GetRequestStream())) 
-                {
-
-
-                    //Esto es lo que envia al servidor (?) Si creo que si
-                   
-                    //dynamic employee = new Object();
-                    //employee.username = "theUserName";
-                    //employee.password = "thePassword";
-                    //streamWriter.Write("d");
-                   
-                }
-                
-                HttpWebResponse httpWebResponse = (HttpWebResponse)httpWebRequest.GetResponse();
-                using (StreamReader streamReader = new StreamReader(httpWebResponse.GetResponseStream()))
-                {
-                    webResponse = streamReader.ReadToEnd();
-                }
-           // }
-          //  catch(Exception ex)
-           // {
-           //     exceptionMessage = $"An error occurred. {ex.Message}";
-           ///     Console.WriteLine(ex.Message);
-           //     Console.ReadKey();
-           // }
-            return webResponse;
-        }
-
-        public string ConnectionTest2(string uirWebAPI)
-        {
-            string webResponse = string.Empty;
-            Uri uri = new Uri(uirWebAPI);
-            WebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(uri);
-            httpWebRequest.ContentType = "application/json";
-            httpWebRequest.Method = "GET";//AQUI SERIA POST A LA HORA DE MANDAR INFO
-            HttpWebResponse httpWebResponse = (HttpWebResponse)httpWebRequest.GetResponse();
-            /*Se quitaria esto cuando este el post
-            using (StreamWriter streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
-            {
-                streamWriter.Write("d");
-            }
-            */
-            using (StreamReader streamReader = new StreamReader(httpWebResponse.GetResponseStream()))
-            {
-                webResponse = streamReader.ReadToEnd();
-            }
-            
-            return webResponse;
-        }
-
-       
-        public string SendPatientToServer(string uirWebAPI, Patient patient/*Este es el path que le va a mandar al metodo encoder para retornarle en base64 y despues poder enciarlo al servidor en nuestro caso seria la ruta al archivo csv*/) {
-            string webResponse = string.Empty;
-
             Uri uri = new Uri(uirWebAPI);
             WebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(uri);
             httpWebRequest.ContentType = "application/json";
@@ -97,14 +28,6 @@ namespace TestingConectionToServerPython.Model
             using (StreamWriter streamWriter = new StreamWriter(httpWebRequest.GetRequestStream())) {
                 string stringJson = JsonConvert.SerializeObject(patient);
                 streamWriter.Write(stringJson);
-                /*
-                var patientDictionary = new Dictionary<string, string>
-                {
-                };
-                /*
-                var jsonPatient = JsonConvert.SerializeObject(patient.getAttributes());
-                streamWriter.Write(stringJson);
-                */
             }
             HttpWebResponse httpWebResponse = (HttpWebResponse)httpWebRequest.GetResponse();
             using (StreamReader streamReader = new StreamReader(httpWebResponse.GetResponseStream())) {
@@ -112,11 +35,6 @@ namespace TestingConectionToServerPython.Model
             }
                 return webResponse;
         }
-
-
-
-
-
         public Image ImageFromAnURI(string urlWebApi) {
             string urlImage = GetImageURL(urlWebApi);
             Image image = null;
@@ -145,8 +63,12 @@ namespace TestingConectionToServerPython.Model
             }
             return uriImage;
         }
-
-
+        public string Train(string url)
+        {
+            var client = new WebClient();
+            var response = client.DownloadString(url);
+            return response;
+        }
 
 
 

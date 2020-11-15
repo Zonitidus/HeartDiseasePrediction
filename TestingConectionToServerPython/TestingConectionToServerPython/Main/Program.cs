@@ -13,6 +13,7 @@ namespace TestingConectionToServerPython
     {
         static void Main(string[] args)
         {
+            //Recordar hacer referencia a algo del proyecto no me acuerdo que era jeje pero si hay algun error en el proyecto oficial es porque falta una assembly reference
             //url = "";
             string link1 = "https://pi-final-app.herokuapp.com/";
             string link2 = "https://pi-final-app.herokuapp.com/train";
@@ -22,8 +23,10 @@ namespace TestingConectionToServerPython
             Conecction connect = new Conecction();
             
             Patient patient = new Patient(66,0,2,146,278,0,0,125,0,0,1,1,2);
-            Console.WriteLine(connect.SendPatientToServer(link4,patient));
+            Console.WriteLine(connect.Train(link2));
             Console.ReadKey();
+            //Console.WriteLine(connect.SendPatientToServer(link4,patient));
+            //Console.ReadKey();
             //string stringJson = JsonConvert.SerializeObject(patient);
             //Console.WriteLine(stringJson);
             //Console.ReadKey();
