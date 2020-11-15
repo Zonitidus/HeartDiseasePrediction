@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace TestingConectionToServerPython.Model
 {
+    //Cuestiones a tener en cuenta en esta clase, 1 Se elimino tanto el id como el target, 2 Se pusieron los atributos como publicos, 3 oldpeak era double y fue necesario cambiarlo a int
     public class Patient
     {
-        public String id { get; set; }
         public int age { get; set; }
         public int sex { get; set; }
         public int cp { get; set; }
@@ -18,34 +18,13 @@ namespace TestingConectionToServerPython.Model
         public int restecg { get; set; }
         public int thalach { get; set; }
         public int exang { get; set; }
-        public double oldpeak { get; set; }
+        public int oldpeak { get; set; }
         public int slope { get; set; }
         public int ca { get; set; }
         public int thal { get; set; }
-        public int target { get; set; }
-
-        public Patient(string id, int age, int sex, int cp, int trestbps, int chol, int fbs, int restecg, int thalach, int exang, double oldpeak, int slope, int ca, int thal, int target)
+      
+        public Patient(int age, int sex, int cp, int trestbps, int chol, int fbs, int restecg, int thalach, int exang, int oldpeak, int slope, int ca, int thal)
         {
-            this.id = id;
-            this.age = age;
-            this.sex = sex;
-            this.cp = cp;
-            this.trestbps = trestbps;
-            this.chol = chol;
-            this.fbs = fbs;
-            this.restecg = restecg;
-            this.thalach = thalach;
-            this.exang = exang;
-            this.oldpeak = oldpeak;
-            this.slope = slope;
-            this.ca = ca;
-            this.thal = thal;
-            this.target = target;
-        }
-        
-        public Patient(int age, int sex, int cp, int trestbps, int chol, int fbs, int restecg, int thalach, int exang, double oldpeak, int slope, int ca, int thal)
-        {
-            this.id = id;
             this.age = age;
             this.sex = sex;
             this.cp = cp;
@@ -64,7 +43,7 @@ namespace TestingConectionToServerPython.Model
 
         public string[] getAttributes()
         {
-            String[] attributes = { "" + age, "" + sex, "" + cp, "" + trestbps, "" + chol, "" + fbs, "" + restecg, "" + thalach, "" + exang, "" + oldpeak, "" + slope, "" + ca, "" + thal, "" + target };
+            String[] attributes = { "" + age, "" + sex, "" + cp, "" + trestbps, "" + chol, "" + fbs, "" + restecg, "" + thalach, "" + exang, "" + oldpeak, "" + slope, "" + ca, "" + thal };
 
             return attributes;
         }

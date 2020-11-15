@@ -38,6 +38,8 @@ namespace TestingConectionToServerPython.Model
                 
                 using (StreamWriter streamWriter = new StreamWriter(httpWebRequest.GetRequestStream())) 
                 {
+
+
                     //Esto es lo que envia al servidor (?) Si creo que si
                    
                     //dynamic employee = new Object();
@@ -93,14 +95,15 @@ namespace TestingConectionToServerPython.Model
             httpWebRequest.ContentType = "application/json";
             httpWebRequest.Method = "POST";
             using (StreamWriter streamWriter = new StreamWriter(httpWebRequest.GetRequestStream())) {
-                
+                string stringJson = JsonConvert.SerializeObject(patient);
+                streamWriter.Write(stringJson);
                 /*
                 var patientDictionary = new Dictionary<string, string>
                 {
                 };
                 /*
                 var jsonPatient = JsonConvert.SerializeObject(patient.getAttributes());
-                streamWriter.Write(jsonPatient);
+                streamWriter.Write(stringJson);
                 */
             }
             HttpWebResponse httpWebResponse = (HttpWebResponse)httpWebRequest.GetResponse();
