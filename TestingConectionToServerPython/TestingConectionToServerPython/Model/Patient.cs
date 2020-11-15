@@ -18,12 +18,12 @@ namespace TestingConectionToServerPython.Model
         public int restecg { get; set; }
         public int thalach { get; set; }
         public int exang { get; set; }
-        public int oldpeak { get; set; }
+        public double oldpeak { get; set; }
         public int slope { get; set; }
         public int ca { get; set; }
         public int thal { get; set; }
       
-        public Patient(int age, int sex, int cp, int trestbps, int chol, int fbs, int restecg, int thalach, int exang, int oldpeak, int slope, int ca, int thal)
+        public Patient(int age, int sex, int cp, int trestbps, int chol, int fbs, int restecg, int thalach, int exang, double oldpeak, int slope, int ca, int thal)
         {
             this.age = age;
             this.sex = sex;

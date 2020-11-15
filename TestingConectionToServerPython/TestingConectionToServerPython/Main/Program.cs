@@ -22,12 +22,24 @@ namespace TestingConectionToServerPython
 
             Conecction connect = new Conecction();
             
-            Patient patient = new Patient(66,0,2,146,278,0,0,125,0,0,1,1,2);
-            Console.WriteLine(connect.Train(link2));
-            Console.ReadKey();
-            //Console.WriteLine(connect.SendPatientToServer(link4,patient));
+            //Patient patient1 = new Patient(66,0,2,146,278,0,0,125,0,0,1,1,2);
+            Patient patient2 = new Patient(68, 1, 2, 180, 274, 1, 0, 150, 1, 1.6, 1, 0, 3);
+            
+            
+            //Console.WriteLine(connect.ImageFromAnURI(link3));
             //Console.ReadKey();
-            //string stringJson = JsonConvert.SerializeObject(patient);
+            
+
+
+            //Console.WriteLine(connect.Train(link2));
+            //Console.ReadKey();
+
+
+            //Console.WriteLine(connect.SendPatientToServer(link4,patient2));
+            //Console.ReadKey();
+
+
+            //string stringJson = JsonConvert.SerializeObject(patient2);
             //Console.WriteLine(stringJson);
             //Console.ReadKey();
         }
