@@ -158,6 +158,7 @@ namespace HeartDiseaseInvestigation.TreeVisualization
                 graph.DrawLine(this.pen, DataCenter, this.TrueNode.DataCenter);
 
                 this.TrueNode.DrawSubtreeLinksHorizontal(graph);
+
             }
             if (this.FalseNode != null)
             {
