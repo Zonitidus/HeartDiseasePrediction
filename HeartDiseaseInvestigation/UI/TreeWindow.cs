@@ -9,37 +9,62 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using HeartDiseaseInvestigation.DecisionTreeClassifier;
 using HeartDiseaseInvestigation.Model;
+using HeartDiseaseInvestigation.TreeVisualization;
+using TreeNode = HeartDiseaseInvestigation.TreeVisualization.TreeNode;
 
 namespace HeartDiseaseInvestigation.UI
 {
     public partial class TreeWindow : Form
     {
 
-        private DataManager dataManager;
+        private TreeNode root;
 
-        public TreeWindow()
+        public TreeWindow(Node<Patient> rootTree)
         {
             InitializeComponent();
-            dataManager = new DataManager();
+            this.InitializeTree(rootTree);
         }
 
-        public void InitializeTree()
+        public void InitializeTree(Node<Patient> rootTree)
         {
-            dataManager.LoadCSV();
-
-            Dictionary<String, Patient> trainData = dataManager.GetPatients();
-
-            DecisionTree<Patient> destree = new DecisionTree<Patient>(trainData);
-
-            List<Patient> rows = new List<Patient>();
-
-            foreach (String k in trainData.Keys)
-            {
-                rows.Add(trainData[k]);
-            }
-
-            Node<Patient> t = destree.BuildTree(rows);
+            this.root = new TreeNode(new CircleNode(root.ToString()));
+            this.GenerateTree(rootTree, null);
             
         }
+
+        public void GenerateTree(Node<Patient> t, TreeNode parent)
+        {
+
+            TreeNode newNode = new TreeNode(new CircleNode(t.ToString()));
+
+            if(parent != null)
+            {
+                if (t.GetTrueNode() != null)
+                {
+                    parent.AddTrueNode(new TreeNode(new CircleNode(t.GetTrueNode().ToString())));
+                    GenerateTree(t.GetTrueNode(), newNode);
+                }
+
+                if (t.GetFalseNode() != null)
+                {
+                    parent.AddFalseNode(new TreeNode(new CircleNode(t.GetFalseNode().ToString())));
+                }
+            }
+            else
+            {
+                if (t.GetTrueNode() != null)
+                {
+                    this.root.AddTrueNode(new TreeNode(new CircleNode(t.GetTrueNode().ToString())));
+                    GenerateTree(t.GetTrueNode(), newNode);
+                }
+
+                if (t.GetFalseNode() != null)
+                {
+                    this.root.AddFalseNode(new TreeNode(new CircleNode(t.GetFalseNode().ToString())));
+                    GenerateTree(t.GetFalseNode(), newNode);
+                }
+            }
+        }
+
     }
 }

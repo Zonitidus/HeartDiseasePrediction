@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HeartDiseaseInvestigation.Model
 {
-    class Patient : DatasetRow
+    public class Patient : DatasetRow
     {
         private String id { get; set; }
         private int age { get; set; }

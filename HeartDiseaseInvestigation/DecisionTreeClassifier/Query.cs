@@ -63,7 +63,7 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
             return this.value;
         }
 
-        public String ToString()
+        public override String ToString()
         {
 
             String oper = " == ";

@@ -45,7 +45,7 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
             return this.labelCount;
         }
 
-        public String ToString()
+        public override String ToString()
         {
             String r = query.ToString()+"\n";
 
