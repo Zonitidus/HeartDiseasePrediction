@@ -134,5 +134,53 @@ namespace HeartDiseaseInvestigation.TreeVisualization
             ymin = biggest_ymin;
         }
 
+        public void DrawTree(Graphics gr, ref float x, float y)
+        {
+            Arrange(gr, ref x, ref y);
+            DrawTree(gr);
+        }
+
+        public void DrawTree(Graphics gr)
+        {
+            DrawSubtreeLinks(gr);
+            DrawSubtreeNodes(gr);
+        }
+
+         private void DrawSubtreeLinks(Graphics gr)
+        {
+            DrawSubtreeLinksHorizontal(gr);
+        }
+
+        private void DrawSubtreeLinksHorizontal(Graphics graph)
+        {
+            if (this.TrueNode != null)
+            {
+                graph.DrawLine(this.pen, DataCenter, this.TrueNode.DataCenter);
+
+                this.TrueNode.DrawSubtreeLinksHorizontal(graph);
+            }
+            if (this.FalseNode != null)
+            {
+                graph.DrawLine(this.pen, DataCenter, this.FalseNode.DataCenter);
+
+                this.FalseNode.DrawSubtreeLinksHorizontal(graph);
+            }
+        }
+
+        // Draw the nodes for the subtree rooted at this node.
+        private void DrawSubtreeNodes(Graphics graph)
+        {
+            this.data.Draw(DataCenter.X, DataCenter.Y, graph, this.pen, this.backgroundBrush, this.fontBrush, this.font);
+
+            if (this.TrueNode != null)
+            {
+                this.TrueNode.DrawSubtreeNodes(graph);
+            }
+            if(this.FalseNode != null)
+            {
+                this.FalseNode.DrawSubtreeNodes(graph);
+            }
+        }
+        
     }
 }
