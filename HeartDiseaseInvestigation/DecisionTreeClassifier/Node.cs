@@ -44,5 +44,30 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
         {
             return this.labelCount;
         }
+
+        public String ToString()
+        {
+            String r = query.ToString()+"\n";
+
+            if(this.labelCount != null)
+            {
+
+                int total = 0;
+
+                foreach(String key in this.labelCount.Keys)
+                {
+                    total+= this.labelCount[key];
+                }
+
+                foreach (String key in this.labelCount.Keys)
+                {
+                    double a = Convert.ToDouble(this.labelCount[key]) / Convert.ToDouble(total);
+
+                   r += key+" "+a+"%\n";
+                }
+            }
+
+            return r;
+        }
     }
 }

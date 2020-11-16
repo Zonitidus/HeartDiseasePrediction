@@ -8,6 +8,9 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
 {
     public class Query<T> where T: DatasetRow
     {
+
+        private String[] attributes;
+
         private int attribute;
         private String value;
 
@@ -15,6 +18,7 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
         {
             this.attribute = attribute;
             this.value = value;
+            this.attributes = Model.Patient.getAttributesName();
         }
 
         public bool Compare(T example)
@@ -57,6 +61,17 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
         public String GetValue()
         {
             return this.value;
+        }
+
+        public String ToString()
+        {
+
+            String oper = " == ";
+
+            if (this.isNumeric(this.attribute))
+                oper = " >= ";
+
+            return "Is "+this.attributes[this.attribute]+oper+this.value;
         }
     }
 }

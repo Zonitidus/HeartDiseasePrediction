@@ -39,7 +39,7 @@ namespace HeartDiseaseInvestigation.UI
             }
 
             Node<Patient> t = destree.BuildTree(rows);
-            //printTree(t, "");
+            
         }
     }
 }
