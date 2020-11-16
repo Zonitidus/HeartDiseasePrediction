@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HeartDiseaseInvestigation.DecisionTreeClassifier
 {
-    class Query<T> where T: DatasetRow
+    public class Query<T> where T: DatasetRow
     {
         private int attribute;
         private String value;

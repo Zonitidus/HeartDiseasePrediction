@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HeartDiseaseInvestigation.DecisionTreeClassifier
 {
-    class OptimalSolution<T> where T : DatasetRow
+    public class OptimalSolution<T> where T : DatasetRow
     {
 
         private double gain;

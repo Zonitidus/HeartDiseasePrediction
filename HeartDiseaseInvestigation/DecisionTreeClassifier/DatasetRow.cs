@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HeartDiseaseInvestigation.DecisionTreeClassifier
 {
-    interface DatasetRow
+    public interface DatasetRow
     {
         String[] getAttributes();
     }

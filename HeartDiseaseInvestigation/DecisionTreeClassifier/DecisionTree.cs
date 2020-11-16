@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HeartDiseaseInvestigation.DecisionTreeClassifier
 {
-    class DecisionTree<T> where T: DatasetRow
+    public class DecisionTree<T> where T: DatasetRow
     {
         private Node<T> root { get; set; }
         private DataTable dataset { get; set; }
