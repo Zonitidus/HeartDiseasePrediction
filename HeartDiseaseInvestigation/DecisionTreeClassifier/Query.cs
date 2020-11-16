@@ -71,7 +71,7 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
             if (this.isNumeric(this.attribute))
                 oper = " >= ";
 
-            return "Is "+this.attributes[this.attribute]+oper+this.value;
+            return "Is "+this.attributes[this.attribute]+oper+this.value+"?";
         }
     }
 }

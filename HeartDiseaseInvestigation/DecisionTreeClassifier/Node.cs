@@ -47,7 +47,12 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
 
         public override String ToString()
         {
-            String r = query.ToString()+"\n";
+            String r = "";
+
+            if(this.query != null)
+            {
+                r = query.ToString() + "\n";
+            }
 
             if(this.labelCount != null)
             {
