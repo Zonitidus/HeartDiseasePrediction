@@ -40,3 +40,6 @@ C:\Users\juano\Source\Repos\HeartDisease_Investigation\HeartDiseaseInvestigation
 C:\Users\juano\Source\Repos\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.csproj.CoreCompileInputs.cache
 C:\Users\juano\Source\Repos\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.exe
 C:\Users\juano\Source\Repos\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.pdb
+C:\Users\juano\source\repos\HeartDisease_Investigation\HeartDiseaseInvestigation\bin\Debug\Newtonsoft.Json.dll
+C:\Users\juano\source\repos\HeartDisease_Investigation\HeartDiseaseInvestigation\bin\Debug\Newtonsoft.Json.xml
+C:\Users\juano\source\repos\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.csproj.CopyComplete
