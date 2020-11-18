@@ -19,6 +19,9 @@ namespace HeartDiseaseInvestigation
         public PatientsFileWindow()
         {
             InitializeComponent();
+            pictureBoxDecisionTree.Image = Image.FromFile("../../data/img.png");
+            //pictureBoxDecisionTree.SizeMode = PictureBoxSizeMode.StretchImage;
+            //pictureBoxDecisionTree.
         }
 
     }
