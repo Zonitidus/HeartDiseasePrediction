@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HeartDiseaseInvestigation.TreeVisualization
 {
-    class CircleNode
+    public class CircleNode
     {
         private String data;
 

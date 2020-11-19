@@ -50,5 +50,12 @@ namespace HeartDiseaseInvestigation.Model
 
             return attributes;
         }
+
+        public static string[] getAttributesName()
+        {
+            String[] attributes = { "age", "sex", "cp", "trestbps", "chol", "fbs", "restecg", "thalach", "exang", "oldpeak", "slope", "ca", "thal", "target" };
+
+            return attributes;
+        }
     }
 }

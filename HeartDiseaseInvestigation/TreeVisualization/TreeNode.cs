@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HeartDiseaseInvestigation.TreeVisualization
 {
-    class TreeNode
+    public class TreeNode
     {
 
         private CircleNode data;
@@ -51,6 +51,16 @@ namespace HeartDiseaseInvestigation.TreeVisualization
         {
             this.data = new_data;
             this.font = font;
+        }
+
+        public TreeNode GetTrueNode()
+        {
+            return this.TrueNode;
+        }
+
+        public TreeNode GetFalseNode()
+        {
+            return this.FalseNode;
         }
 
         public void AddTrueNode(TreeNode node)

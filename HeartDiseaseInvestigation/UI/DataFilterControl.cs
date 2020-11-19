@@ -86,7 +86,7 @@ namespace HeartDiseaseInvestigation.UI
             }
 
             Node<Patient> t = destree.BuildTree(rows);
-            //printTree(t, "");
+            printTree(t);
 
             dmC.LoadCSVTest();
 
@@ -100,29 +100,19 @@ namespace HeartDiseaseInvestigation.UI
                     "Predicted -> " + destree.PrintLeaf(destree.Classify(test[k], t)));
 
 
-                Console.WriteLine("Actual -> " + test[k].getAttributes()[test[k].getAttributes().Length - 1] + "\n" +
-                    "Predicted -> " + destree.PrintLeaf(destree.Classify(test[k], t)));
+                /*Console.WriteLine("Actual -> " + test[k].getAttributes()[test[k].getAttributes().Length - 1] + "\n" +
+                    "Predicted -> " + destree.PrintLeaf(destree.Classify(test[k], t)));*/
             }
 
             ClassificationResult c = new ClassificationResult(classification);
             c.Show();
         }
 
-        private void printTree(Node<Patient> root, String tab)
+        private void printTree(Node<Patient> root)
         {
 
-
-            if (root != null && root.GetQuery() != null)
-            {
-                Console.WriteLine(tab + root.GetQuery().GetAttribute());
-            }
-
-            
-            tab += "\t";
-            if (root.GetFalseNode() != null)
-                printTree(root.GetFalseNode(), tab);
-            if (root.GetTrueNode() != null)
-                printTree(root.GetTrueNode(), tab);
+            TreeWindow tw = new TreeWindow(root);
+            tw.Show();
         }
     }
 
