@@ -100,12 +100,7 @@ namespace HeartDiseaseInvestigation.UI
             pictureBox.Refresh();
         }
 
-        private void pictureBox_Paint(object sender, PaintEventArgs e)
-        {
-            e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
-            e.Graphics.TextRenderingHint = TextRenderingHint.AntiAliasGridFit;
-            root.DrawTree(e.Graphics);
-        }
+       
 
         private void pictureBox_Paint_1(object sender, PaintEventArgs e)
         {

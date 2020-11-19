@@ -47,7 +47,7 @@ namespace HeartDiseaseInvestigation
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PatientsFileWindow());
+            Application.Run(new PatientsFileWindow(null));
         }
     }
 }

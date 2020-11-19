@@ -41,12 +41,17 @@
             this.zoomIn = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBoxTreeManual = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTree)).BeginInit();
+            this.tabPage4.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTreeManual)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -160,6 +165,7 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.panel2);
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(1126, 658);
@@ -176,6 +182,23 @@
             this.tabPage5.Text = "Add Patient";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.pictureBoxTreeManual);
+            this.panel2.Location = new System.Drawing.Point(4, 53);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1119, 602);
+            this.panel2.TabIndex = 0;
+            // 
+            // pictureBoxTreeManual
+            // 
+            this.pictureBoxTreeManual.Location = new System.Drawing.Point(3, 3);
+            this.pictureBoxTreeManual.Name = "pictureBoxTreeManual";
+            this.pictureBoxTreeManual.Size = new System.Drawing.Size(1113, 596);
+            this.pictureBoxTreeManual.TabIndex = 0;
+            this.pictureBoxTreeManual.TabStop = false;
+            this.pictureBoxTreeManual.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
+            // 
             // PatientsFileWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -190,6 +213,9 @@
             this.tabPage3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTree)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTreeManual)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -209,6 +235,8 @@
         private System.Windows.Forms.Button buttonResetZoom;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBoxTreeManual;
     }
 }
 
