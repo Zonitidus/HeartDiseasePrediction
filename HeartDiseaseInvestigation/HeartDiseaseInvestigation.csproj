@@ -64,6 +64,12 @@
     <Compile Include="Model\Patient.cs" />
     <Compile Include="TreeVisualization\CircleNode.cs" />
     <Compile Include="TreeVisualization\TreeNode.cs" />
+    <Compile Include="UI\AddPatientControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\AddPatientControl.Designer.cs">
+      <DependentUpon>AddPatientControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\ClassificationResult.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\AddPatientControl.resx">
+      <DependentUpon>AddPatientControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\ClassificationResult.resx">
       <DependentUpon>ClassificationResult.cs</DependentUpon>
     </EmbeddedResource>

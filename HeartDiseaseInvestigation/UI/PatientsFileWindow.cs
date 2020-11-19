@@ -29,8 +29,7 @@ namespace HeartDiseaseInvestigation
         public PatientsFileWindow(Node<Patient> rootTree)
         {
             InitializeComponent();
-            this.InitializeTree(rootTree);
-            //pictureBoxTree.Image = Image.FromFile("../../Data/img.png");
+            //this.InitializeTree(rootTree);
             pictureBoxTree.Image = cn.ImageFromAnURI("https://pi-final-app.herokuapp.com/draw-tree");
             w = pictureBoxTree.Width;
             h = pictureBoxTree.Height;
@@ -61,7 +60,7 @@ namespace HeartDiseaseInvestigation
 
 
         //Decision tree manual
-
+        /*
         public void InitializeTree(Node<Patient> rootTree)
         {
 
@@ -133,12 +132,17 @@ namespace HeartDiseaseInvestigation
 
             pictureBoxTreeManual.Refresh();
         }
-
+        */
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
             e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
             e.Graphics.TextRenderingHint = TextRenderingHint.AntiAliasGridFit;
             root.DrawTree(e.Graphics);
+        }
+        
+        private void buttonTrainTreeAuto_Click(object sender, EventArgs e)
+        {
+            labelTrainTreeAuto.Text = cn.Train("https://pi-final-app.herokuapp.com/train");
         }
     }
 }

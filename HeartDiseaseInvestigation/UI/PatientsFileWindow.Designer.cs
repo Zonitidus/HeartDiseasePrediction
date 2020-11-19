@@ -28,21 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dataFilterControl1 = new HeartDiseaseInvestigation.UI.DataFilterControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.graphsControl1 = new HeartDiseaseInvestigation.UI.GraphsControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.labelTrainTreeAuto = new System.Windows.Forms.Label();
+            this.buttonTrainTreeAuto = new System.Windows.Forms.Button();
             this.buttonResetZoom = new System.Windows.Forms.Button();
             this.zoomOut = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBoxTree = new System.Windows.Forms.PictureBox();
             this.zoomIn = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBoxTreeManual = new System.Windows.Forms.PictureBox();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.dataFilterControl1 = new HeartDiseaseInvestigation.UI.DataFilterControl();
+            this.graphsControl1 = new HeartDiseaseInvestigation.UI.GraphsControl();
+            this.addPatientControl1 = new HeartDiseaseInvestigation.UI.AddPatientControl();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -52,6 +57,7 @@
             this.tabPage4.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTreeManual)).BeginInit();
+            this.tabPage5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -78,13 +84,6 @@
             this.tabPage1.Text = "Data";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // dataFilterControl1
-            // 
-            this.dataFilterControl1.Location = new System.Drawing.Point(1, 0);
-            this.dataFilterControl1.Name = "dataFilterControl1";
-            this.dataFilterControl1.Size = new System.Drawing.Size(1119, 649);
-            this.dataFilterControl1.TabIndex = 0;
-            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.graphsControl1);
@@ -96,15 +95,10 @@
             this.tabPage2.Text = "Graphs";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // graphsControl1
-            // 
-            this.graphsControl1.Location = new System.Drawing.Point(22, 38);
-            this.graphsControl1.Name = "graphsControl1";
-            this.graphsControl1.Size = new System.Drawing.Size(1123, 655);
-            this.graphsControl1.TabIndex = 3;
-            // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.labelTrainTreeAuto);
+            this.tabPage3.Controls.Add(this.buttonTrainTreeAuto);
             this.tabPage3.Controls.Add(this.buttonResetZoom);
             this.tabPage3.Controls.Add(this.zoomOut);
             this.tabPage3.Controls.Add(this.panel1);
@@ -115,6 +109,23 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Decision Tree Auto";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // labelTrainTreeAuto
+            // 
+            this.labelTrainTreeAuto.Location = new System.Drawing.Point(670, 9);
+            this.labelTrainTreeAuto.Name = "labelTrainTreeAuto";
+            this.labelTrainTreeAuto.Size = new System.Drawing.Size(440, 43);
+            this.labelTrainTreeAuto.TabIndex = 5;
+            // 
+            // buttonTrainTreeAuto
+            // 
+            this.buttonTrainTreeAuto.Location = new System.Drawing.Point(478, 9);
+            this.buttonTrainTreeAuto.Name = "buttonTrainTreeAuto";
+            this.buttonTrainTreeAuto.Size = new System.Drawing.Size(185, 37);
+            this.buttonTrainTreeAuto.TabIndex = 4;
+            this.buttonTrainTreeAuto.Text = "Train Decision Tree Auto";
+            this.buttonTrainTreeAuto.UseVisualStyleBackColor = true;
+            this.buttonTrainTreeAuto.Click += new System.EventHandler(this.buttonTrainTreeAuto_Click);
             // 
             // buttonResetZoom
             // 
@@ -173,15 +184,6 @@
             this.tabPage4.Text = "Decision Tree Manual";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // tabPage5
-            // 
-            this.tabPage5.Location = new System.Drawing.Point(4, 25);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1126, 658);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Add Patient";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.pictureBoxTreeManual);
@@ -198,6 +200,43 @@
             this.pictureBoxTreeManual.TabIndex = 0;
             this.pictureBoxTreeManual.TabStop = false;
             this.pictureBoxTreeManual.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.addPatientControl1);
+            this.tabPage5.Location = new System.Drawing.Point(4, 25);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(1126, 658);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Add Patient";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // dataFilterControl1
+            // 
+            this.dataFilterControl1.Location = new System.Drawing.Point(1, 0);
+            this.dataFilterControl1.Name = "dataFilterControl1";
+            this.dataFilterControl1.Size = new System.Drawing.Size(1119, 649);
+            this.dataFilterControl1.TabIndex = 0;
+            // 
+            // graphsControl1
+            // 
+            this.graphsControl1.Location = new System.Drawing.Point(22, 38);
+            this.graphsControl1.Name = "graphsControl1";
+            this.graphsControl1.Size = new System.Drawing.Size(1123, 655);
+            this.graphsControl1.TabIndex = 3;
+            // 
+            // addPatientControl1
+            // 
+            this.addPatientControl1.Location = new System.Drawing.Point(3, 3);
+            this.addPatientControl1.Name = "addPatientControl1";
+            this.addPatientControl1.Size = new System.Drawing.Size(1120, 655);
+            this.addPatientControl1.TabIndex = 0;
             // 
             // PatientsFileWindow
             // 
@@ -216,6 +255,7 @@
             this.tabPage4.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTreeManual)).EndInit();
+            this.tabPage5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -237,6 +277,10 @@
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBoxTreeManual;
+        private System.Windows.Forms.Button buttonTrainTreeAuto;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Label labelTrainTreeAuto;
+        private UI.AddPatientControl addPatientControl1;
     }
 }
 
