@@ -53,6 +53,16 @@ namespace HeartDiseaseInvestigation.TreeVisualization
             this.font = font;
         }
 
+        public TreeNode GetTrueNode()
+        {
+            return this.TrueNode;
+        }
+
+        public TreeNode GetFalseNode()
+        {
+            return this.FalseNode;
+        }
+
         public void AddTrueNode(TreeNode node)
         {
             this.TrueNode = node;

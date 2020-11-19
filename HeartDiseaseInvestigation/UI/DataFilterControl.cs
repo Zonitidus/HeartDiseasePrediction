@@ -90,8 +90,8 @@ namespace HeartDiseaseInvestigation.UI
                     "Predicted -> " + destree.PrintLeaf(destree.Classify(test[k], t)));
 
 
-                Console.WriteLine("Actual -> " + test[k].getAttributes()[test[k].getAttributes().Length - 1] + "\n" +
-                    "Predicted -> " + destree.PrintLeaf(destree.Classify(test[k], t)));
+                /*Console.WriteLine("Actual -> " + test[k].getAttributes()[test[k].getAttributes().Length - 1] + "\n" +
+                    "Predicted -> " + destree.PrintLeaf(destree.Classify(test[k], t)));*/
             }
 
             ClassificationResult c = new ClassificationResult(classification);

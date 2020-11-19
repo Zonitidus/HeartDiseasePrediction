@@ -26,50 +26,61 @@ namespace HeartDiseaseInvestigation.UI
             InitializeComponent();
             this.InitializeTree(rootTree);
 
-            Console.WriteLine(rootTree.ToString());
         }
 
         public void InitializeTree(Node<Patient> rootTree)
         {
 
-            this.root = new TreeNode(new CircleNode(rootTree.ToString()));
-            this.GenerateTree(rootTree, null);
+            Console.WriteLine(rootTree.GetTrueNode().ToString());
+            Console.WriteLine("\t"+rootTree.GetTrueNode().GetFalseNode().ToString());
+            Console.WriteLine("\t"+rootTree.GetTrueNode().GetTrueNode().ToString());
+            Console.WriteLine(rootTree.GetFalseNode().ToString());
+            Console.WriteLine("\t" + rootTree.GetFalseNode().GetFalseNode().ToString());
+            Console.WriteLine("\t" + rootTree.GetFalseNode().GetTrueNode().ToString());
 
+            this.root = new TreeNode(new CircleNode(rootTree.ToString()));
+            this.GenerateTree(rootTree);
             this.Arrange();
         }
 
-        public void GenerateTree(Node<Patient> t, TreeNode parent)
+        public void GenerateTree(Node<Patient> rootTree)
+        {
+            this.root = new TreeNode(new CircleNode(rootTree.ToString()));
+
+            if (rootTree.GetTrueNode() != null)
+            {
+                AddNode(rootTree.GetTrueNode(), this.root);
+            }
+
+            if (rootTree.GetFalseNode() != null)
+            {
+                AddNode(rootTree.GetFalseNode(), this.root);
+            }
+        }
+
+        public void AddNode(Node<Patient> t, TreeNode parent)
         {
 
             TreeNode newNode = new TreeNode(new CircleNode(t.ToString()));
 
-            if(parent != null)
-            {
-                if (t.GetTrueNode() != null)
-                {
-                    parent.AddTrueNode(new TreeNode(new CircleNode(t.GetTrueNode().ToString())));
-                    GenerateTree(t.GetTrueNode(), newNode);
-                }
 
-                if (t.GetFalseNode() != null)
-                {
-                    parent.AddFalseNode(new TreeNode(new CircleNode(t.GetFalseNode().ToString())));
-                    GenerateTree(t.GetFalseNode(), newNode);
-                }
+            if (parent.GetTrueNode() == null)
+            {
+                parent.AddTrueNode(newNode);
             }
             else
             {
-                if (t.GetTrueNode() != null)
-                {
-                    this.root.AddTrueNode(new TreeNode(new CircleNode(t.GetTrueNode().ToString())));
-                    GenerateTree(t.GetTrueNode(), newNode);
-                }
+                parent.AddFalseNode(newNode);
+            }
 
-                if (t.GetFalseNode() != null)
-                {
-                    this.root.AddFalseNode(new TreeNode(new CircleNode(t.GetFalseNode().ToString())));
-                    GenerateTree(t.GetFalseNode(), newNode);
-                }
+
+            if (t.GetTrueNode() != null)
+            { 
+                AddNode(t.GetTrueNode(), newNode);
+            }
+            if (t.GetFalseNode() != null)
+            {
+                AddNode(t.GetFalseNode(), newNode);
             }
         }
 

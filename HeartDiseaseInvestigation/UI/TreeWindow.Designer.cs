@@ -35,9 +35,9 @@ namespace HeartDiseaseInvestigation.UI
             // 
             // pictureBox
             // 
-            this.pictureBox.Location = new System.Drawing.Point(50, 46);
+            this.pictureBox.Location = new System.Drawing.Point(12, 46);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(686, 368);
+            this.pictureBox.Size = new System.Drawing.Size(1822, 602);
             this.pictureBox.TabIndex = 0;
             this.pictureBox.TabStop = false;
             this.pictureBox.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox_Paint_1);
@@ -46,7 +46,7 @@ namespace HeartDiseaseInvestigation.UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1846, 674);
             this.Controls.Add(this.pictureBox);
             this.Name = "TreeWindow";
             this.Text = "TreeWindow";
