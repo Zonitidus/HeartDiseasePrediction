@@ -17,7 +17,7 @@ namespace HeartDiseaseInvestigation.Model
         //List of the filters to apply
         List<string> listFilters = new List<string>();
 
-        //Class constructor
+        //C
         public DataManager()
         {
             this.dataSetPatients = new Dictionary<String, Patient>();
@@ -72,6 +72,7 @@ namespace HeartDiseaseInvestigation.Model
             {
                 listFilters.Add(cb.Text + " = " + "'" + tb1.Text + "'");
                 l.Text = l.Text + "\n" + cb.Text + ": " + tb1.Text;
+
             }
             else
             {
@@ -124,7 +125,7 @@ namespace HeartDiseaseInvestigation.Model
 
             return dt;
         }
-
+        //a
         public DataTable LoadCSVTest()
         {
             DataTable dt = new DataTable();

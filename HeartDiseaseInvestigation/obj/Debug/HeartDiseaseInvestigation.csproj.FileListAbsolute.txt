@@ -12,3 +12,31 @@ C:\Users\zonif\OneDrive\Escritorio\Work\QuintoSemestre\Integrador\Proyecto\OssaM
 C:\Users\zonif\OneDrive\Escritorio\Work\QuintoSemestre\Integrador\Proyecto\OssaMongolo\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.exe
 C:\Users\zonif\OneDrive\Escritorio\Work\QuintoSemestre\Integrador\Proyecto\OssaMongolo\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.pdb
 C:\Users\zonif\OneDrive\Escritorio\Work\QuintoSemestre\Integrador\Proyecto\OssaMongolo\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.UI.ClassificationResult.resources
+C:\Users\zonif\OneDrive\Escritorio\Work\QuintoSemestre\Monitoría UTN\Renombrar ramas\HeartDisease_Investigation\HeartDiseaseInvestigation\bin\Debug\HeartDiseaseInvestigation.exe.config
+C:\Users\zonif\OneDrive\Escritorio\Work\QuintoSemestre\Monitoría UTN\Renombrar ramas\HeartDisease_Investigation\HeartDiseaseInvestigation\bin\Debug\HeartDiseaseInvestigation.exe
+C:\Users\zonif\OneDrive\Escritorio\Work\QuintoSemestre\Monitoría UTN\Renombrar ramas\HeartDisease_Investigation\HeartDiseaseInvestigation\bin\Debug\HeartDiseaseInvestigation.pdb
+C:\Users\zonif\OneDrive\Escritorio\Work\QuintoSemestre\Monitoría UTN\Renombrar ramas\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.csprojAssemblyReference.cache
+C:\Users\zonif\OneDrive\Escritorio\Work\QuintoSemestre\Monitoría UTN\Renombrar ramas\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.Properties.Resources.resources
+C:\Users\zonif\OneDrive\Escritorio\Work\QuintoSemestre\Monitoría UTN\Renombrar ramas\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.UI.ClassificationResult.resources
+C:\Users\zonif\OneDrive\Escritorio\Work\QuintoSemestre\Monitoría UTN\Renombrar ramas\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.UI.DataFilterControl.resources
+C:\Users\zonif\OneDrive\Escritorio\Work\QuintoSemestre\Monitoría UTN\Renombrar ramas\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.UI.GraphsControl.resources
+C:\Users\zonif\OneDrive\Escritorio\Work\QuintoSemestre\Monitoría UTN\Renombrar ramas\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.PatientsFileWindow.resources
+C:\Users\zonif\OneDrive\Escritorio\Work\QuintoSemestre\Monitoría UTN\Renombrar ramas\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.UI.Graphs.resources
+C:\Users\zonif\OneDrive\Escritorio\Work\QuintoSemestre\Monitoría UTN\Renombrar ramas\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.csproj.GenerateResource.cache
+C:\Users\zonif\OneDrive\Escritorio\Work\QuintoSemestre\Monitoría UTN\Renombrar ramas\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.csproj.CoreCompileInputs.cache
+C:\Users\zonif\OneDrive\Escritorio\Work\QuintoSemestre\Monitoría UTN\Renombrar ramas\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.exe
+C:\Users\zonif\OneDrive\Escritorio\Work\QuintoSemestre\Monitoría UTN\Renombrar ramas\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.pdb
+C:\Users\juano\Source\Repos\HeartDisease_Investigation\HeartDiseaseInvestigation\bin\Debug\HeartDiseaseInvestigation.exe.config
+C:\Users\juano\Source\Repos\HeartDisease_Investigation\HeartDiseaseInvestigation\bin\Debug\HeartDiseaseInvestigation.exe
+C:\Users\juano\Source\Repos\HeartDisease_Investigation\HeartDiseaseInvestigation\bin\Debug\HeartDiseaseInvestigation.pdb
+C:\Users\juano\Source\Repos\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.csprojAssemblyReference.cache
+C:\Users\juano\Source\Repos\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.Properties.Resources.resources
+C:\Users\juano\Source\Repos\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.UI.ClassificationResult.resources
+C:\Users\juano\Source\Repos\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.UI.DataFilterControl.resources
+C:\Users\juano\Source\Repos\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.UI.GraphsControl.resources
+C:\Users\juano\Source\Repos\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.PatientsFileWindow.resources
+C:\Users\juano\Source\Repos\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.UI.Graphs.resources
+C:\Users\juano\Source\Repos\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.csproj.GenerateResource.cache
+C:\Users\juano\Source\Repos\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.csproj.CoreCompileInputs.cache
+C:\Users\juano\Source\Repos\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.exe
+C:\Users\juano\Source\Repos\HeartDisease_Investigation\HeartDiseaseInvestigation\obj\Debug\HeartDiseaseInvestigation.pdb
