@@ -17,7 +17,7 @@ namespace HeartDiseaseInvestigation
         {
             //Recordar hacer referencia a algo del proyecto no me acuerdo que era jeje pero si hay algun error en el proyecto oficial es porque falta una assembly reference
             //url = "";
-            string link1 = "https://pi-final-app.herokuapp.com/";
+           /* string link1 = "https://pi-final-app.herokuapp.com/";
             string link2 = "https://pi-final-app.herokuapp.com/train";
             string link3 = "https://pi-final-app.herokuapp.com/draw-tree";
             string link4 = "https://pi-final-app.herokuapp.com/classify-patient";
@@ -43,7 +43,7 @@ namespace HeartDiseaseInvestigation
 
             //string stringJson = JsonConvert.SerializeObject(patient2);
             //Console.WriteLine(stringJson);
-            //Console.ReadKey();
+            //Console.ReadKey(); */
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
