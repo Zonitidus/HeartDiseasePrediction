@@ -119,7 +119,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Data\logo.ico" />
     <Content Include="Data\img.png" />
+    <Content Include="Data\zoomIn.png" />
+    <Content Include="Data\zoomOut.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
