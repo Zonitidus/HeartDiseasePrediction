@@ -118,12 +118,6 @@
     <EmbeddedResource Include="UI\PatientsFileWindow.resx">
       <DependentUpon>PatientsFileWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Graphs.resx">
-      <DependentUpon>Graphs.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\TreeWindow.resx">
-      <DependentUpon>TreeWindow.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Data\heart.csv" />
     <None Include="Data\heartS.csv" />
     <None Include="Data\test.csv" />
