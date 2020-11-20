@@ -29,6 +29,7 @@ namespace HeartDiseaseInvestigation
         public PatientsFileWindow(Node<Patient> rootTree)
         {
             InitializeComponent();
+            pictureBoxLogo.Image = Image.FromFile("../../Data/logo.ico");
             //this.InitializeTree(rootTree);
             pictureBoxTree.Image = cn.ImageFromAnURI("https://pi-final-app.herokuapp.com/draw-tree");
             w = pictureBoxTree.Width;
