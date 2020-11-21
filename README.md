@@ -21,7 +21,7 @@ Marta is a software engineer in Cleveland she was born with hearth issues, thank
 [Functional Requirements](https://github.com/Zonitidus/HeartDisease_Investigation/blob/main/HeartDiseaseInvestigation/Docs/Requerimientos%20funcionales.docx)<br>
 [Engineering method](https://github.com/Zonitidus/HeartDisease_Investigation/blob/main/HeartDiseaseInvestigation/Docs/Documentacion%20PI1%20SEGUNDA%20ENTREGA.docx)<br>
 #### Diagrams
-[Class Diagram](https://github.com/Zonitidus/HeartDisease_Investigation/blob/main/HeartDiseaseInvestigation/Docs/Diagrama%20de%20Clases.pdf)<br>
+[Class Diagram](https://github.com/Zonitidus/HeartDisease_Investigation/blob/main/HeartDiseaseInvestigation/Docs/class_diagram.pdf)<br>
 [Object Diagram](https://github.com/Zonitidus/HeartDisease_Investigation/blob/main/HeartDiseaseInvestigation/Docs/Diagrama%20de%20objetos.png)<br>
 [Sequence Diagram](https://github.com/Zonitidus/HeartDisease_Investigation/blob/main/HeartDiseaseInvestigation/Docs/Sequence%20Diagram.pdf)<br>
 
