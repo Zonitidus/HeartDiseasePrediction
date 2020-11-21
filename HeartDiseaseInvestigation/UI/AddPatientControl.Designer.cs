@@ -374,7 +374,7 @@
             this.groupBox8.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox8.Location = new System.Drawing.Point(395, 53);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(315, 128);
+            this.groupBox8.Size = new System.Drawing.Size(345, 128);
             this.groupBox8.TabIndex = 74;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Resting electrocardiographic results:";
@@ -385,7 +385,7 @@
             this.groupBox9.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox9.Location = new System.Drawing.Point(395, 187);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(315, 61);
+            this.groupBox9.Size = new System.Drawing.Size(345, 61);
             this.groupBox9.TabIndex = 75;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Maximum heart rate achieved:";
@@ -409,7 +409,7 @@
             this.groupBox10.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox10.Location = new System.Drawing.Point(395, 254);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(315, 48);
+            this.groupBox10.Size = new System.Drawing.Size(345, 48);
             this.groupBox10.TabIndex = 76;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Exercise induced angina:";
@@ -420,7 +420,7 @@
             this.groupBox11.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox11.Location = new System.Drawing.Point(395, 308);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(315, 60);
+            this.groupBox11.Size = new System.Drawing.Size(345, 60);
             this.groupBox11.TabIndex = 76;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "ST depression:";
@@ -451,7 +451,7 @@
             this.groupBox12.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox12.Location = new System.Drawing.Point(395, 374);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(315, 105);
+            this.groupBox12.Size = new System.Drawing.Size(345, 105);
             this.groupBox12.TabIndex = 76;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Slope of the peak exercise ST segment:";
@@ -498,7 +498,7 @@
             this.groupBox13.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox13.Location = new System.Drawing.Point(395, 485);
             this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(315, 54);
+            this.groupBox13.Size = new System.Drawing.Size(345, 54);
             this.groupBox13.TabIndex = 77;
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "Number of major vessels colored:";
@@ -556,7 +556,7 @@
             this.groupBox14.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox14.Location = new System.Drawing.Point(395, 545);
             this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Size = new System.Drawing.Size(315, 86);
+            this.groupBox14.Size = new System.Drawing.Size(345, 86);
             this.groupBox14.TabIndex = 78;
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "Thalassemia:";
