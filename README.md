@@ -6,7 +6,7 @@ Marta is a software engineer in Cleveland she was born with hearth issues, thank
 
 [Part 2](https://www.youtube.com/watch?v=AlyZ87v1Lhk&feature=youtu.be&ab_channel=FelipeGarc%C3%ADaL%C3%B3pez)
 
-[Part 3](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+[Part 3](https://youtu.be/6IGN9lNxrcA)
 
 ## Database:
 [Kaggle Database](https://www.kaggle.com/ronitf/heart-disease-uci)
