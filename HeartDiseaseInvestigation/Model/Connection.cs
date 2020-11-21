@@ -72,13 +72,6 @@ namespace HeartDiseaseInvestigation.Model
         }
 
 
-
-
-
-
-
-
-
         //Ya no mandar CSV si no el paciente en formato Json
         //Imagen por ruta hacer metodo
     }

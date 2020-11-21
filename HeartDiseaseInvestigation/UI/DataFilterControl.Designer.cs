@@ -38,7 +38,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.filtersLabel = new System.Windows.Forms.Label();
             this.heartDataTable = new System.Windows.Forms.DataGridView();
-            this.trainBttn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.heartDataTable)).BeginInit();
             this.SuspendLayout();
             // 
@@ -131,21 +130,10 @@
             this.heartDataTable.Size = new System.Drawing.Size(1108, 541);
             this.heartDataTable.TabIndex = 10;
             // 
-            // trainBttn
-            // 
-            this.trainBttn.Location = new System.Drawing.Point(927, 54);
-            this.trainBttn.Name = "trainBttn";
-            this.trainBttn.Size = new System.Drawing.Size(129, 27);
-            this.trainBttn.TabIndex = 12;
-            this.trainBttn.Text = "Train and classify";
-            this.trainBttn.UseVisualStyleBackColor = true;
-            this.trainBttn.Click += new System.EventHandler(this.trainBttn_Click);
-            // 
             // DataFilterControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.trainBttn);
             this.Controls.Add(this.heartDataTable);
             this.Controls.Add(this.filtersLabel);
             this.Controls.Add(this.label2);
@@ -176,6 +164,5 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label filtersLabel;
         private System.Windows.Forms.DataGridView heartDataTable;
-        private System.Windows.Forms.Button trainBttn;
     }
 }
