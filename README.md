@@ -14,7 +14,8 @@ Marta is a software engineer in Cleveland she was born with hearth issues, thank
 ## Technical Conditions: 
 **Programing language:** C# <br>
 **Operative System:** Windows 10 <br>
-**Development Environment:**  Visual Studio 
+**Development Environment:**  Visual Studio <br>
+**Api REST skitlearn python:** https://github.com/felipegarcial/decision_tree
 ## Documentation:
 [Roles PDF](https://github.com/Zonitidus/HeartDisease_Investigation/blob/main/HeartDiseaseInvestigation/Docs/Roles_del_equipo.pdf)<br>
 [Functional Requirements](https://github.com/Zonitidus/HeartDisease_Investigation/blob/main/HeartDiseaseInvestigation/Docs/Requerimientos%20funcionales.docx)<br>
