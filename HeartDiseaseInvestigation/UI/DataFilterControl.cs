@@ -111,8 +111,6 @@ namespace HeartDiseaseInvestigation.UI
         private void printTree(Node<Patient> root)
         {
 
-            TreeWindow tw = new TreeWindow(root);
-            tw.Show();
         }
     }
 

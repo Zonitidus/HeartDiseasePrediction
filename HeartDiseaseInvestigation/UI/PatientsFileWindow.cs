@@ -25,12 +25,12 @@ namespace HeartDiseaseInvestigation
         int h;
         Connection cn = new Connection();
         private TreeNode root;
+        private DataManager dmC = new DataManager();
 
         public PatientsFileWindow(Node<Patient> rootTree)
         {
             InitializeComponent();
             pictureBoxLogo.Image = Image.FromFile("../../Data/logo.ico");
-            //this.InitializeTree(rootTree);
             pictureBoxTree.Image = cn.ImageFromAnURI("https://pi-final-app.herokuapp.com/draw-tree");
             w = pictureBoxTree.Width;
             h = pictureBoxTree.Height;
@@ -61,7 +61,7 @@ namespace HeartDiseaseInvestigation
 
 
         //Decision tree manual
-        /*
+       
         public void InitializeTree(Node<Patient> rootTree)
         {
 
@@ -133,9 +133,60 @@ namespace HeartDiseaseInvestigation
 
             pictureBoxTreeManual.Refresh();
         }
-        */
+        
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
+            if (this.root == null)
+            {
+                MessageBox.Show("Generating tree. This might take a while", "Please wait");
+
+                dmC.LoadCSV();
+
+                Dictionary<String, Patient> trainData = dmC.GetPatients();
+
+                DecisionTree<Patient> destree = new DecisionTree<Patient>(trainData);
+
+                List<Patient> rows = new List<Patient>();
+
+                foreach (String k in trainData.Keys)
+                {
+                    rows.Add(trainData[k]);
+                }
+
+                Node<Patient> t = destree.BuildTree(rows);
+
+                this.InitializeTree(t);
+
+                dmC.LoadCSVTest();
+
+                Dictionary<String, Patient> test = dmC.GetClassifiedPatients();
+
+                List<String> classification = new List<string>();
+
+                double correct = 0;
+                double total = 0;
+
+                foreach (String k in test.Keys)
+                {
+
+                    String a = test[k].getAttributes()[test[k].getAttributes().Length - 1];
+                    String b = destree.PrintLeaf(destree.Classify(test[k], t))[1];
+
+                    if (a.Equals(b))
+                        correct++;
+
+                    total++;
+
+                }
+
+                double accurracy = (correct/total);
+
+                this.accu.Text = "Accurracy: "+accurracy;
+
+                this.addPatientControl2.SetRoot(t);
+                this.addPatientControl2.SetTree(destree);
+            }
+
             e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
             e.Graphics.TextRenderingHint = TextRenderingHint.AntiAliasGridFit;
             root.DrawTree(e.Graphics);
@@ -144,6 +195,11 @@ namespace HeartDiseaseInvestigation
         private void buttonTrainTreeAuto_Click(object sender, EventArgs e)
         {
             labelTrainTreeAuto.Text = cn.Train("https://pi-final-app.herokuapp.com/train");
+        }
+
+        private void tabControl1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

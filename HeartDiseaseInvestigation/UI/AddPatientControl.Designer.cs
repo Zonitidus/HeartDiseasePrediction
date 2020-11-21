@@ -49,12 +49,16 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.numericUpDownTrestbps = new System.Windows.Forms.NumericUpDown();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.numericUpDownChol = new System.Windows.Forms.NumericUpDown();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.numericUpDownThalach = new System.Windows.Forms.NumericUpDown();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.numericUpDownOldpeak = new System.Windows.Forms.NumericUpDown();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.radioButtonSlope3 = new System.Windows.Forms.RadioButton();
             this.radioButtonSlope1 = new System.Windows.Forms.RadioButton();
@@ -65,16 +69,12 @@
             this.radioButtonCa2 = new System.Windows.Forms.RadioButton();
             this.radioButtonCa1 = new System.Windows.Forms.RadioButton();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
-            this.buttonResetForm = new System.Windows.Forms.Button();
-            this.buttonRegisterAuto = new System.Windows.Forms.Button();
-            this.numericUpDownTrestbps = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownChol = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownThalach = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownOldpeak = new System.Windows.Forms.NumericUpDown();
             this.radioButtonThal3 = new System.Windows.Forms.RadioButton();
+            this.radioButtonThal1 = new System.Windows.Forms.RadioButton();
             this.radioButtonThal0 = new System.Windows.Forms.RadioButton();
             this.radioButtonThal2 = new System.Windows.Forms.RadioButton();
-            this.radioButtonThal1 = new System.Windows.Forms.RadioButton();
+            this.buttonResetForm = new System.Windows.Forms.Button();
+            this.buttonRegisterAuto = new System.Windows.Forms.Button();
             this.buttonRegisterManual = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAge)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -82,19 +82,19 @@
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTrestbps)).BeginInit();
             this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownChol)).BeginInit();
             this.groupBox7.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownThalach)).BeginInit();
             this.groupBox10.SuspendLayout();
             this.groupBox11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownOldpeak)).BeginInit();
             this.groupBox12.SuspendLayout();
             this.groupBox13.SuspendLayout();
             this.groupBox14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTrestbps)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownChol)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownThalach)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownOldpeak)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -319,6 +319,18 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Resting blood pressure:";
             // 
+            // numericUpDownTrestbps
+            // 
+            this.numericUpDownTrestbps.Location = new System.Drawing.Point(6, 22);
+            this.numericUpDownTrestbps.Maximum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            0});
+            this.numericUpDownTrestbps.Name = "numericUpDownTrestbps";
+            this.numericUpDownTrestbps.Size = new System.Drawing.Size(140, 27);
+            this.numericUpDownTrestbps.TabIndex = 81;
+            // 
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.numericUpDownChol);
@@ -329,6 +341,18 @@
             this.groupBox6.TabIndex = 74;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Cholesterol: ";
+            // 
+            // numericUpDownChol
+            // 
+            this.numericUpDownChol.Location = new System.Drawing.Point(6, 23);
+            this.numericUpDownChol.Maximum = new decimal(new int[] {
+            600,
+            0,
+            0,
+            0});
+            this.numericUpDownChol.Name = "numericUpDownChol";
+            this.numericUpDownChol.Size = new System.Drawing.Size(140, 27);
+            this.numericUpDownChol.TabIndex = 82;
             // 
             // groupBox7
             // 
@@ -366,6 +390,18 @@
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Maximum heart rate achieved:";
             // 
+            // numericUpDownThalach
+            // 
+            this.numericUpDownThalach.Location = new System.Drawing.Point(6, 21);
+            this.numericUpDownThalach.Maximum = new decimal(new int[] {
+            250,
+            0,
+            0,
+            0});
+            this.numericUpDownThalach.Name = "numericUpDownThalach";
+            this.numericUpDownThalach.Size = new System.Drawing.Size(140, 27);
+            this.numericUpDownThalach.TabIndex = 83;
+            // 
             // groupBox10
             // 
             this.groupBox10.Controls.Add(this.radioButtonExangYes);
@@ -388,6 +424,24 @@
             this.groupBox11.TabIndex = 76;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "ST depression:";
+            // 
+            // numericUpDownOldpeak
+            // 
+            this.numericUpDownOldpeak.DecimalPlaces = 1;
+            this.numericUpDownOldpeak.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numericUpDownOldpeak.Location = new System.Drawing.Point(7, 27);
+            this.numericUpDownOldpeak.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDownOldpeak.Name = "numericUpDownOldpeak";
+            this.numericUpDownOldpeak.Size = new System.Drawing.Size(120, 27);
+            this.numericUpDownOldpeak.TabIndex = 0;
             // 
             // groupBox12
             // 
@@ -507,82 +561,6 @@
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "Thalassemia:";
             // 
-            // buttonResetForm
-            // 
-            this.buttonResetForm.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonResetForm.Location = new System.Drawing.Point(816, 485);
-            this.buttonResetForm.Name = "buttonResetForm";
-            this.buttonResetForm.Size = new System.Drawing.Size(213, 38);
-            this.buttonResetForm.TabIndex = 79;
-            this.buttonResetForm.Text = "Reset Form";
-            this.buttonResetForm.UseVisualStyleBackColor = true;
-            this.buttonResetForm.Click += new System.EventHandler(this.buttonResetForm_Click);
-            // 
-            // buttonRegisterAuto
-            // 
-            this.buttonRegisterAuto.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRegisterAuto.Location = new System.Drawing.Point(774, 303);
-            this.buttonRegisterAuto.Name = "buttonRegisterAuto";
-            this.buttonRegisterAuto.Size = new System.Drawing.Size(310, 83);
-            this.buttonRegisterAuto.TabIndex = 80;
-            this.buttonRegisterAuto.Text = "Send Information by Ossa";
-            this.buttonRegisterAuto.UseVisualStyleBackColor = true;
-            this.buttonRegisterAuto.Click += new System.EventHandler(this.buttonRegisterAuto_Click);
-            // 
-            // numericUpDownTrestbps
-            // 
-            this.numericUpDownTrestbps.Location = new System.Drawing.Point(6, 22);
-            this.numericUpDownTrestbps.Maximum = new decimal(new int[] {
-            300,
-            0,
-            0,
-            0});
-            this.numericUpDownTrestbps.Name = "numericUpDownTrestbps";
-            this.numericUpDownTrestbps.Size = new System.Drawing.Size(140, 27);
-            this.numericUpDownTrestbps.TabIndex = 81;
-            // 
-            // numericUpDownChol
-            // 
-            this.numericUpDownChol.Location = new System.Drawing.Point(6, 23);
-            this.numericUpDownChol.Maximum = new decimal(new int[] {
-            600,
-            0,
-            0,
-            0});
-            this.numericUpDownChol.Name = "numericUpDownChol";
-            this.numericUpDownChol.Size = new System.Drawing.Size(140, 27);
-            this.numericUpDownChol.TabIndex = 82;
-            // 
-            // numericUpDownThalach
-            // 
-            this.numericUpDownThalach.Location = new System.Drawing.Point(6, 21);
-            this.numericUpDownThalach.Maximum = new decimal(new int[] {
-            250,
-            0,
-            0,
-            0});
-            this.numericUpDownThalach.Name = "numericUpDownThalach";
-            this.numericUpDownThalach.Size = new System.Drawing.Size(140, 27);
-            this.numericUpDownThalach.TabIndex = 83;
-            // 
-            // numericUpDownOldpeak
-            // 
-            this.numericUpDownOldpeak.DecimalPlaces = 1;
-            this.numericUpDownOldpeak.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.numericUpDownOldpeak.Location = new System.Drawing.Point(7, 27);
-            this.numericUpDownOldpeak.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numericUpDownOldpeak.Name = "numericUpDownOldpeak";
-            this.numericUpDownOldpeak.Size = new System.Drawing.Size(120, 27);
-            this.numericUpDownOldpeak.TabIndex = 0;
-            // 
             // radioButtonThal3
             // 
             this.radioButtonThal3.AutoSize = true;
@@ -593,6 +571,17 @@
             this.radioButtonThal3.TabStop = true;
             this.radioButtonThal3.Text = "Reversable defect";
             this.radioButtonThal3.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonThal1
+            // 
+            this.radioButtonThal1.AutoSize = true;
+            this.radioButtonThal1.Location = new System.Drawing.Point(6, 55);
+            this.radioButtonThal1.Name = "radioButtonThal1";
+            this.radioButtonThal1.Size = new System.Drawing.Size(81, 23);
+            this.radioButtonThal1.TabIndex = 84;
+            this.radioButtonThal1.TabStop = true;
+            this.radioButtonThal1.Text = "Normal";
+            this.radioButtonThal1.UseVisualStyleBackColor = true;
             // 
             // radioButtonThal0
             // 
@@ -616,16 +605,27 @@
             this.radioButtonThal2.Text = "Fixed defect";
             this.radioButtonThal2.UseVisualStyleBackColor = true;
             // 
-            // radioButtonThal1
+            // buttonResetForm
             // 
-            this.radioButtonThal1.AutoSize = true;
-            this.radioButtonThal1.Location = new System.Drawing.Point(6, 55);
-            this.radioButtonThal1.Name = "radioButtonThal1";
-            this.radioButtonThal1.Size = new System.Drawing.Size(81, 23);
-            this.radioButtonThal1.TabIndex = 84;
-            this.radioButtonThal1.TabStop = true;
-            this.radioButtonThal1.Text = "Normal";
-            this.radioButtonThal1.UseVisualStyleBackColor = true;
+            this.buttonResetForm.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonResetForm.Location = new System.Drawing.Point(816, 485);
+            this.buttonResetForm.Name = "buttonResetForm";
+            this.buttonResetForm.Size = new System.Drawing.Size(213, 38);
+            this.buttonResetForm.TabIndex = 79;
+            this.buttonResetForm.Text = "Reset Form";
+            this.buttonResetForm.UseVisualStyleBackColor = true;
+            this.buttonResetForm.Click += new System.EventHandler(this.buttonResetForm_Click);
+            // 
+            // buttonRegisterAuto
+            // 
+            this.buttonRegisterAuto.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRegisterAuto.Location = new System.Drawing.Point(774, 303);
+            this.buttonRegisterAuto.Name = "buttonRegisterAuto";
+            this.buttonRegisterAuto.Size = new System.Drawing.Size(310, 83);
+            this.buttonRegisterAuto.TabIndex = 80;
+            this.buttonRegisterAuto.Text = "Classify patient (library)";
+            this.buttonRegisterAuto.UseVisualStyleBackColor = true;
+            this.buttonRegisterAuto.Click += new System.EventHandler(this.buttonRegisterAuto_Click);
             // 
             // buttonRegisterManual
             // 
@@ -634,7 +634,7 @@
             this.buttonRegisterManual.Name = "buttonRegisterManual";
             this.buttonRegisterManual.Size = new System.Drawing.Size(310, 83);
             this.buttonRegisterManual.TabIndex = 82;
-            this.buttonRegisterManual.Text = "Send Information by Yusun";
+            this.buttonRegisterManual.Text = "Classify patient (our approach)";
             this.buttonRegisterManual.UseVisualStyleBackColor = true;
             this.buttonRegisterManual.Click += new System.EventHandler(this.buttonRegisterManual_Click);
             // 
@@ -671,25 +671,25 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTrestbps)).EndInit();
             this.groupBox6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownChol)).EndInit();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             this.groupBox9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownThalach)).EndInit();
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
             this.groupBox11.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownOldpeak)).EndInit();
             this.groupBox12.ResumeLayout(false);
             this.groupBox12.PerformLayout();
             this.groupBox13.ResumeLayout(false);
             this.groupBox13.PerformLayout();
             this.groupBox14.ResumeLayout(false);
             this.groupBox14.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTrestbps)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownChol)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownThalach)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownOldpeak)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

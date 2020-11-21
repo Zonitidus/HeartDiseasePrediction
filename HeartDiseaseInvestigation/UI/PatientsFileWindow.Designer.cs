@@ -30,7 +30,9 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.dataFilterControl1 = new HeartDiseaseInvestigation.UI.DataFilterControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.graphsControl1 = new HeartDiseaseInvestigation.UI.GraphsControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.labelTrainTreeAuto = new System.Windows.Forms.Label();
             this.buttonTrainTreeAuto = new System.Windows.Forms.Button();
@@ -43,10 +45,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBoxTreeManual = new System.Windows.Forms.PictureBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.dataFilterControl1 = new HeartDiseaseInvestigation.UI.DataFilterControl();
-            this.graphsControl1 = new HeartDiseaseInvestigation.UI.GraphsControl();
-            this.addPatientControl2 = new HeartDiseaseInvestigation.UI.AddPatientControl();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
+            this.addPatientControl2 = new HeartDiseaseInvestigation.UI.AddPatientControl();
+            this.accu = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -72,6 +73,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1134, 687);
             this.tabControl1.TabIndex = 4;
+            this.tabControl1.Click += new System.EventHandler(this.tabControl1_Click);
             // 
             // tabPage1
             // 
@@ -84,6 +86,13 @@
             this.tabPage1.Text = "Data";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // dataFilterControl1
+            // 
+            this.dataFilterControl1.Location = new System.Drawing.Point(1, 0);
+            this.dataFilterControl1.Name = "dataFilterControl1";
+            this.dataFilterControl1.Size = new System.Drawing.Size(1119, 649);
+            this.dataFilterControl1.TabIndex = 0;
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.graphsControl1);
@@ -94,6 +103,13 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Graphs";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // graphsControl1
+            // 
+            this.graphsControl1.Location = new System.Drawing.Point(22, 38);
+            this.graphsControl1.Name = "graphsControl1";
+            this.graphsControl1.Size = new System.Drawing.Size(1123, 655);
+            this.graphsControl1.TabIndex = 3;
             // 
             // tabPage3
             // 
@@ -160,9 +176,9 @@
             // 
             // pictureBoxTree
             // 
-            this.pictureBoxTree.Location = new System.Drawing.Point(4, 3);
+            this.pictureBoxTree.Location = new System.Drawing.Point(2, 2);
             this.pictureBoxTree.Name = "pictureBoxTree";
-            this.pictureBoxTree.Size = new System.Drawing.Size(1116, 594);
+            this.pictureBoxTree.Size = new System.Drawing.Size(894, 474);
             this.pictureBoxTree.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxTree.TabIndex = 0;
             this.pictureBoxTree.TabStop = false;
@@ -188,17 +204,20 @@
             // 
             // panel2
             // 
+            this.panel2.AutoScroll = true;
+            this.panel2.Controls.Add(this.accu);
             this.panel2.Controls.Add(this.pictureBoxTreeManual);
-            this.panel2.Location = new System.Drawing.Point(4, 53);
+            this.panel2.Location = new System.Drawing.Point(3, 42);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1119, 602);
+            this.panel2.Size = new System.Drawing.Size(1120, 613);
             this.panel2.TabIndex = 0;
             // 
             // pictureBoxTreeManual
             // 
             this.pictureBoxTreeManual.Location = new System.Drawing.Point(3, 3);
             this.pictureBoxTreeManual.Name = "pictureBoxTreeManual";
-            this.pictureBoxTreeManual.Size = new System.Drawing.Size(1113, 596);
+            this.pictureBoxTreeManual.Size = new System.Drawing.Size(2251, 607);
+            this.pictureBoxTreeManual.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxTreeManual.TabIndex = 0;
             this.pictureBoxTreeManual.TabStop = false;
             this.pictureBoxTreeManual.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
@@ -214,27 +233,6 @@
             this.tabPage5.Text = "Add Patient";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // dataFilterControl1
-            // 
-            this.dataFilterControl1.Location = new System.Drawing.Point(1, 0);
-            this.dataFilterControl1.Name = "dataFilterControl1";
-            this.dataFilterControl1.Size = new System.Drawing.Size(1119, 649);
-            this.dataFilterControl1.TabIndex = 0;
-            // 
-            // graphsControl1
-            // 
-            this.graphsControl1.Location = new System.Drawing.Point(22, 38);
-            this.graphsControl1.Name = "graphsControl1";
-            this.graphsControl1.Size = new System.Drawing.Size(1123, 655);
-            this.graphsControl1.TabIndex = 3;
-            // 
-            // addPatientControl2
-            // 
-            this.addPatientControl2.Location = new System.Drawing.Point(3, 3);
-            this.addPatientControl2.Name = "addPatientControl2";
-            this.addPatientControl2.Size = new System.Drawing.Size(1120, 652);
-            this.addPatientControl2.TabIndex = 0;
-            // 
             // pictureBoxLogo
             // 
             this.pictureBoxLogo.Location = new System.Drawing.Point(775, 14);
@@ -243,6 +241,21 @@
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxLogo.TabIndex = 82;
             this.pictureBoxLogo.TabStop = false;
+            // 
+            // addPatientControl2
+            // 
+            this.addPatientControl2.Location = new System.Drawing.Point(3, 3);
+            this.addPatientControl2.Name = "addPatientControl2";
+            this.addPatientControl2.Size = new System.Drawing.Size(1120, 652);
+            this.addPatientControl2.TabIndex = 0;
+            // 
+            // accu
+            // 
+            this.accu.AutoSize = true;
+            this.accu.Location = new System.Drawing.Point(894, 18);
+            this.accu.Name = "accu";
+            this.accu.Size = new System.Drawing.Size(0, 17);
+            this.accu.TabIndex = 1;
             // 
             // PatientsFileWindow
             // 
@@ -260,6 +273,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTree)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTreeManual)).EndInit();
             this.tabPage5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
@@ -289,6 +303,7 @@
         private UI.AddPatientControl addPatientControl1;
         private UI.AddPatientControl addPatientControl2;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
+        private System.Windows.Forms.Label accu;
     }
 }
 

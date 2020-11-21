@@ -68,7 +68,19 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
                 {
                     double a = Convert.ToDouble(this.labelCount[key]) / Convert.ToDouble(total);
 
-                   r += key+" "+a+"%\n";
+                    if(key.Equals("1") && a == 1)
+                    {
+                        r += key + "-" + a + "%\n"+"0"+"-"+"99%";
+                        break;
+                    }
+                    if (key.Equals("0") && a == 1)
+                    {
+                        r += key + "-" + a + "%\n" + "0" + "-" + "99%";
+                        break;
+                    }
+
+
+                    r += key+"-"+a+"%\n";
                 }
             }
 
