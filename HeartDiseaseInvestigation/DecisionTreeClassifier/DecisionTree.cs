@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HeartDiseaseInvestigation.DecisionTreeClassifier
 {
-    class DecisionTree<T> where T: DatasetRow
+    public class DecisionTree<T> where T: DatasetRow
     {
         private Node<T> root { get; set; }
         private DataTable dataset { get; set; }
@@ -172,8 +172,11 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
                 return Classify(row, node.GetFalseNode());
         }
 
-        public String PrintLeaf(Dictionary<String, Int32> counts)
+        public String[] PrintLeaf(Dictionary<String, Int32> counts)
         {
+
+            String[] res = new string[2];
+            String clas = "";
 
             Console.WriteLine("AAAAAHHH COunts -> "+counts.Count);
 
@@ -201,18 +204,28 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
                 else
                 {
                     probs.Add(key, 100);
+
                 }
             }
 
 
             String pre = "";
 
+            double maxP = 0;
+
             foreach (String k in probs.Keys)
             {
+                if (maxP < probs[k]) { 
+                    maxP = probs[k];
+                    clas = k;
+                }
                 pre += k + " " + probs[k] + "%" + "\n\t\t";
             }
 
-            return pre;
+            res[0] = pre;
+            res[1] = clas;
+
+            return res;
         }
     }
 }

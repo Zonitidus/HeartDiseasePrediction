@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HeartDiseaseInvestigation.DecisionTreeClassifier
 {
-    class Node<T> where T: DatasetRow
+    public class Node<T> where T: DatasetRow
     {
         private Query<T> query;
         private Node<T> trueNode;
@@ -43,6 +43,48 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
         public Dictionary<String, Int32> GetPredictions()
         {
             return this.labelCount;
+        }
+
+        public override String ToString()
+        {
+            String r = "";
+
+            if(this.query != null)
+            {
+                r = query.ToString() + "\n";
+            }
+
+            if(this.labelCount != null)
+            {
+
+                int total = 0;
+
+                foreach(String key in this.labelCount.Keys)
+                {
+                    total+= this.labelCount[key];
+                }
+
+                foreach (String key in this.labelCount.Keys)
+                {
+                    double a = Convert.ToDouble(this.labelCount[key]) / Convert.ToDouble(total);
+
+                    if(key.Equals("1") && a == 1)
+                    {
+                        r += key + "-" + a + "%\n"+"0"+"-"+"99%";
+                        break;
+                    }
+                    if (key.Equals("0") && a == 1)
+                    {
+                        r += key + "-" + a + "%\n" + "0" + "-" + "99%";
+                        break;
+                    }
+
+
+                    r += key+"-"+a+"%\n";
+                }
+            }
+
+            return r;
         }
     }
 }
