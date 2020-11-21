@@ -24,9 +24,6 @@ namespace HeartDiseaseInvestigation.TreeVisualization
 
         private PointF DataCenter;
 
-        private PointF SpotCenter;
-
-
         public Font font = new Font("Times New Roman", 12);
         public Pen pen = Pens.Black;
         public Brush fontBrush = Brushes.Black;

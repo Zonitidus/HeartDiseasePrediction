@@ -70,12 +70,6 @@
     <Compile Include="UI\AddPatientControl.Designer.cs">
       <DependentUpon>AddPatientControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\ClassificationResult.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\ClassificationResult.Designer.cs">
-      <DependentUpon>ClassificationResult.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\DataFilterControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -108,9 +102,6 @@
     </Compile>
     <EmbeddedResource Include="UI\AddPatientControl.resx">
       <DependentUpon>AddPatientControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\ClassificationResult.resx">
-      <DependentUpon>ClassificationResult.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\DataFilterControl.resx">
       <DependentUpon>DataFilterControl.cs</DependentUpon>
