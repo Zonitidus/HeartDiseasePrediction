@@ -43,11 +43,12 @@
             this.zoomIn = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.accu = new System.Windows.Forms.Label();
             this.pictureBoxTreeManual = new System.Windows.Forms.PictureBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.addPatientControl2 = new HeartDiseaseInvestigation.UI.AddPatientControl();
-            this.accu = new System.Windows.Forms.Label();
+            this.runBttn = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -194,6 +195,7 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.runBttn);
             this.tabPage4.Controls.Add(this.panel2);
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
@@ -211,6 +213,14 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1120, 613);
             this.panel2.TabIndex = 0;
+            // 
+            // accu
+            // 
+            this.accu.AutoSize = true;
+            this.accu.Location = new System.Drawing.Point(894, 18);
+            this.accu.Name = "accu";
+            this.accu.Size = new System.Drawing.Size(0, 17);
+            this.accu.TabIndex = 1;
             // 
             // pictureBoxTreeManual
             // 
@@ -249,13 +259,15 @@
             this.addPatientControl2.Size = new System.Drawing.Size(1120, 652);
             this.addPatientControl2.TabIndex = 0;
             // 
-            // accu
+            // runBttn
             // 
-            this.accu.AutoSize = true;
-            this.accu.Location = new System.Drawing.Point(894, 18);
-            this.accu.Name = "accu";
-            this.accu.Size = new System.Drawing.Size(0, 17);
-            this.accu.TabIndex = 1;
+            this.runBttn.Location = new System.Drawing.Point(979, 13);
+            this.runBttn.Name = "runBttn";
+            this.runBttn.Size = new System.Drawing.Size(115, 23);
+            this.runBttn.TabIndex = 1;
+            this.runBttn.Text = "Run experiment";
+            this.runBttn.UseVisualStyleBackColor = true;
+            this.runBttn.Click += new System.EventHandler(this.runBttn_Click);
             // 
             // PatientsFileWindow
             // 
@@ -304,6 +316,7 @@
         private UI.AddPatientControl addPatientControl2;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.Label accu;
+        private System.Windows.Forms.Button runBttn;
     }
 }
 

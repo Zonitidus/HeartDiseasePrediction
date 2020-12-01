@@ -17,6 +17,7 @@ namespace HeartDiseaseInvestigation.Model
         {
 
         }
+
         public string SendPatientToServer(string uirWebAPI, Patient patient)
         {
             string webResponse = string.Empty;
@@ -36,6 +37,7 @@ namespace HeartDiseaseInvestigation.Model
             }
             return webResponse;
         }
+
         public Image ImageFromAnURI(string urlWebApi)
         {
             string urlImage = GetImageURL(urlWebApi);
@@ -48,6 +50,7 @@ namespace HeartDiseaseInvestigation.Model
             webResponse.Close();
             return image;
         }
+
         private string GetImageURL(string uirWebAPI)
         {
             string uriImage = string.Empty;
@@ -70,9 +73,5 @@ namespace HeartDiseaseInvestigation.Model
             var response = client.DownloadString(url);
             return response;
         }
-
-
-        //Ya no mandar CSV si no el paciente en formato Json
-        //Imagen por ruta hacer metodo
     }
 }

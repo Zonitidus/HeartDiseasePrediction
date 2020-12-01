@@ -84,13 +84,14 @@ namespace HeartDiseaseInvestigation.TreeVisualization
             float subtree_ymin = ymin + size.Height + VOffset;
 
 
-
             if(this.TrueNode != null)
             {
                 float child_ymin = subtree_ymin;
                 this.TrueNode.Arrange(graph, ref x, ref child_ymin);
 
                 if (biggest_ymin < child_ymin) biggest_ymin = child_ymin;
+
+
 
                 x += HOffset;
             }

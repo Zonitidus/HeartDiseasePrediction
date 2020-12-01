@@ -15,6 +15,7 @@ using HeartDiseaseInvestigation.TreeVisualization;
 using TreeNode = HeartDiseaseInvestigation.TreeVisualization.TreeNode;
 using System.Drawing.Drawing2D;
 using System.Drawing.Text;
+using HeartDiseaseInvestigation.ExperimentData;
 
 namespace HeartDiseaseInvestigation
 {
@@ -26,6 +27,7 @@ namespace HeartDiseaseInvestigation
         Connection cn = new Connection();
         private TreeNode root;
         private DataManager dmC = new DataManager();
+        private Experiment experiment;
 
         public PatientsFileWindow(Node<Patient> rootTree)
         {
@@ -155,6 +157,8 @@ namespace HeartDiseaseInvestigation
 
                 Node<Patient> t = destree.BuildTree(rows);
 
+                this.experiment = new Experiment(destree, t);
+
                 this.InitializeTree(t);
 
                 dmC.LoadCSVTest();
@@ -200,6 +204,11 @@ namespace HeartDiseaseInvestigation
         private void tabControl1_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void runBttn_Click(object sender, EventArgs e)
+        {
+            this.experiment.RunExperiment();
         }
     }
 }
