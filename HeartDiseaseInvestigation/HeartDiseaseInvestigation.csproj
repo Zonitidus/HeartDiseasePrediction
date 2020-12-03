@@ -59,6 +59,7 @@
     <Compile Include="DecisionTreeClassifier\Node.cs" />
     <Compile Include="DecisionTreeClassifier\Optimal Solution.cs" />
     <Compile Include="DecisionTreeClassifier\Query.cs" />
+    <Compile Include="ExperimentData\Experiment.cs" />
     <Compile Include="Model\Connection.cs" />
     <Compile Include="Model\DataManager.cs" />
     <Compile Include="Model\Patient.cs" />
@@ -112,9 +113,13 @@
     <EmbeddedResource Include="UI\PatientsFileWindow.resx">
       <DependentUpon>PatientsFileWindow.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Data\ExperimentData.csv" />
+    <None Include="Data\ExperimentTest.csv" />
     <None Include="Data\heart.csv" />
     <None Include="Data\heartS.csv" />
     <None Include="Data\test.csv" />
+    <None Include="ExperimentData\ExperimentData.csv" />
+    <None Include="ExperimentData\ExperimentTest.csv" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

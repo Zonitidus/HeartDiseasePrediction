@@ -27,7 +27,7 @@ namespace HeartDiseaseInvestigation
         Connection cn = new Connection();
         private TreeNode root;
         private DataManager dmC = new DataManager();
-        private Experiment experiment;
+        private Experiment experiment = new Experiment();
 
         public PatientsFileWindow(Node<Patient> rootTree)
         {
@@ -156,8 +156,6 @@ namespace HeartDiseaseInvestigation
                 }
 
                 Node<Patient> t = destree.BuildTree(rows);
-
-                this.experiment = new Experiment(destree, t);
 
                 this.InitializeTree(t);
 

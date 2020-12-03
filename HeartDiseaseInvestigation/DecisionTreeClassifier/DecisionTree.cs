@@ -98,7 +98,7 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
             Query<T> bestQuery = null;
             double currentImpurity = this.Gini(rows);
 
-            Console.WriteLine("Rows: "+rows.Count+"\nGini: "+currentImpurity);
+            //Console.WriteLine("Rows: "+rows.Count+"\nGini: "+currentImpurity);
 
             int attributesN = rows.ElementAt(0).getAttributes().Length-1;
 
@@ -178,7 +178,7 @@ namespace HeartDiseaseInvestigation.DecisionTreeClassifier
             String[] res = new string[2];
             String clas = "";
 
-            Console.WriteLine("AAAAAHHH COunts -> "+counts.Count);
+            //Console.WriteLine("AAAAAHHH COunts -> "+counts.Count);
 
             double total = 0;
 
