@@ -30,6 +30,8 @@ namespace HeartDiseaseInvestigation
         public PatientsFileWindow(Node<Patient> rootTree)
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
             pictureBoxLogo.Image = Image.FromFile("../../Data/logo.ico");
             pictureBoxTree.Image = cn.ImageFromAnURI("https://pi-final-app.herokuapp.com/draw-tree");
             w = pictureBoxTree.Width;
@@ -200,6 +202,11 @@ namespace HeartDiseaseInvestigation
         private void tabControl1_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void graphsControl1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
