@@ -134,6 +134,10 @@
     <Content Include="Data\img.png" />
     <Content Include="Data\zoomIn.png" />
     <Content Include="Data\zoomOut.png" />
+    <None Include="Resources\sam.png" />
+    <None Include="Resources\yus.jpg" />
+    <None Include="Resources\pipe.jpg" />
+    <None Include="Resources\ossa.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

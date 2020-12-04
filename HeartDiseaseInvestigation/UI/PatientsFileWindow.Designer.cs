@@ -49,20 +49,20 @@
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.addPatientControl2 = new HeartDiseaseInvestigation.UI.AddPatientControl();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -75,10 +75,10 @@
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.tabPage6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -106,7 +106,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1456, 826);
+            this.tabPage1.Size = new System.Drawing.Size(1756, 826);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Data";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -129,7 +129,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1456, 826);
+            this.tabPage2.Size = new System.Drawing.Size(1756, 826);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Graphs";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -152,7 +152,7 @@
             this.tabPage3.Controls.Add(this.zoomIn);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1456, 826);
+            this.tabPage3.Size = new System.Drawing.Size(1756, 826);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Decision Tree Auto";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -229,7 +229,7 @@
             this.tabPage4.Controls.Add(this.panel2);
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1456, 826);
+            this.tabPage4.Size = new System.Drawing.Size(1756, 826);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Decision Tree Manual";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -269,7 +269,7 @@
             this.tabPage5.Controls.Add(this.addPatientControl2);
             this.tabPage5.Location = new System.Drawing.Point(4, 25);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1456, 826);
+            this.tabPage5.Size = new System.Drawing.Size(1756, 826);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Add Patient";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -292,6 +292,7 @@
             // 
             // tabPage6
             // 
+            this.tabPage6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tabPage6.Controls.Add(this.label6);
             this.tabPage6.Controls.Add(this.label5);
             this.tabPage6.Controls.Add(this.linkLabel4);
@@ -313,109 +314,23 @@
             this.tabPage6.Text = "Developers";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // label6
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(358, 127);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(140, 144);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(800, 808);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(168, 17);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "All Rights Reserved 2020";
             // 
-            // pictureBox2
+            // label5
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(358, 418);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(140, 144);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Location = new System.Drawing.Point(1009, 127);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(140, 144);
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Location = new System.Drawing.Point(1009, 418);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(140, 144);
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Arial", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(504, 143);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(326, 47);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Juan David Ossa";
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Arial", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(504, 434);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(396, 45);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Esteban Yusunguaira";
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Arial", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1155, 143);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(326, 47);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Felipe Garcia";
-            // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("Arial", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1155, 434);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(326, 45);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Samuel Satizabal";
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.linkLabel1.Location = new System.Drawing.Point(506, 190);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(216, 32);
-            this.linkLabel1.TabIndex = 8;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Perfil en GitHub";
-            // 
-            // linkLabel2
-            // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel2.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.linkLabel2.Location = new System.Drawing.Point(506, 479);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(216, 32);
-            this.linkLabel2.TabIndex = 9;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Perfil en GitHub";
-            // 
-            // linkLabel3
-            // 
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel3.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.linkLabel3.Location = new System.Drawing.Point(1155, 190);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(216, 32);
-            this.linkLabel3.TabIndex = 10;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "Perfil en GitHub";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(731, 791);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(339, 17);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "El Marcapasos De Marta™ is a registered trademark.";
             // 
             // linkLabel4
             // 
@@ -429,23 +344,124 @@
             this.linkLabel4.TabStop = true;
             this.linkLabel4.Text = "Perfil en GitHub";
             // 
-            // label5
+            // linkLabel3
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(731, 791);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(339, 17);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "El Marcapasos De Marta™ is a registered trademark.";
+            this.linkLabel3.AutoSize = true;
+            this.linkLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel3.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkLabel3.Location = new System.Drawing.Point(1155, 190);
+            this.linkLabel3.Name = "linkLabel3";
+            this.linkLabel3.Size = new System.Drawing.Size(216, 32);
+            this.linkLabel3.TabIndex = 10;
+            this.linkLabel3.TabStop = true;
+            this.linkLabel3.Text = "Perfil en GitHub";
             // 
-            // label6
+            // linkLabel2
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(800, 808);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(168, 17);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "All Rights Reserved 2020";
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel2.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkLabel2.Location = new System.Drawing.Point(506, 479);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(216, 32);
+            this.linkLabel2.TabIndex = 9;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Perfil en GitHub";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkLabel1.Location = new System.Drawing.Point(506, 190);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(216, 32);
+            this.linkLabel1.TabIndex = 8;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Perfil en GitHub";
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Arial", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(1155, 434);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(326, 45);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Samuel Satizabal";
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Arial", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(1155, 143);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(326, 47);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Felipe Garcia";
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Arial", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(504, 434);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(396, 45);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Esteban Yusunguaira";
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Arial", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(504, 143);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(326, 47);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Juan David Ossa";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox4.Image = global::HeartDiseaseInvestigation.Properties.Resources.sam;
+            this.pictureBox4.Location = new System.Drawing.Point(1009, 418);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(140, 144);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 3;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox3.Image = global::HeartDiseaseInvestigation.Properties.Resources.pipe;
+            this.pictureBox3.InitialImage = global::HeartDiseaseInvestigation.Properties.Resources.pipe;
+            this.pictureBox3.Location = new System.Drawing.Point(1009, 127);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(140, 144);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox2.Image = global::HeartDiseaseInvestigation.Properties.Resources.yus;
+            this.pictureBox2.InitialImage = global::HeartDiseaseInvestigation.Properties.Resources.yus;
+            this.pictureBox2.Location = new System.Drawing.Point(358, 418);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(140, 144);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Image = global::HeartDiseaseInvestigation.Properties.Resources.ossa;
+            this.pictureBox1.InitialImage = global::HeartDiseaseInvestigation.Properties.Resources.ossa;
+            this.pictureBox1.Location = new System.Drawing.Point(358, 127);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(140, 144);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // PatientsFileWindow
             // 
@@ -469,10 +485,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
