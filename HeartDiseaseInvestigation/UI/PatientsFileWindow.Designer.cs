@@ -48,6 +48,7 @@
             this.dataFilterControl1 = new HeartDiseaseInvestigation.UI.DataFilterControl();
             this.addPatientControl2 = new HeartDiseaseInvestigation.UI.AddPatientControl();
             this.graphsControl1 = new HeartDiseaseInvestigation.UI.GraphsControl();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -71,6 +72,7 @@
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -85,7 +87,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1126, 750);
+            this.tabPage1.Size = new System.Drawing.Size(1456, 826);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Data";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -251,7 +253,7 @@
             this.dataFilterControl1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.dataFilterControl1.Location = new System.Drawing.Point(162, 3);
             this.dataFilterControl1.Name = "dataFilterControl1";
-            this.dataFilterControl1.Size = new System.Drawing.Size(1128, 771);
+            this.dataFilterControl1.Size = new System.Drawing.Size(1458, 847);
             this.dataFilterControl1.TabIndex = 0;
             // 
             // addPatientControl2
@@ -268,6 +270,15 @@
             this.graphsControl1.Size = new System.Drawing.Size(1637, 514);
             this.graphsControl1.TabIndex = 3;
             this.graphsControl1.Load += new System.EventHandler(this.graphsControl1_Load);
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Location = new System.Drawing.Point(4, 25);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(1456, 826);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "Developers";
+            this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // PatientsFileWindow
             // 
@@ -316,6 +327,7 @@
         private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.Label accu;
         private UI.GraphsControl graphsControl1;
+        private System.Windows.Forms.TabPage tabPage6;
     }
 }
 
