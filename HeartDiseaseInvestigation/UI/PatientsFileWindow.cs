@@ -213,5 +213,15 @@ namespace HeartDiseaseInvestigation
         {
             System.Diagnostics.Process.Start("https://github.com/Zonitidus");
         }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/felipegarcial");
+        }
+
+        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
     }
 }

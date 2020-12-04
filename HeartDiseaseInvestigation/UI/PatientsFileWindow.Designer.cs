@@ -341,6 +341,7 @@
             this.linkLabel4.TabIndex = 11;
             this.linkLabel4.TabStop = true;
             this.linkLabel4.Text = "Perfil en GitHub";
+            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
             // 
             // linkLabel3
             // 
@@ -353,6 +354,7 @@
             this.linkLabel3.TabIndex = 10;
             this.linkLabel3.TabStop = true;
             this.linkLabel3.Text = "Perfil en GitHub";
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
             // 
             // linkLabel2
             // 
