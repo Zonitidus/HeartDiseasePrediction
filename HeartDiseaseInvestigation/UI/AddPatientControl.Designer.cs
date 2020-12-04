@@ -321,7 +321,7 @@
             // 
             // numericUpDownTrestbps
             // 
-            this.numericUpDownTrestbps.Location = new System.Drawing.Point(8, 32);
+            this.numericUpDownTrestbps.Location = new System.Drawing.Point(6, 41);
             this.numericUpDownTrestbps.Maximum = new decimal(new int[] {
             300,
             0,

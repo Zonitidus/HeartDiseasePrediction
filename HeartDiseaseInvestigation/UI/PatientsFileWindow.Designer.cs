@@ -140,7 +140,6 @@
             this.graphsControl1.Name = "graphsControl1";
             this.graphsControl1.Size = new System.Drawing.Size(1637, 514);
             this.graphsControl1.TabIndex = 3;
-            this.graphsControl1.Load += new System.EventHandler(this.graphsControl1_Load);
             // 
             // tabPage3
             // 
@@ -276,7 +275,7 @@
             // 
             // pictureBoxLogo
             // 
-            this.pictureBoxLogo.Location = new System.Drawing.Point(1161, 3);
+            this.pictureBoxLogo.Location = new System.Drawing.Point(1376, 3);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
             this.pictureBoxLogo.Size = new System.Drawing.Size(310, 286);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -285,14 +284,13 @@
             // 
             // addPatientControl2
             // 
-            this.addPatientControl2.Location = new System.Drawing.Point(3, 3);
+            this.addPatientControl2.Location = new System.Drawing.Point(218, 3);
             this.addPatientControl2.Name = "addPatientControl2";
             this.addPatientControl2.Size = new System.Drawing.Size(1900, 950);
             this.addPatientControl2.TabIndex = 0;
             // 
             // tabPage6
             // 
-            this.tabPage6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tabPage6.Controls.Add(this.label6);
             this.tabPage6.Controls.Add(this.label5);
             this.tabPage6.Controls.Add(this.linkLabel4);
@@ -379,6 +377,7 @@
             this.linkLabel1.TabIndex = 8;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Perfil en GitHub";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // label4
             // 
