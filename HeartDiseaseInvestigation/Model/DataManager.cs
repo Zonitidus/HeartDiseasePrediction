@@ -76,6 +76,7 @@ namespace HeartDiseaseInvestigation.Model
             }
             else
             {
+                Console.WriteLine(tb2.Text);
                 listFilters.Add(cb.Text + " >= " + "'" + tb1.Text + "'" + " AND " + cb.Text + " <= " + "'" + tb2.Text + "'");
                 l.Text = l.Text + "\n" + cb.Text + ": " + tb1.Text + "-" + tb2.Text;
             }

@@ -37,16 +37,28 @@ namespace HeartDiseaseInvestigation.UI
             {
                 MessageBox.Show("Please select a filter", "Error", MessageBoxButtons.OK);
             }
+            else if (textBox1.Text == "" && textBox2.Text == "")
+            {
+                MessageBox.Show("Please add a value", "Error", MessageBoxButtons.OK);
+            }
             else
             {
-                if (textBox1.Text.CompareTo(textBox2.Text) > 0)
-                {
-                    dm.addFilter(filtersLabel, textBox2, textBox1, comboBoxHeartData);
-                }
-                else
+                if (textBox2.Text == "")
                 {
                     dm.addFilter(filtersLabel, textBox1, textBox2, comboBoxHeartData);
                 }
+                else
+                {
+                    if (textBox1.Text.CompareTo(textBox2.Text) > 0)
+                    {
+                        dm.addFilter(filtersLabel, textBox2, textBox1, comboBoxHeartData);
+                    }
+                    else
+                    {
+                        dm.addFilter(filtersLabel, textBox1, textBox2, comboBoxHeartData);
+                    }
+                }
+                
 
             }
 
@@ -69,15 +81,6 @@ namespace HeartDiseaseInvestigation.UI
             dm.resetFilters(filtersLabel, dt);
         }
 
-        private void trainBttn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void printTree(Node<Patient> root)
-        {
-
-        }
     }
 
 }
