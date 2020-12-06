@@ -22,6 +22,7 @@ namespace HeartDiseaseInvestigation
             string link3 = "https://pi-final-app.herokuapp.com/draw-tree";
             string link4 = "https://pi-final-app.herokuapp.com/classify-patient";
 
+
             Connection connect = new Connection();
 
             //Patient patient1 = new Patient("dd",66,0,2,146,278,0,0,125,0,0,1,1,2,0);
